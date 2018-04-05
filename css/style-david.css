@@ -1,7 +1,17 @@
+section{
+    width: 95%;
+    margin: auto;
+}
+
 .breadcrumb{
     font-size: 10px;
 }
 
 #lupa{
-    font-size: 1.5em;
+    font-size: 1.3em;
+}
+
+label{
+    width: 100%;
+    text-align: center;
 }
