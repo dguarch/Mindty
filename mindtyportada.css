@@ -1,0 +1,33 @@
+.contenido{ 
+    height: 540px;
+    padding-left:  10px;
+    padding-right: 10px;
+    margin-left:   10px;
+    margin-right:  10px;
+    border: 10px white;
+}
+
+footer{
+    height: 20%;
+    padding-left: 
+    border: 10px ;
+    text-align: center;
+    font-size: 8px;
+    background: #afbdbd;
+    padding-top: 10px;
+    position: fixed;
+    width: 95%;
+    position: relative;
+   
+
+}
+
+img{
+
+}
+.navbar-brand{
+    font-family: audiowide;
+
+
+
+}
