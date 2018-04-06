@@ -42,7 +42,7 @@
           <div class="form-group col-6">
             <input type="codigo" class="form-control" id="codigo" placeholder="Código">
           </div>
-          <div id="lupa" class="col-3">
+          <div id="lupa" class="col-2">
             <i class="fas fa-search"></i>
           </div>
           <div class="col-3">
@@ -82,11 +82,35 @@
     </section>
 
     <section id="alumnos">
+      <div class="row">
+        <div calss="col-3 btnBadge">
+          <button type="button" class="btn btn-primary">
+            Alumnos
+            <span class="badge badge-light">4</span>
+          </button>
+        </div>
+        <div class="col-4"></div>
+        <div class="col-3">
+          <button type="button" id="add" class="btn btn-success">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+      </div>
+
+
       <!-- .row>(div.col-5>img[src=./images/users/ alt="Usuario $"]{Apellidos, Nombre})*2 -->
       <div class="row">
         <div class="col-6">
-          <img class="align-middle" src="./images/users/usr1.jpg" alt="Usuario 1">
-          <p><i class="fas fa-user"></i> Guarch Esparza, David<br><i class="fas fa-envelope"></i> david@guarch.es<br><i class="fas fa-phone flip-horizontal"></i> 615 64 22 92</p>
+          <img class="rounded-circle img-thumbnail" src="./images/users/usr1.jpg" alt="Usuario 1">
+          <p>
+            <i class="fas fa-user"></i> David Guarch
+            <br>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:#">david@guarch.es</a>
+            <br>
+            <i class="fas fa-phone flip-horizontal"></i>
+            <a href="tel:#">615 64 22 92</a>
+          </p>
         </div>
         <div class="col-6">
           <img src="./images/users/usr1.jpg" alt="Usuario 2">
@@ -106,9 +130,7 @@
       </div>
 
 
-      <button type="button" id="add" class="btn btn-success float-right">
-        <i class="fas fa-plus"></i>
-      </button>
+
     </section>
 
 
