@@ -15,3 +15,35 @@ label{
     width: 100%;
     text-align: center;
 }
+
+#alumnos{
+    border: 1px solid darkgray;
+    box-shadow: 0px 0px 5px darkgray;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+section > div > div{
+    padding: 5px;
+}
+
+section > div > div > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+section > div > div > p{
+    font-size: 0.7em;
+    display: inline-block;
+}
+
+#add{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px darkgray;
+    margin-top: -45px;
+}
