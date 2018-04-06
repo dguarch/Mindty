@@ -5,7 +5,7 @@ body {background: #f5f5f5;}
 .desplegable {background: #f5f5f5 !important; padding-bottom: 25px; 
              padding-left: 20px;padding-right: 20px; color: black !important;}
 button {color: black !important;}
-.calendario{ padding-left: 20px;  }
+.calendario{ padding-left: 20px;  line-height: 50px; padding-right:20px; }
 
 .card{
     background-color: #f5f5f5;
@@ -16,5 +16,11 @@ button {color: black !important;}
 }
 
 .card-body{
-    background-color: #f5f5f5 !important;
+    background-color: #f5f5f5 !important;  
+
+}
+
+td{
+    width: 100px !important;
+    height: 6px !important;
 }
