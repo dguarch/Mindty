@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <!-- Required meta tags -->
@@ -7,16 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
 
   <!-- Mindty CSS -->
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/style-david.css">
-
-  <!-- Font Awesome -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
-    crossorigin="anonymous"></script>
 
   <title>Mindty</title>
 </head>
@@ -30,7 +25,6 @@
     <a class="navbar-brand logo" href="#">MINDTY
     </a>
     <div>
-      Hola
       <img clas="cara" src="./images/if_user_318585.png">
       <img clas="cara" src="./images/flecha-desplegable.png">
     </div>
@@ -38,11 +32,13 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="./coordinador.html">Coordinación
-          </a>
+          <a class="nav-link" href="./login.html">Log in</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Profesiorado</a>
+          <a class="nav-link" href="./coordinador.html">Coordinación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./profesor.html">Profesorado</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="./alumno.html">Alumno</a>
@@ -54,6 +50,8 @@
       </form>
     </div>
   </nav>
+
+  <!-- Breadcrumb -->
   <section>
     <div>
       <nav class="breadcrumb">
@@ -64,143 +62,154 @@
         <span class="breadcrumb-item active" title="Añadir módulo" alt="Añadir módulo">Curso</span>
       </nav>
     </div>
+  </section>
+
+  <!-- Nombre seccion -->
+  <section>
     <h2>Curso</h2>
     <hr>
-    <section>
-      <form ">
-            <!-- Fila Código + Btn Guardar -->
-            <div class="form-row ">
-              <div class="form-group col-6 ">
-                <input type="codigo " class="form-control " id="codigo " placeholder="Código ">
-              </div>
-              <div id="lupa" class="col-2 ">
-                <i class="fas fa-search fa-sm"></i>
-              </div>
-              <div class="col-3 ">
-                <button type="submit " class="btn btn-primary ">Guardar</button>
-              </div>
-            </div>
-    
-            <!-- Fila nombre -->
-            <div class="form-row ">
-              <div class="form-group col-12 ">
-                <input type="text " class="form-control " id="nombre " placeholder="Nombre ">
-              </div>
-            </div>
-    
-            <!-- Fila formador -->
-            <div class="form-row ">
-              <div class="form-group col-12 ">
-                <select class="form-control col-12 ">
-                  <option value="0 " disabled selected>Formador</option>
-                </select>
-              </div>
-            </div>
-    
-            <!-- Fila #módulos + horas -->
-            <div class="form-row ">
-              <div class="form-group col-5 ">
-                <label for="modulos ">Nº módulos</label>
-                <input type="number " class="form-control " id="modulos " placeholder="1 ">
-              </div>
-              <div class="col-2 "></div>
-              <div class="col-5 ">
-                <label for="horas ">Nº horas</label>
-                <input type="number " class="form-control " id="horas " placeholder="25 ">
-              </div>
-            </div>
-          </form>
-        </section>
-    
-        <section id="alumnos ">
-          <div class="row ">
-            <div class="col-3 btnBadge ">
-              <button type="button " class="btn btn-primary ">
-                Alumnos
-                <span class="badge badge-light ">4</span>
-              </button>
-            </div>
-            <div class="col-5 "></div>
-            <div class="col-4 ">
-              <button type="button " id="add " class="btn btn-success ">
-                <i class="fas fa-plus "></i>
-              </button>
-            </div>
-          </div>
-    
-    
-          <!-- .row>(div.col-5>img[src=./images/users/ alt="Usuario $ "]{Apellidos, Nombre})*2 -->
-          <div class="row ">
-            <div class="col-6 ">
-              <img class="rounded-circle img-thumbnail " src="./images/users/usr1.jpg " alt="Usuario 1 ">
-              <p>
-                <i class="fas fa-user "></i> Julia Ivanov
-                <br>
-                <i class="fas fa-envelope "></i>
-                <a href="mailto:# ">julia@ivanov.ru</a>
-                <br>
-                <i class="fas fa-phone flip-horizontal "></i>
-                <a href="tel:# ">685 12 75 54</a>
-              </p>
-            </div>
-            <div class="col-6 ">
-              <img class="rounded-circle img-thumbnail " src="./images/users/usr1.jpg " alt="Usuario 1 ">
-              <p>
-                <i class="fas fa-user "></i> Julia Ivanov
-                <br>
-                <i class="fas fa-envelope "></i>
-                <a href="mailto:# ">julia@ivanov.ru</a>
-                <br>
-                <i class="fas fa-phone flip-horizontal "></i>
-                <a href="tel:# ">685 12 75 54</a>
-              </p>
-            </div>
-          </div>
-    
-          <div class="row ">
-            <div class="col-6 ">
-              <img class="rounded-circle img-thumbnail " src="./images/users/usr1.jpg " alt="Usuario 1 ">
-              <p>
-                <i class="fas fa-user "></i> Julia Ivanov
-                <br>
-                <i class="fas fa-envelope "></i>
-                <a href="mailto:# ">julia@ivanov.ru</a>
-                <br>
-                <i class="fas fa-phone flip-horizontal "></i>
-                <a href="tel:# ">685 12 75 54</a>
-              </p>
-            </div>
-            <div class="col-6 ">
-              <img class="rounded-circle img-thumbnail " src="./images/users/usr1.jpg " alt="Usuario 1 ">
-              <p>
-                <i class="fas fa-user "></i> Julia Ivanov
-                <br>
-                <i class="fas fa-envelope "></i>
-                <a href="mailto:# ">julia@ivanov.ru</a>
-                <br>
-                <i class="fas fa-phone flip-horizontal "></i>
-                <a href="tel:# ">685 12 75 54</a>
-              </p>
-            </div>
-          </div>   
-        </section>
+  </section>
 
-    <footer class="row ">
-        <div class="col-12 col-md-12 ">
-            <p>Diseñado por OVERFLOW
-                <br>&copy 2018</p>
+  <!-- Formulario entrada curso -->
+  <section>
+    <form>
+      <!-- Fila Código + Btn Guardar -->
+      <div class="form-row">
+        <div class="form-group col-6">
+          <input type="codigo" class="form-control" id="codigo" placeholder="Código">
         </div>
+        <div class="col-4">
+          <div id="lupa">
+            <i class="fas fa-search fa-2x"></i>
+          </div>
+        </div>
+        <div class="col-2">
+          <i id="enviar" class="fas fa-save fa-3x"></i>
+        </div>
+      </div>
 
-    </footer>
+      <!-- Fila nombre -->
+      <div class="form-row">
+        <div class="form-group col-12">
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+        </div>
+      </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
-        crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
-        crossorigin="anonymous "></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
-        crossorigin="anonymous "></script>
+      <!-- Fila formador -->
+      <div class="form-row">
+        <div class="form-group col-12">
+          <select class="form-control col-12">
+            <option value="0" disabled selected>Formador</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Fila #módulos + horas -->
+      <div class="form-row">
+        <div class="form-group col-5">
+          <label for="modulos">Nº módulos</label>
+          <input type="number" class="form-control" id="modulos" placeholder="1">
+        </div>
+        <div class="col-2"></div>
+        <div class="col-5">
+          <label for="horas">Nº horas</label>
+          <input type="number" class="form-control" id="horas" placeholder="25" min="25" step="5">
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- Listado de alumnos -->
+  <section id="alumnos">
+    <div class="row">
+      <div class="col-3 btnBadge">
+        <button type="button" class="btn btn-primary">
+          Alumnos
+          <span class="badge badge-light">4</span>
+        </button>
+      </div>
+      <div class="col-5"></div>
+      <div class="col-4">
+        <button type="button" id="add" class="btn btn-success">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <img class="rounded-circle img-thumbnail" src="./images/users/usr1.jpg" alt="Usuario 1">
+        <p>
+          <i class="fas fa-user"></i> Julia Ivanov
+          <br>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:#">julia@ivanov.ru</a>
+          <br>
+          <i class="fas fa-phone flip-horizontal"></i>
+          <a href="tel:#">685 12 75 54</a>
+        </p>
+      </div>
+      <div class="col-6">
+        <img class="rounded-circle img-thumbnail" src="./images/users/usr1.jpg" alt="Usuario 1">
+        <p>
+          <i class="fas fa-user"></i> Julia Ivanov
+          <br>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:#">julia@ivanov.ru</a>
+          <br>
+          <i class="fas fa-phone flip-horizontal"></i>
+          <a href="tel:#">685 12 75 54</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <img class="rounded-circle img-thumbnail" src="./images/users/usr1.jpg" alt="Usuario 1">
+        <p>
+          <i class="fas fa-user"></i> Julia Ivanov
+          <br>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:#">julia@ivanov.ru</a>
+          <br>
+          <i class="fas fa-phone flip-horizontal"></i>
+          <a href="tel:#">685 12 75 54</a>
+        </p>
+      </div>
+      <div class="col-6">
+        <img class="rounded-circle img-thumbnail" src="./images/users/usr1.jpg" alt="Usuario 1">
+        <p>
+          <i class="fas fa-user"></i> Julia Ivanov
+          <br>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:#">julia@ivanov.ru</a>
+          <br>
+          <i class="fas fa-phone flip-horizontal"></i>
+          <a href="tel:#">685 12 75 54</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Copy right -->
+  <footer>
+    <div>
+      <small>Diseñado por OVERFLOW
+        <br>&copy 2018</small>
+    </div>
+  </footer>
+
 </body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+  crossorigin="anonymous"></script>
 
+<!-- Font Awesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+  crossorigin="anonymous"></script>
 </html>

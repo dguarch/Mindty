@@ -20,10 +20,10 @@ section{
 /* Estilo del pie de la página de la APP */
 footer{
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1em;
     background: #93adb7;
-    padding-top: 10px;
-    width: 100%px; 
+    width: 100%; 
+    padding: 5px;
 }
 
 /* Asignamos la fuente Audiowise a las etiquetas de cabecera */
@@ -58,13 +58,16 @@ section > div > div > img{
 
 /* Fondo de la barra de navegación principal*/
 #menu{
-    background: #00838f !Important;
+    background: #009688 !Important;
     color: white;
 } 
 
-*/ Añadimos el icono de la lupa */
 #lupa{
-    font-size: 50px;
+    margin-top: 5px;
+}
+
+#enviar{
+    color: #007bff;
 }
 
 #alumnos{
@@ -86,7 +89,9 @@ section > div > div > img{
 /* Fuente del nombre de la app */
 .logo{
     font-family: 'Audiowide', cursive;
-    padding-right: 83px;
+    /*padding-right: 83px;*/
+    color: white !Important;
+    font-size: 2.5em;
 }
 
 /* Estilo del botón de búsqueda */
