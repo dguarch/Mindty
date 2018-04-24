@@ -76,8 +76,10 @@
       <!-- Fila Código + Btn Guardar -->
       <div class="form-row">
         <div class="form-group col-6">
-          <input type="codigo" class="form-control" id="codigo" placeholder="Código">
+          <!-- ExpReg= /[A-Z]{3,} \d/ -->
+          <input type="text" class="form-control" id="codigo_curso" placeholder="Código curso">
         </div>
+        <!-- Disquete + Lupa -->
         <div class="col-4">
           <div id="lupa">
             <i class="fas fa-search fa-2x"></i>
@@ -91,6 +93,7 @@
       <!-- Fila nombre -->
       <div class="form-row">
         <div class="form-group col-12">
+          <!-- ExpReg= 1a letra mayuscula, solo letras -->
           <input type="text" class="form-control" id="nombre" placeholder="Nombre">
         </div>
       </div>

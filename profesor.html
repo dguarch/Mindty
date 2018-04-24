@@ -94,12 +94,12 @@
         <div class="col-10 col-sm-10 col-sm-10">
             <form class="form-inline">
                 <div class="form-group mx-sm-3 mb-2">
-                    <label for="codigo" class="sr-only"></label>
-                    <input type="number" class="form-control" id="code_modulo" placeholder="Codigo del modulo:" value="codigo">
+                    <!-- ExpReg= /[A-Z]{3,} \d/ -->
+                    <input type="text" class="form-control" id="code_modulo" placeholder="Código módulo">
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
-                    <label for="preparacion previa" class="sr-only"></label>
-                    <input type="text" class="form-control" id="preparacion" placeholder="Preparacion previa">
+                    <!-- ExpReg= /[aA-zZ]/ -->
+                    <input type="text" class="form-control" id="nombre_modulo" placeholder="Nombre módulo" minlength="4">
                 </div>
                 <div class="col-10 col-sm-10 col-md-10">
                     <button id="btn_form">Modificar</button>
@@ -113,7 +113,7 @@
         <div class="col-sm-5">
             <ol>
                 <li>
-                    <a href="#">Arquitectura de las apps</a>
+                    <!-- <a href="#">Arquitectura de las apps</a> -->
                 </li>
                 <li>
                     <a href="#">Gestión de software</a>
