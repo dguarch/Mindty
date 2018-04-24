@@ -95,11 +95,12 @@
             <form class="form-inline">
                 <div class="form-group mx-sm-3 mb-2">
                     <!-- ExpReg= /[A-Z]{3,} \d/ -->
-                    <input type="text" class="form-control" id="code_modulo" placeholder="Código módulo">
-                </div>
+                    <input type="number" minlength="4"  class="form-control" id="code_modulo" placeholder="Código módulo" required>
+                    </div>
                 <div class="form-group mx-sm-3 mb-2">
                     <!-- ExpReg= /[aA-zZ]/ -->
-                    <input type="text" class="form-control" id="nombre_modulo" placeholder="Nombre módulo" minlength="4">
+                    <input type="text" class="form-control" id="nombre_modulo" placeholder="Nombre módulo" minlength="4" required>
+                    
                 </div>
                 <div class="col-10 col-sm-10 col-md-10">
                     <button id="btn_form">Modificar</button>
@@ -154,5 +155,8 @@
     crossorigin="anonymous "></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
     crossorigin="anonymous "></script>
+    <script src="./js/formValidation.js"></script>
 
 </html>
+
+
