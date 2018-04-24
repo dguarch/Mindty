@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <!-- Required meta tags -->
@@ -9,179 +9,150 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="../Mindty/css/style.css">
 
-    <title>User Teacher</title>
+    <!-- Mindty CSS -->
+    <link rel="stylesheet" href="./css/style.css">
 
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+        crossorigin="anonymous"></script>
+
+    <title>Mindty</title>
 </head>
 
 <body>
+    <!-- Navegación principal -->
     <nav id="menu" class="navbar navbar-expand-lg navbar-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand logo" href="#">MINDTY
+        <a class="navbar-brand logo" href="./index.html">MINDTY
         </a>
         <div>
-            Hola
             <img clas="cara" src="./images/if_user_318585.png">
             <img clas="cara" src="./images/flecha-desplegable.png">
         </div>
-
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Coordinación
+                    <a class="nav-link" href="./coordinador.html">Coordinador
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="profesor.html">Profesiorado</a>
+                    <a class="nav-link activeNav">Profesor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="alumno.html">Alumno</a>
+                    <a class="nav-link" href="./alumno.html">Alumno</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
-                <div id="sugerencias"></div>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
         </div>
     </nav>
-    <div class="container">
 
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-
-
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <a href="#">Contenido</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">Modulos</li>
-                    </ol>
-                </nav>
-            </div>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div>
+            <a class="breadcrumb-item" href="#" title="incio" alt="Incio">
+                <i class="fas fa-home"></i>
+            </a>
+            <a class="breadcrumb-item" href="#" title="Curso" alt="Curso">Contenido</a>
+            <span class="breadcrumb-item active" title="Añadir módulo" alt="Añadir módulo">Módulos</span>
         </div>
+    </nav>
 
+    <!-- Nombre seccion -->
+    <section>
+        <h2>Añadir Módulo</h2>
+        <hr>
+    </section>
 
+    <div class="row">
+        <div class="col-sm-10 col-md-10">
 
-        <h1>Añadir Modulo</h1>
-
-
-
-
-        <div class="row">
-            <div class="col-sm-10 col-md-10">
-
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Modulo 1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Modulo 2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Modulo 3</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Modulo 4</a>
-                    </li>
-                </ul>
-
-
-
-
-
-            </div>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Modulo 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Modulo 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Modulo 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Modulo 4</a>
+                </li>
+            </ul>
         </div>
-
-        <div class="row">
-
-            <div class="col-10 col-sm-10 col-sm-10">
-                <form class="form-inline">
-                    <div class="form-group mx-sm-3 mb-2">
-                        <label for="codigo" class="sr-only"></label>
-                        <input type="number" class="form-control" id="code_modulo" placeholder="Codigo del modulo:" value="codigo">
-                    </div>
-                    <div class="form-group mx-sm-3 mb-2">
-                        <label for="preparacion previa" class="sr-only"></label>
-                        <input type="text" class="form-control" id="preparacion" placeholder="Preparacion previa">
-                    </div>
-                    <div class="col-10 col-sm-10 col-md-10">
-                        <button id="btn_form">Modificar</button>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-
-
-        <!-- bloque de modulos -->
-        <div class="row">
-            <div class="col-sm-5">
-
-                <ol>
-                    <li>
-                        <a href="#">Arquitectura de las apps</a>
-                    </li>
-                    <li>
-                        <a href="#">Gestión de software</a>
-                    </li>
-                    <li>
-                        <a href="#">Fundamentos UX</a>
-                    </li>
-                    <li>
-                        <a href="#">Fundamentos desarrollo</a>
-                    </li>
-                    <li>
-                        <a href="#">Fundamentos Java</a>
-                    </li>
-
-
-                    <!-- <ul>Boton-->
-                    <button type="button" id="btn_añadir" class="btn btn-primary btn-sm">+</button>
-                </ol>
-            </div>
-
-        </div>
-
-
-        <div class="row">
-            <img src="./images/calendar.png" alt="">
-            <!-- calendario -->
-        </div>
-
-
-
-
     </div>
-    <footer class="row">
-        <div class="col-12 col-md-12 ">
+
+    <div class="row">
+        <div class="col-10 col-sm-10 col-sm-10">
+            <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="codigo" class="sr-only"></label>
+                    <input type="number" class="form-control" id="code_modulo" placeholder="Codigo del modulo:" value="codigo">
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="preparacion previa" class="sr-only"></label>
+                    <input type="text" class="form-control" id="preparacion" placeholder="Preparacion previa">
+                </div>
+                <div class="col-10 col-sm-10 col-md-10">
+                    <button id="btn_form">Modificar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- bloque de modulos -->
+    <div class="row">
+        <div class="col-sm-5">
+            <ol>
+                <li>
+                    <a href="#">Arquitectura de las apps</a>
+                </li>
+                <li>
+                    <a href="#">Gestión de software</a>
+                </li>
+                <li>
+                    <a href="#">Fundamentos UX</a>
+                </li>
+                <li>
+                    <a href="#">Fundamentos desarrollo</a>
+                </li>
+                <li>
+                    <a href="#">Fundamentos Java</a>
+                </li>
+                <!-- <ul>Boton-->
+                <button type="button" id="btn_añadir" class="btn btn-primary btn-sm">+</button>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <img src="./images/calendar.png" alt="">
+        <!-- calendario -->
+    </div>
+
+    <!-- Copy right -->
+    <footer>
+        <div>
             <p>Diseñado por OVERFLOW
                 <br>&copy 2018</p>
         </div>
-
     </footer>
-
-
-
 </body>
-
-
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
+    crossorigin="anonymous "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
+    crossorigin="anonymous "></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
+    crossorigin="anonymous "></script>
 
 </html>

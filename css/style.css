@@ -1,129 +1,65 @@
 /* Fuente texto cuerpo */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 /* Fuente logo y h1-h6 */
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
 
 /* Propiedad principal para el cuerpo de la app*/
-body{
-    margin: 0px !Important;
-    padding: 0px !Important;
-    background: #f5f5f5 !Important;
-    font-family: 'Open Sans', sans-serif !Important;
-    font-size: 12px !Important;
-}
+body{margin: 0px !important; padding: 0px !important; background: #f5f5f5 !important; font-family: 'Open Sans', sans-serif !important; font-size: 12px !important;}
 
 /* Estilo de la sección */
-section{ 
-    margin: 0px 10px 0px 10px; 
-}
+section{margin: 10px 10px;}
 
 /* Estilo del pie de la página de la APP */
-footer{
-    text-align: center;
-    font-size: 1em;
-    background: #93adb7;
-    width: 100%; 
-    padding: 5px;
-}
+footer{text-align: center; font-size: 1em; background: #93adb7; width: 100%; padding: 5px;}
 
 /* Asignamos la fuente Audiowise a las etiquetas de cabecera */
-h1,h2,h3,h4,h5,h6{font-family: 'Audiowide', cursive !Important;}
+h1,h2,h3,h4,h5,h6{font-family: 'Audiowide', cursive !important;}
 
-/* Margen inferior para la tabla */
-table{
-    margin-bottom: 10px;
-}
-
+/* ------ TABLA ---------------------------------------*/
+/* Margen inferior para la tabla del calendario */
+table{margin-bottom: 10px;}
 /* Formateo de las celdas del calendario */
-td{
-    width: 100px !important;
-    height: 6px !important;
-}
+td{width: 100px !important; height: 6px !important;}
+label{width: 100%; text-align: center;}
+section > div > div{padding: 5px; text-align: center; font-size: 1.2em;}
+section > div > div > img{width: 80px; height: 80px;}
+/* ----------------------------------------------------*/
 
-label{
-    width: 100%;
-    text-align: center;
-}
+/* Fondo de la navegación principal*/
+#menu{background: #009688 !important; color: white;} 
 
-section > div > div{
-    padding: 5px;
-    text-align: center;
-    font-size: 1.2em;
-}
+/* Botón lupa */
+#lupa{margin-top: 5px;}
 
-section > div > div > img{
-    width: 80px;
-    height: 80px;
-}
+/* Botón disquete*/
+#enviar{color: #007bff;}
 
-/* Fondo de la barra de navegación principal*/
-#menu{
-    background: #009688 !Important;
-    color: white;
-} 
+/* Listado de alumnos */
+#alumnos{border: 1px solid darkgray; box-shadow: 0px 0px 5px darkgray; padding: 10px; margin-bottom: 20px; background: rgb(255, 255, 255);}
 
-#lupa{
-    margin-top: 5px;
-}
+/* Botón añadir nuevo */
+#add{height: 40px; width: 40px; border-radius: 100%; box-shadow: 0px 0px 10px darkgray; float: right;}
 
-#enviar{
-    color: #007bff;
-}
+/* Fuente del logo */
+.logo{font-family: 'Audiowide', cursive; color: white !important; font-size: 2.5em;}
 
-#alumnos{
-    border: 1px solid darkgray;
-    box-shadow: 0px 0px 5px darkgray;
-    padding: 10px;
-    margin-bottom: 20px;
-    background: rgb(255, 255, 255);
-}
-
-#add{
-    height: 40px;
-    width: 40px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 10px darkgray;
-    float: right;
-}
-
-/* Fuente del nombre de la app */
-.logo{
-    font-family: 'Audiowide', cursive;
-    /*padding-right: 83px;*/
-    color: white !Important;
-    font-size: 2.5em;
-}
+.activeNav {color: white !important; font-weight: 700;}
 
 /* Estilo del botón de búsqueda */
-.btn-outline-success{
-    color: #000203;
-    background-color: transparent;
-    background-image: none;
-    border-color: #000203;
-    }
+.btn-outline-success{color: #000203; background-color: transparent; background-image: none; border-color: #000203;}
 
-/* Color de fonde del bradcrumb */
-.breadcrumb{
-    background-color: #e9e9e9 !Important;
-    font-size: 10px;
-}
+/* Estilo del bradcrumb */
+.breadcrumb{background-color: #e9e9e9 !important; font-size: 10px;}
 
-/* Formateo del color de fondo de los collapses */
-.card{
-    background-color: #f5f5f5;
-}
-
-.card-header{
-    background-color: #f5f5f5 !important;
-}
-
-.card-body{
-    background-color: #f5f5f5 !important;  
-}
-
+/* ------ COLLAPSES ---------------------------------------*/
+/* Color de fondo de los collapses */
+.card{background-color: #f5f5f5;}
+.card-header{background-color: #f5f5f5 !important;}
+.card-body{background-color: #f5f5f5 !important;}
 /* Formateo de los collapses y sus margenes */
-.desplegable {background: #f5f5f5 !important; padding-bottom: 25px; 
-    padding-left: 20px;padding-right: 20px; color: black !important;}
+.desplegable {background: #f5f5f5 !important; padding-bottom: 25px; padding-left: 20px; padding-right: 20px; color: black !important;}
+/* --------------------------------------------------------*/
 
 /* Formateo del calendario */
-.calendario{ padding-left: 20px;  line-height: 50px; padding-right:20px; }
+.calendario{padding-left: 20px; line-height: 50px; padding-right:20px;}
