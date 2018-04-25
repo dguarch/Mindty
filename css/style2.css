@@ -1,3 +1,10 @@
 .error{
     color: red;
 }
+
+#enviar{
+    color: #007bff;;
+    background: rgba(255, 255, 255, 0);
+    border: 0px;
+    padding: 0px;
+}

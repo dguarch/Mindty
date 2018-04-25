@@ -23,3 +23,8 @@ const validarCampo = () => {
 }
 
 elementosEspera();
+
+$('#enviar').click(function (evnt) {
+    evnt.preventDefault();
+    console.log('Hello');
+});
