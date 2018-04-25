@@ -10,9 +10,10 @@ document.getElementById('btn_form').addEventListener('click', function(){
     let name_modulo = document.getElementById('nombre_modulo');
         
         if (!form_code.checkValidity() && !name_modulo.checkValidity()) {
-            document.getElementById("error").innerHTML = 'datos incorrectos'
+           
+            document.getElementById("error").innerHTML = 'datos incorrectos';
             document.getElementById('ok').innerHTML ='';
-            document.getElementById("error1").innerHTML = 'datos incorrectos'
+            document.getElementById("error1").innerHTML = 'datos incorrectos';
             document.getElementById('ok1').innerHTML ='';
         }else {
             document.getElementById('ok1').innerHTML ='<img src="./images/users/Custom-Icon-Design-Pretty-Office-8-Accept.ico">';
@@ -24,7 +25,10 @@ document.getElementById('btn_form').addEventListener('click', function(){
     });
 
     //            <img src="./images/users/Custom-Icon-Design-Pretty-Office-8-Accept.ico">                 //
-// ==================================================!!!FORM VALIDATION PROFESSOR!!!!==========================================================================================
+
+
+
+    // ==================================================!!!FORM VALIDATION PROFESSOR!!!!==========================================================================================
    
 
    
