@@ -8,15 +8,18 @@ evnt.preventDefault();
 
     let _invalido = {}
 
-    $('error').remove();   
+    $('form .error').remove();   
 
     $('input[name=usuario]').each(function () {
 
-        let exp= /^([A-Z]{1}[a-zñáéíóú]+[\s]*)+$/;
+        let exp= /^([A-Z][a-z]{1}[a-zñáéíóú]+[\s]*)+$/;
         
-        if(!exp.test(this.value)) $('input[name=usuario]').before('<div class="error">incorrecto!</div>');
-        _formValueUsuario[this.name] = this.value;
+        if(!exp.test(this.value)) $('input[name=usuario]').before('<div class="error">incorrecto!</div>' );
+        
+        _formValue[this.name] = this.value;
     });
+    
+      
 
     $('input[name=contaseña]').each(function () {
 
@@ -24,9 +27,16 @@ evnt.preventDefault();
        
         if(!exp.test(this.value)) $('input[name=contaseña]').before('<div class="error">incorrecto!</div>');
 
-        _formValueContraseña[this.name] = this.value;
+        _formValue[this.name] = this.value;
     });
-    
+
+
+
+    console.log(_formValue);
+  
+
+
+
 
     });
    /*  $('input[name=usuario]').each(function () {
