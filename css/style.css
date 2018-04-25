@@ -79,4 +79,6 @@ section > div > div > img{width: 80px; height: 80px;}
 #calendar .hoy {background-color: red;}
 
 
-/* ..........................................................
+/* ..........................check icono*/
+
+#check{ width: 20px; height: 20px;}
