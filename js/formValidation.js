@@ -1,9 +1,8 @@
- document.getElementById('btn_form').onclick = (function(event){
+
+
+
+document.getElementById('btn_form').addEventListener('click', function(event){
     event.preventDefault();
-});
-
-
-document.getElementById('btn_form').addEventListener('input', function(){
 
          
     let form_code = document.getElementById('code_modulo');
