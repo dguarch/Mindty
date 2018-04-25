@@ -62,4 +62,23 @@ section > div > div > img{width: 80px; height: 80px;}
 /* --------------------------------------------------------*/
 
 /* Formateo del calendario */
-.calendario{padding-left: 20px; line-height: 50px; padding-right:20px;}
+.calendario{padding-left: 20px; line-height: 50px; padding-right:20px; } 
+#calendar {font-family: Arial;font-size: 12px;border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;}
+#calendar caption {text-align: left;padding: 5px 10px;background-color: #009688;color: #fff;font-weight: bold;font-size: mediu  m;}
+
+#calendar caption div:nth-child(1) {float: left;}
+
+#calendar caption div:nth-child(2) {float: right;}
+
+#calendar caption div:nth-child(2) a {cursor: pointer;}
+
+#calendar th {background-color: #009688;color: #fff;width: 40px; text-align:center;}
+
+#calendar td {text-align: right;padding: 2px 5px;background-color: white;    border-bottom: 1px solid rgba(0,0,0,.125);}
+
+#calendar .hoy {background-color: red;}
+
+
+/* ..........................check icono*/
+
+#check{ width: 20px; height: 20px;}
