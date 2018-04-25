@@ -62,11 +62,10 @@ h1,h2,h3,h4,h5,h6{font-family: 'Audiowide', cursive !important;}
 /* Icono enviar form */
 #prof_save{width : 30px; height:30px;};
 
-.butons{color: #007bff; background: rgba(255, 255, 255, 0); border: 0px; padding: 0px; cursor: pointer;}
+.botons{color: #007bff; background: rgba(255, 255, 255, 0); border: 0px; padding: 0px; cursor: pointer;}
 
 .errors{color: red;}
 
 #lupa{margin-top: 2px;}
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none; -moz-appearance:textfield; margin: 0;}
-
