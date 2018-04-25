@@ -118,57 +118,44 @@ $('#bton').click(function (evnt) {
 
 }); */
 
-let getFormData = function () {
-    let data_to_send = {};
-    let form_valid = true;
+$('#bton').click(function (evnt) {
+    evnt.preventDefault();
+    let form_data = ValFormulario();
+    if (form_data.vall) {
+        enviarDatos(form_data.data)
+    }
+});
 
-    $('form .error').remove();
-
+let ValFormulario = function () {
+    $('form .estamal').remove();
+    let datos_envio = {};
+    let formulario_correcto = true;
     $('form div input').each(function () {
-        console.log(this.checkValidity())
         if (this.checkValidity()) {
-            data_to_send[this.name] = this.value;
+            datos_envio[this.name] = this.value;
         } else {
-            $(this).before('<div class="error">Error!!</div>');
-            form_valid = false;
+            $(this).before('<div class="estamal">¡¡Error!! campo introducido incorrecto</div>');
+            formulario_correcto = false;
         }
     })
-
-    console.log(data_to_send);
-    return { valid: form_valid, data: data_to_send };
+    return { vall: formulario_correcto, data: datos_envio };
 }
-
-let enviarDatos = function (data_to_send) {
-    console.log('enviando....', data_to_send);
+let enviarDatos = function (datos_envio) {
 
     $.ajax({
-        url: 'http://www.mocky.io/v2/5ad782bd3000005600e5849d',
-        
+        url: 'http://www.mocky.io/v2/5ad782bd3000005600e5849d', /* "true" dice el servidor*/
+        /* url: 'http://www.mocky.io/v2/5ae0fab83200006b00510dbc',  *//* "false" dice el servidor*/
         method: 'POST',
-        data: data_to_send
+        data: datos_envio
     })
-        .done(function (response_data) {
-            console.log(response_data);
-            //cuando hay exito
-            if (response_data.result) {
-                location.href = '/';
+        .done(function (responde_data) {
+            if (responde_data.result) {
+                location.href = './coordinador.html';
             } else {
-                $('#mesajes').html('Email o contraseña incorrectas');
+                $('#mesajes').html('Usuario y/o Contraseña incorrectas');
             }
         })
         .fail(function (err) {
-            //cuando hay error
-            $('#mesajes').html('Oooopss...ha habido un errorcito...:-p');
+            $('#mesajes').html('habido un error de conexión, inténtalo en unos minutos.');
         });
-
 }
-
-$('#bton').click(function (evnt) {
-    evnt.preventDefault();
-    let form_data = getFormData();
-
-    if (form_data.valid) {
-        enviarDatos(form_data.data);
-    }
-
-});
