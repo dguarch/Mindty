@@ -1,9 +1,9 @@
-document.getElementById('btn_form').onclick = (function(event){
+ document.getElementById('btn_form').onclick = (function(event){
     event.preventDefault();
 });
 
 
-document.getElementById('btn_form').addEventListener('click', function(){
+document.getElementById('btn_form').addEventListener('input', function(){
 
          
     let form_code = document.getElementById('code_modulo');
@@ -22,15 +22,17 @@ document.getElementById('btn_form').addEventListener('click', function(){
             document.getElementById("error").innerHTML ='';
         }
 
-    });
+    });    
 
     //            <img src="./images/users/Custom-Icon-Design-Pretty-Office-8-Accept.ico">                 //
 
 
 
     // ==================================================!!!FORM VALIDATION PROFESSOR!!!!==========================================================================================
+    
+    
+    
    
-
    
    
    
