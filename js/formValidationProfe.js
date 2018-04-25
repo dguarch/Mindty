@@ -1,31 +1,3 @@
-
-/*   var elem = null;
-
-const elementosEspera = () => {
-    elem = document.querySelector('#code_modulo');
-    elem.onblur = validarCampo;
-};
-
-const validarCampo = () => {
-    let _valid = true;
-    let _formValues = {};
-    $('form .error').remove();
-    $('#code_modulo').each(function () {
-        let validezNombre = this.validity;
-        console.log(validezNombre);
-        if (validezNombre.patternMismatch) {
-            $('#code_modulo').after('<div class="error"> Código inválido.</div>')
-        }
-        if(validezNombre.valueMissing){
-            $('#code_modulo').after('<div class="error">Código inválido.</div>');
-        }
-        _formValues[this.name] = this.value
-     })
-}
-
-elementosEspera();   *///
-
-
 document.getElementById('btn_form').addEventListener('click', function (event) {
     event.preventDefault();
 
@@ -59,6 +31,11 @@ document.getElementById('btn_form').addEventListener('click', function (event) {
 
 
 
+    document.getElementById('btn_form').onclick = (function(){
+        localStorage.setItem('professor', [document.getElementById('code_modulo').value, document.getElementById('nombre_modulo').value]);
+    });
+    
+    // ==================================================!!!!!!!!!API LOCAL STORAGE PROFESSOR!!!!!!!==========================================================//
 
 
 
@@ -66,4 +43,57 @@ document.getElementById('btn_form').addEventListener('click', function (event) {
 
 
 
-
+    let getFormData = function () {
+        let data_to_send = {};
+        let form_valid = true;
+    
+        $('form #error').remove();
+    
+        $('.form-inline input').each(function () {
+            console.log(this.checkValidity())
+            if (this.checkValidity()) {
+                data_to_send[this.name] = this.value;
+            } else {
+                $(this).before('<div class="error">Error!!</div>');
+                form_valid = false;
+            }
+        })
+    
+        console.log(data_to_send);
+        return { valid: form_valid, data: data_to_send };
+    }
+    
+    let enviarDatos = function (data_to_send) {
+        console.log('enviando....', data_to_send);
+    
+        $.ajax({
+            url: 'http://www.mocky.io/v2/5ae0e6ff3200007600510d6a',
+            
+            method: 'POST',
+            data: data_to_send
+        })
+            .done(function (response_data) {
+                console.log(response_data);
+                //cuando hay exito
+                if (response_data.result) {
+                    location.href = '/';
+                } else {
+                    $('#error').html('Se ha producido un error');
+                }
+            })
+            .fail(function (err) {
+                //cuando hay error
+                $('#error').html('Error ');
+            });
+    
+    }
+    
+    $('#btn_form').click(function (evnt) {
+        evnt.preventDefault();
+        let form_data = getFormData();
+    
+        if (form_data.valid) {
+            enviarDatos(form_data.data);
+        }
+    
+    });
