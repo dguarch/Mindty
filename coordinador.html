@@ -11,11 +11,7 @@
     crossorigin="anonymous">
 
   <!-- Mindty CSS -->
-  <link rel="stylesheet" href="./css/style.css"s">
-
-  <!-- Font Awesome -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
-    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
 
   <title>Mindty: Coordinador</title>
 </head>
@@ -36,8 +32,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link activeNav">Coordinador
-          </a>
+          <a class="nav-link activeNav">Coordinador</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./profesor.html">Profesor</a>
@@ -76,8 +71,9 @@
       <!-- Fila Código + Btn Guardar -->
       <div class="form-row">
         <div class="form-group col-6">
-          <input type="text" class="form-control" pattern="^[A-Z]{3}\s+[0-9]{5}$" id="codigo_curso" placeholder="Código curso" required
-            tabindex="1"><small>XXX 12345</small>
+          <input type="text" class="form-control" pattern="^[A-Z]{3}\s+[0-9]{5}$" id="codigoCurso" placeholder="Código curso" required
+            tabindex="1">
+          <small>XXX 12345</small>
         </div>
         <!-- Lupa + Disquete -->
         <div class="col-4">
@@ -102,8 +98,7 @@
       <div class="form-row">
         <div class="form-group col-12">
           <!-- ExpReg= 1a letra mayuscula, solo letras -->
-          <input type="text" class="form-control" pattern="^[A-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" id="nombre_curso" placeholder="Nombre curso"
-            required tabindex="3">
+          <input type="text" class="form-control" pattern="^[A-Z]+(([,. -][a-zA-Z ])?[a-zA-Z]*)*$" id="nombreCurso" placeholder="Nombre curso" required tabindex="3">
         </div>
       </div>
 
@@ -112,11 +107,11 @@
         <div class="form-group col-12">
           <select id="profes" class="form-control col-12" tabindex="4">
             <option value="0" disabled selected>Formador</option>
-            <option value="Ángel M. Rayo">Ángel M. Rayo</option>
-            <option value="Joan Marimón">Joan Marimón</option>
-            <option value="Xavier Saladié">Xavier Saladié</option>
+            <option value="Angel M. Rayo">Ángel M. Rayo</option>
+            <option value="Joan Marimon">Joan Marimón</option>
+            <option value="Xavier Saladie">Xavier Saladié</option>
             <option value="Eduardo di Monte">Eduardo di Monte</option>
-            <option value="Luis Sánchez">Luis Sánchez</option>
+            <option value="Luis Sanchez">Luis Sánchez</option>
             <option value="Ricardo Ahumada">Ricardo Ahumada</option>
           </select>
         </div>
@@ -131,7 +126,8 @@
         <div class="col-2"></div>
         <div class="col-5">
           <label for="horas">Nº horas</label>
-          <input type="number" class="form-control" id="horas" placeholder="20" min="20" max="200" step="10" tabindex="6">
+          <input type="number" class="form-control" id="horas" placeholder="20" min="20" max="200" step="10
+   " tabindex="6">
         </div>
       </div>
     </form>
@@ -219,12 +215,16 @@
 </body>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
-  crossorigin="anonymous "></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
-  crossorigin="anonymous "></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
-  crossorigin="anonymous "></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
+  crossorigin="anonymous"></script>
+
+<!-- Font Awesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+  crossorigin="anonymous"></script>
 
 <!-- Mindty JS -->
 <!-- <script src="./js/formValidation.js"></script> -->
