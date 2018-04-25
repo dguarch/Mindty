@@ -6,10 +6,27 @@ document.getElementById('btn_form').onclick = (function(){
 
 
 
+
+
+
+/*
+
+
+
+
+
+
 document.getElementById('enviar').onclick =(function(){
      localStorage.setItem('coordinador', [document.getElementById('codigo_curso'.value, document.getElementById('nombre').value)]);
      localStorage.setItem('infoModulo', [document.getElementById('modulos').value, document.getElementById('horas').value]);
 });
 
+
+
+
+
+
+
+*/
 
 // =======================================================!!!!!!!!!!API LOCAL STORAGE COORDINADOR!!!!!!!!!!============================================//
