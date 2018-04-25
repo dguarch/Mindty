@@ -12,6 +12,7 @@
 
   <!-- Mindty CSS -->
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style2.css">
 
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
@@ -76,17 +77,18 @@
       <!-- Fila Código + Btn Guardar -->
       <div class="form-row">
         <div class="form-group col-6">
-          <!-- ExpReg= /[A-Z]{3,} \d/ -->
-          <input type="text" class="form-control" id="codigo_curso" placeholder="Código curso">
+          <input type="text" class="form-control" pattern="^[A-Z][a-z]{3,}" id="codigo_curso" placeholder="Código curso" required>
         </div>
-        <!-- Disquete + Lupa -->
+        <!-- Lupa + Disquete -->
         <div class="col-4">
           <div id="lupa">
+            <!-- Lupa -->
             <i class="fas fa-search fa-2x"></i>
           </div>
         </div>
         <div class="col-2">
-          <i id="enviar" class="fas fa-save fa-3x"></i>
+          <!-- Disquete -->
+          <div><button id="enviar"><i class="fas fa-save fa-3x"></i></button></div>
         </div>
       </div>
 
@@ -218,5 +220,6 @@
   crossorigin="anonymous "></script>
 
 <!-- Mindty JS -->
-<script src="./js/formulario.js"></script>
+<!-- <script src="./js/formValidation.js"></script> -->
+<script src="./js/formValidation2.js"></script>
 </html>

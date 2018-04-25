@@ -32,9 +32,6 @@ section > div > div > img{width: 80px; height: 80px;}
 /* Botón lupa */
 #lupa{margin-top: 5px;}
 
-/* Botón disquete*/
-#enviar{color: #007bff;}
-
 /* Listado de alumnos */
 #alumnos{border: 1px solid darkgray; box-shadow: 0px 0px 5px darkgray; padding: 10px; margin-bottom: 20px; background: rgb(255, 255, 255);}
 
