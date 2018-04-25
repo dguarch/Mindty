@@ -1,5 +1,6 @@
 let validar = (element) => {
-
+    let _valid = true;
+    let _formValues = {};
     if (element == document.querySelector("#codigo_curso")) {
         $('form #codigo_error').remove();
         $('#codigo_curso').each(function () {
