@@ -2,47 +2,69 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <script src="./css/style.css"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-        crossorigin="anonymous"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous">
+  
+    <!-- Mindty CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+  
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+      crossorigin="anonymous"></script>
+     <title>Mindty</title>
 </head>
 
 <body>
-    <h2>Login Form</h2>
+  <!-- Inicio header -->
+  <header>
+    <!-- Menu nav -->
+    <nav id="menu" class="navbar navbar-expand-lg navbar-light">
+      <!-- Boton desplegable -->
+      <!-- Titulo de la web -->
+      <a class="navbar-brand logo" href="#">MINDTY
+      </a>
 
+      <div>
+        Hola
+        <img clas="cara" src="./images/if_user_318585.png">
+        <img clas="cara" src="./images/flecha-desplegable.png">
+      </div>
+    </nav>
+    <!-- Menu nav -->
+  </header>
+  <!-- Fin header -->
+
+  <section>
+    <h4>Login Form</h4>
+<section>
     <form action="/action_page.php">
       <div class="imgcontainer">
-        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+        <img src="./images/login/login.png" alt="Avatar" class="avatar">
       </div>
-    
+
       <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-    
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-            
-        <button type="submit">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
+        <label for="uname">
+          
         </label>
-      </div>
-    
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
+        <input id="usuario" type="text" placeholder="usuario" name="usuario" required>
+
+        <label for="psw">
+          
+        </label>
+        <input id="contraseña" type="password" placeholder="contraseña" name="contaseña" required>
+
+        <button id="bton" type="submit">Entrar</button>
+        
       </div>
     </form>
+  </section>
 </body>
-<script></script>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/login.js"></script>
 </html>
