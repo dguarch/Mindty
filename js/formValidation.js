@@ -1,12 +1,18 @@
 document.getElementById('btn_form').addEventListener('click', function(){
-        let forma = document.getElementById('code_modulo');
+         
+    let form_code = document.getElementById('code_modulo');
+    let name_modulo = document.getElementById('nombre_modulo');
         
-        
-        if (!forma.checkValidity()) {
+        if (!form_code.checkValidity()) {
             document.getElementById("error").innerHTML = 'datos incorrectos'
-        }else {
-       
+            document.getElementById('ok').innerHTML ='';
+        }else { 
+            document.getElementById('ok').innerHTML ='<img src="./images/users/Custom-Icon-Design-Pretty-Office-8-Accept.ico">';
+            document.getElementById("error").innerHTML ='';
         }
+
+
+        
 
 
     })
@@ -18,3 +24,6 @@ document.getElementById('btn_form').addEventListener('click', function(){
 
 
    //            <img src="./images/users/Custom-Icon-Design-Pretty-Office-8-Accept.ico">                 //
+
+   
+
