@@ -1,67 +1,71 @@
 let validar = (element) => {
     let _valid = true;
     let _formValues = {};
+
     if (element == document.querySelector("#codigo_curso")) {
-        $('form #codigo_error').remove();
+        $('form #codigo_errors').remove();
         $('#codigo_curso').each(function () {
             let validezNombre = this.validity;
             if (validezNombre.patternMismatch || validezNombre.valueMissing) {
-                $('#codigo_curso').after('<div id="codigo_error" class="error"><i class="far fa-times-circle"></i> Código curso inválido.</div>');
+                $('#codigo_curso').after('<div id="codigo_errors" class="errors"><i class="far fa-times-circle"></i> Código curso inválido.</div>');
             }
-            // _formValues[this.name] = this.value;
+            _formValues[this.name] = this.value;
         });
     }
 
     if (element == document.querySelector("#nombre_curso")) {
-        $('form #nombre_error').remove();
+        $('form #nombre_errors').remove();
         $('#nombre_curso').each(function () {
             let validezNombre = this.validity;
             if (validezNombre.patternMismatch || validezNombre.valueMissing) {
-                $('#nombre_curso').after('<div id="nombre_error" class="error"><i class="far fa-times-circle"></i> Nombre curso inválido.</div>');
+                $('#nombre_curso').after('<div id="nombre_errors" class="errors"><i class="far fa-times-circle"></i> Nombre curso inválido.</div>');
             }
-            // _formValues[this.name] = this.value;
+            _formValues[this.name] = this.value;
         });
     }
     if (element == document.querySelector("#profes")) {
-        $('form #profes_error').remove();
+        $('form #profes_errors').remove();
         $('#profes').each(function () {
             let validezNombre = this.validity;
             if (element.value == 0) {
-                $('#profes').after('<div id="profes_error" class="error"><i class="far fa-times-circle"></i> No has seleccionado a ningún formador.</div>');
+                $('#profes').after('<div id="profes_errors" class="errors"><i class="far fa-times-circle"></i> No has seleccionado a ningún formador.</div>');
             }
-            // _formValues[this.name] = this.value;
+            _formValues[this.name] = this.value;
         });
     }
     if (element == document.querySelector("#modulos")) {
-        $('form #modulos_error').remove();
+        $('form #modulos_errors').remove();
         $('#modulos').each(function () {
             let validezNombre = this.validity;
             if (element.value >= 0 || element.value < 20) {
-                $('#modulos').after('<div id="modulos_error" class="error"><i class="far fa-times-circle"></i> No has seleccionado a ningún formador.</div>');
+                $('#modulos').after('<div id="modulos_errors" class="errors"><i class="far fa-times-circle"></i> No has seleccionado a ningún formador.</div>');
             }
-            // _formValues[this.name] = this.value;
+            _formValues[this.name] = this.value;
         });
     }
     if (element == document.querySelector("#modulos")) {
-        $('form #modulos_error').remove();
+        $('form #modulos_errors').remove();
         $('#modulos').each(function () {
             let validezNombre = this.validity;
             if (element.value < 1 || element.value > 10) {
-                $('#modulos').after('<div id="modulos_error" class="error"><i class="far fa-times-circle"></i> Nº de módulos inválido.</div>');
+                $('#modulos').after('<div id="modulos_errors" class="errors"><i class="far fa-times-circle"></i> Nº de módulos inválido.</div>');
             }
-            // _formValues[this.name] = this.value;
+            _formValues[this.name] = this.value;
         });
     }
     if (element == document.querySelector("#horas")) {
-        $('form #horas_error').remove();
+        $('form #horas_errors').remove();
         $('#horas').each(function () {
             let validezNombre = this.validity;
             if (element.value < 20 || element.value > 200) {
-                $('#horas').after('<div id="horas_error" class="error"><i class="far fa-times-circle"></i> Nº de horas inválidas.</div>');
+                $('#horas').after('<div id="horas_errors" class="errors"><i class="far fa-times-circle"></i> Nº de horas inválidas.</div>');
             }
-            // _formValues[this.name] = this.value;
+            _formValues[this.name] = this.value;
         });
     }
+    console.log(_valid);
+    console.log(_formValues);
+    return { valid: _valid, values: _formValues };
 }
 
 document.querySelector("#codigo_curso").addEventListener("blur", function () {

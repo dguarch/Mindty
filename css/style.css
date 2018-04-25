@@ -49,31 +49,24 @@ h1,h2,h3,h4,h5,h6{font-family: 'Audiowide', cursive !important;}
 .calendario{padding-left: 20px; line-height: 50px; padding-right:20px; } 
 #calendar {font-family: Arial;font-size: 12px;border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;}
 #calendar caption {text-align: left;padding: 5px 10px;background-color: #009688;color: #fff;font-weight: bold;font-size: mediu  m;}
-
 #calendar caption div:nth-child(1) {float: left;}
-
 #calendar caption div:nth-child(2) {float: right;}
-
 #calendar caption div:nth-child(2) a {cursor: pointer;}
-
 #calendar th {background-color: #009688;color: #fff;width: 40px; text-align:center;}
-
 #calendar td {text-align: right;padding: 2px 5px;background-color: white;    border-bottom: 1px solid rgba(0,0,0,.125);}
-
 #calendar .hoy {background-color: red;}
 
 /* Icono validación form */
 #check{ width: 20px; height: 20px;}
 
 /* Icono enviar form */
-#prof_save{
-    width : 30px; height:30px;
-};
-
-.error{color: red;}
+#prof_save{width : 30px; height:30px;};
 
 .butons{color: #007bff; background: rgba(255, 255, 255, 0); border: 0px; padding: 0px; cursor: pointer;}
+
+.errors{color: red;}
 
 #lupa{margin-top: 2px;}
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none; -moz-appearance:textfield; margin: 0;}
+
