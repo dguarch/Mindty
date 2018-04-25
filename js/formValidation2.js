@@ -1,8 +1,5 @@
-var elem = null;
-
 const elementosEspera = () => {
-    elem = document.querySelector("#codigo_curso");
-    elem.onblur = validarCampo;
+    document.querySelector("#codigo_curso").onblur = validarCampo;
 };
 
 const validarCampo = () => {
@@ -23,3 +20,8 @@ const validarCampo = () => {
 }
 
 elementosEspera();
+
+$('#enviar').click(function (evnt) {
+    evnt.preventDefault();
+    console.log('Hello');
+});
