@@ -77,18 +77,25 @@
       <!-- Fila Código + Btn Guardar -->
       <div class="form-row">
         <div class="form-group col-6">
-          <input type="text" class="form-control" pattern="^[A-Z]{3}\s+[0-9]{5}$" id="codigo_curso" placeholder="Código curso" required>
+          <input type="text" class="form-control" pattern="^[A-Z]{3}\s+[0-9]{5}$" id="codigo_curso" placeholder="Código curso" required
+            tabindex="1">
         </div>
         <!-- Lupa + Disquete -->
         <div class="col-4">
           <div id="lupa">
             <!-- Lupa -->
-            <i class="fas fa-search fa-2x"></i>
+            <button id="lupa" class="butons" tabindex="2">
+              <i class="fas fa-search fa-2x"></i>
+            </button>
           </div>
         </div>
         <div class="col-2">
           <!-- Disquete -->
-          <div><button id="enviar"><i class="fas fa-save fa-3x"></i></button></div>
+          <div>
+            <button id="enviar" class="butons" tabindex="7">
+              <i class="fas fa-save fa-3x"></i>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -96,14 +103,15 @@
       <div class="form-row">
         <div class="form-group col-12">
           <!-- ExpReg= 1a letra mayuscula, solo letras -->
-          <input type="text" class="form-control" pattern="^[A-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" id="nombre_curso" placeholder="Nombre curso" required>
+          <input type="text" class="form-control" pattern="^[A-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" id="nombre_curso" placeholder="Nombre curso"
+            required tabindex="3">
         </div>
       </div>
 
       <!-- Fila formador -->
       <div class="form-row">
         <div class="form-group col-12">
-          <select id="profes" class="form-control col-12">
+          <select id="profes" class="form-control col-12" tabindex="4">
             <option value="0" disabled selected>Formador</option>
             <option value="Ángel M. Rayo">Ángel M. Rayo</option>
             <option value="Joan Marimón">Joan Marimón</option>
@@ -119,12 +127,12 @@
       <div class="form-row">
         <div class="form-group col-5">
           <label for="modulos">Nº módulos</label>
-          <input type="number" class="form-control" id="modulos" placeholder="1" min="1" max="10">
+          <input type="number" class="form-control" id="modulos" placeholder="1" min="1" max="10" tabindex="5">
         </div>
         <div class="col-2"></div>
         <div class="col-5">
           <label for="horas">Nº horas</label>
-          <input type="number" class="form-control" id="horas" placeholder="25" min="25" step="5">
+          <input type="number" class="form-control" id="horas" placeholder="20" min="20" max="200" step="10" tabindex="6">
         </div>
       </div>
     </form>
@@ -204,10 +212,10 @@
 
   <!-- Copy right -->
   <footer>
-      <div>
-          <p>Diseñado por OVERFLOW
-              <br>&copy 2018</p>
-      </div>
+    <div>
+      <p>Diseñado por OVERFLOW
+        <br>&copy 2018</p>
+    </div>
   </footer>
 </body>
 <!-- Optional JavaScript -->
@@ -222,4 +230,5 @@
 <!-- Mindty JS -->
 <!-- <script src="./js/formValidation.js"></script> -->
 <script src="./js/formValidationCoordinador.js"></script>
+
 </html>
