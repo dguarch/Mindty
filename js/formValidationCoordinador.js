@@ -65,7 +65,6 @@ const enviarCurso = (dataSend) => {
                 $('#mensajes').html(`<div class="alert alert-success col-6" role="alert">
             Los datos se han envíado correctamente!!!!!!
           </div>`);
-                $('#formCurso').trigger("reset");
             } else {
                 $('#mensajes').html(`<div class="alert alert-danger" role="alert">
         No lo he podido guardar en el servidor, en un ratito lo intentaré de nuevo.
@@ -75,15 +74,16 @@ const enviarCurso = (dataSend) => {
         .fail(function (err) {
             // Cuando hay error
             $('#mensajes').html(`<div class="alert alert-danger" role="alert">
-        No lo he podido guardar en el servidor, en un ratito lo intentaré de nuevo.
+        No he podido encontrar el servidor, en un ratito lo intentaré de nuevo.
       </div>`);
         });
+    $('#formCurso').trigger("reset");
 };
 
 $('#enviar').click(function (evnt) {
     evnt.preventDefault();
     let formValido = validar();
-    localStorage.setItem('infoCurso', JSON.stringify(formValido.values,' '));
+    localStorage.setItem('infoCurso', JSON.stringify(formValido.values, ' '));
     if (formValido.valid) {
         enviarCurso(formValido);
     }

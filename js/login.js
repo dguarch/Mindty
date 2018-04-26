@@ -1,3 +1,72 @@
+/*     boton enviar validar */
+$('#bton').click(function (evnt) {
+    evnt.preventDefault();
+    let form_data = ValFormulario();
+    if (form_data.vall) {
+        enviarDatos(form_data.data)
+    }
+});
+
+/*     función  validar */
+
+let ValFormulario = function () {
+    $('form .estamal').remove();
+    let datos_envio = {};
+    let formulario_correcto = true;
+    $('form div input').each(function () {
+        if (this.checkValidity()) {
+            datos_envio[this.name] = this.value;
+        } else {
+            $(this).before('<div class="estamal">¡¡Error!! campo introducido incorrecto</div>');
+            formulario_correcto = false;
+        }
+    })
+    return { vall: formulario_correcto, data: datos_envio };
+}
+
+
+/*     función  enviar datos */
+
+let enviarDatos = function (datos_envio) {
+
+    $.ajax({
+        url:  'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9',  /* "true" dice el servidor*/
+         /* url: 'http://www.mocky.io/v2/5ae0fab8320006b00510dbc',  */ //* "false" dice el servidor*/
+        method: 'POST',
+        data: datos_envio
+    })
+        .done(function (responde_data) {
+            if (responde_data.result) {
+                location.href = './coordinador.html';
+            } else {
+                $('#mesajes').html('Usuario y/o Contraseña incorrectas');
+            }
+        })
+        .fail(function (err) {
+           
+            $('#errServidor').text('habido un error de conexión,  inténtalo en unos minutos.');
+           
+            $('#btonErr').html('<button  id="btnR" type="submit">refrescar pag</button>');
+            
+
+            $('#errServidor').show();
+            $('.pinta').hide();
+             $('#bton').hide();
+             $('#prue').hide();
+             $('#prue2').hide();
+             
+        });
+}
+
+$('#btnR').click(function (env) {
+
+    location.href = '/index.html';
+  /*  evn= window.reload() */
+});
+
+
+
+
 /* 
 let valida_form = function () {
 
@@ -118,77 +187,11 @@ $('#bton').click(function (evnt) {
 }); */
 
 
-/*     boton enviar validar */
-$('#bton').click(function (evnt) {
-    evnt.preventDefault();
-    let form_data = ValFormulario();
-    if (form_data.vall) {
-        enviarDatos(form_data.data)
-    }
-});
-
-/*     función  validar */
-
-let ValFormulario = function () {
-    $('form .estamal').remove();
-    let datos_envio = {};
-    let formulario_correcto = true;
-    $('form div input').each(function () {
-        if (this.checkValidity()) {
-            datos_envio[this.name] = this.value;
-        } else {
-            $(this).before('<div class="estamal">¡¡Error!! campo introducido incorrecto</div>');
-            formulario_correcto = false;
-        }
-    })
-    return { vall: formulario_correcto, data: datos_envio };
-}
-
-
-/*     función  enviar datos */
-
-let enviarDatos = function (datos_envio) {
-
-    $.ajax({
-        url:  'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9',  /* "true" dice el servidor*/
-         /* url: 'http://www.mocky.io/v2/5ae0fab8320006b00510dbc',  */ //* "false" dice el servidor*/
-        method: 'POST',
-        data: datos_envio
-    })
-        .done(function (responde_data) {
-            if (responde_data.result) {
-                location.href = './coordinador.html';
-            } else {
-                $('#mesajes').html('Usuario y/o Contraseña incorrectas');
-            }
-        })
-        .fail(function (err) {
-           
-            $('#errServidor').text('habido un error de conexión,  inténtalo en unos minutos.');
-            console.log('hola');
-            
-            $('#btonErr').html('<button  id="btnR" type="submit">refrescar pag</button>');
-            
-
-            $('#errServidor').show();
-            $('.pinta').hide();
-             $('#bton').hide();
-             $('#prue').hide();
-             $('#prue2').hide();
-             
-        });
-}
-
-$('#btnR').click(function (env) {
-
-    location.href = '/index.html';
-  /*  evn= window.reload() */
-});
 
 /*     estilos y venta info de campos para introdcir  */
 
 
-$(document).ready(function (evnt) {
+/* $(document).ready(function (evnt) {
 
     $(".pinta").mouseover(function () {
 
@@ -208,7 +211,7 @@ $(document).ready(function (evnt) {
         })
 
     });
-});
+}); */
 /* break; */
 
 /* $(document).ready(function (evnt) {
