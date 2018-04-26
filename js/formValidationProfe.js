@@ -57,7 +57,9 @@ let ValFormulario = function () {
 let enviarDatos = function (datos_envio) {
 
     $.ajax({
-        url: 'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9',
+        // url: 'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9asasas',  // SERVER WRONG
+        //url: 'http://www.mocky.io/v2/5ad78aa33000004b00e584d0', // URL FALSE
+        url: 'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9asasas',  // SERVER OK  
         
         method: 'POST',
         data: datos_envio
@@ -67,7 +69,7 @@ let enviarDatos = function (datos_envio) {
             if (responde_data.result) {
                 $('#ok').html('Enhorabuena, datos enviados correctamente!!!');
             } else {
-                $('#ok').html('Usuario y/o Contraseña incorrectas');
+                $('#ok').html('Ha habido un error de conexión, inténtalo en unos minutos');
             }
             $('#ok').addClass('show');
         })
