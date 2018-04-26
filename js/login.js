@@ -150,8 +150,8 @@ let ValFormulario = function () {
 let enviarDatos = function (datos_envio) {
 
     $.ajax({
-        url: 'http://www.mocky.io/v2/5ad782bd300005600e5849d', /* "true" dice el servidor*/
-        /* url: 'http://www.mocky.io/v2/5ae0fab83200006b00510dbc',  *//* "false" dice el servidor*/
+       /* url:  'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9', */ /* "true" dice el servidor*/
+         url: 'http://www.mocky.io/v2/5ae0fab8320006b00510dbc',  //* "false" dice el servidor*/
         method: 'POST',
         data: datos_envio
     })
@@ -179,9 +179,10 @@ let enviarDatos = function (datos_envio) {
         });
 }
 
-$('#btnR').click(function () {
-    /* location.href = './index.html'; */
-    location.reload()
+$('#btnR').click(function (env) {
+
+    location.href = '/index.html';
+  /*  evn= window.reload() */
 });
 
 /*     estilos y venta info de campos para introdcir  */
