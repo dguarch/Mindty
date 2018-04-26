@@ -117,6 +117,8 @@ $('#bton').click(function (evnt) {
 
 }); */
 
+
+/*     boton enviar validar */ 
 $('#bton').click(function (evnt) {
     evnt.preventDefault();
     let form_data = ValFormulario();
@@ -124,6 +126,8 @@ $('#bton').click(function (evnt) {
         enviarDatos(form_data.data)
     }
 });
+
+/*     función  validar */ 
 
 let ValFormulario = function () {
     $('form .estamal').remove();
@@ -134,11 +138,15 @@ let ValFormulario = function () {
             datos_envio[this.name] = this.value;
         } else {
             $(this).before('<div class="estamal">¡¡Error!! campo introducido incorrecto</div>');
-            formulario_correcto = false;
+            formulario_correcto = false;/* no fun*/
         }
     })
     return { vall: formulario_correcto, data: datos_envio };
 }
+
+
+/*     función  enviar datos */ 
+
 let enviarDatos = function (datos_envio) {
 
     $.ajax({
@@ -161,6 +169,7 @@ let enviarDatos = function (datos_envio) {
 
 
 
+/*     estilos y venta info de campos para introdcir  */ 
 
 
 $(document).ready(function (evnt) {
@@ -203,8 +212,8 @@ $(document).ready(function (evnt) {
         $('#prue2').remove();
 
     }
-});
- */
+}); */
+
 
 
 
