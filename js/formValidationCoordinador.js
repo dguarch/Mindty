@@ -64,8 +64,8 @@ let validar = (element) => {
         });
     }
 
-    console.log(_valid);
-    console.log(_formValues);
+    // console.log(_valid);
+    // console.log(_formValues);
     return { valid: _valid, values: _formValues };
 }
 
@@ -97,3 +97,5 @@ $('#enviar').click(function (evnt) {
 $('#lupa').click(function (evnt) {
     evnt.preventDefault();
 });
+
+console.log(validar());
