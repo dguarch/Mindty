@@ -57,8 +57,8 @@ let ValFormulario = function () {
 let enviarDatos = function (datos_envio) {
 
     $.ajax({
-        url: 'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9', /* "true" dice el servidor*/
-        /* url: 'http://www.mocky.io/v2/5ae0fab83200006b00510dbc',  *//* "false" dice el servidor*/
+        url: 'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9',
+        
         method: 'POST',
         data: datos_envio
     })
