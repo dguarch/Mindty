@@ -118,7 +118,7 @@ $('#bton').click(function (evnt) {
 }); */
 
 
-/*     boton enviar validar */ 
+/*     boton enviar validar */
 $('#bton').click(function (evnt) {
     evnt.preventDefault();
     let form_data = ValFormulario();
@@ -127,7 +127,7 @@ $('#bton').click(function (evnt) {
     }
 });
 
-/*     función  validar */ 
+/*     función  validar */
 
 let ValFormulario = function () {
     $('form .estamal').remove();
@@ -138,19 +138,19 @@ let ValFormulario = function () {
             datos_envio[this.name] = this.value;
         } else {
             $(this).before('<div class="estamal">¡¡Error!! campo introducido incorrecto</div>');
-            formulario_correcto = false;/* no fun*/
+            formulario_correcto = false;
         }
     })
     return { vall: formulario_correcto, data: datos_envio };
 }
 
 
-/*     función  enviar datos */ 
+/*     función  enviar datos */
 
 let enviarDatos = function (datos_envio) {
 
     $.ajax({
-        url: 'http://www.mocky.io/v2/5ad782bd3000005600e5849d', /* "true" dice el servidor*/
+        url: 'http://www.mocky.io/v2/5ad782bd300005600e5849d', /* "true" dice el servidor*/
         /* url: 'http://www.mocky.io/v2/5ae0fab83200006b00510dbc',  *//* "false" dice el servidor*/
         method: 'POST',
         data: datos_envio
@@ -163,38 +163,48 @@ let enviarDatos = function (datos_envio) {
             }
         })
         .fail(function (err) {
-            $('#mesajes').html('habido un error de conexión, inténtalo en unos minutos.');
+           
+            $('#errServidor').text('habido un error de conexión,  inténtalo en unos minutos.');
+            console.log('hola');
+            
+            $('#btonErr').html('<button  id="btnR" type="submit">refrescar pag</button>');
+            
+
+            $('#errServidor').show();
+            $('.pinta').hide();
+             $('#bton').hide();
+             $('#prue').hide();
+             $('#prue2').hide();
+             
         });
 }
 
+$('#btnR').click(function () {
+    location.href = './index.html';
+});
 
-
-/*     estilos y venta info de campos para introdcir  */ 
+/*     estilos y venta info de campos para introdcir  */
 
 
 $(document).ready(function (evnt) {
 
     $(".pinta").mouseover(function () {
+
         $(".pinta").css("background-color", "white");
-
-    });
-    $(".pinta").mouseover(function () {
-
-
-        $('#prue').html('<div>introduzca xxxx</div>');
-
-        $('#prue2').html('<div>introduzca xxxx</div>');
-
+        $('#prue').text('el campo requiere XXXXX');
+        $('#prue2').text('el campo requiere XXXXX');
+        $('#prue').show();
+        $('#prue2').show();
 
         $(".pinta").mouseout(function () {
             $(".pinta").css("background-color", "lightgray");
             $(".pinta").keydown(function () {
-                $('#prue').remove();
-                $('#prue2').remove();
+                $('#prue').hide();
+                $('#prue2').hide();
 
             })
         })
-        
+
     });
 });
 /* break; */

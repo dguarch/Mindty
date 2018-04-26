@@ -49,35 +49,41 @@
         </div>
 
         <div id="mensajes">
+
+
           <label for="uname">
 
           </label>
+
+          <div>
+            <div id="prue"></div>
+            <input class="pinta" id="usuario" type="text" placeholder="usuario" name="usuario" value="Usuario" pattern="^([A-Z][a-z]{1}[a-zñáéíóú]+[\s]*)+$"
+              required>
+          </div>
           
-            <div>
-              <div id="prue"></div>
-              <input class="pinta" id="usuario" type="text" placeholder="usuario" name="usuario" value="Usuario" pattern="^([A-Z][a-z]{1}[a-zñáéíóú]+[\s]*)+$"
-                required>
-            </div>
-
-            <label for="psw">
-
-            </label>
-
-            <div>
-              <div id="prue2"></div>
-              <input class="pinta" id="contraseña" type="password" placeholder="contraseña" value="Adddd" pattern="^([A-Z]{1}[a-zñáéíóú]+[\s]*)+$"
-                name="contaseña" required>
-            </div>
-            <div>
-              <br>
-              <button id="bton" type="submit">Entrar</button>
-            </div>
           
+          
+          <label for="psw">
+
+          </label>
+
+          <div>
+            <div id="prue2"></div>
+            <input class="pinta" id="contraseña" type="password" placeholder="contraseña" value="Adddd" pattern="^([A-Z]{1}[a-zñáéíóú]+[\s]*)+$"
+              name="contaseña" required>
+          </div>
+          <div>
+            <br>
+            <button id="bton" type="submit">Entrar</button>
+          </div>
+
         </div>
         <div class="enviado">
 
         </div>
       </form>
+      <div id="errServidor"></div>
+      <div id="btonErr"></div>
     </section>
 </body>
 <script src="./js/jquery-3.3.1.min.js"></script>
