@@ -64,13 +64,15 @@ document.getElementById('btn_form').addEventListener('click', function (event) {
     }
     
     let enviarDatos = function (data_to_send) {
+        let form_code = document.getElementById('code_modulo').value;
+        let data_to_send2 = JSON.stringify(form_code);
         console.log('enviando....', data_to_send);
     
         $.ajax({
             url: 'http://www.mocky.io/v2/5ae0e6ff3200007600510d6a',
             
             method: 'POST',
-            data: data_to_send
+            data: data_to_send, data_to_send2
         })
             .done(function (response_data) {
                 console.log(response_data);
