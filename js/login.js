@@ -180,7 +180,8 @@ let enviarDatos = function (datos_envio) {
 }
 
 $('#btnR').click(function () {
-    location.href = './index.html';
+    /* location.href = './index.html'; */
+    location.reload()
 });
 
 /*     estilos y venta info de campos para introdcir  */
