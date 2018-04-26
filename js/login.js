@@ -1,4 +1,3 @@
-
 /* 
 let valida_form = function () {
 
@@ -159,3 +158,57 @@ let enviarDatos = function (datos_envio) {
             $('#mesajes').html('habido un error de conexión, inténtalo en unos minutos.');
         });
 }
+
+
+
+
+
+$(document).ready(function (evnt) {
+
+    $(".pinta").mouseover(function () {
+        $(".pinta").css("background-color", "white");
+
+    });
+    $(".pinta").mouseover(function () {
+
+
+        $('#prue').html('<div>introduzca xxxx</div>');
+
+        $('#prue2').html('<div>introduzca xxxx</div>');
+
+
+        $(".pinta").mouseout(function () {
+            $(".pinta").css("background-color", "lightgray");
+            $(".pinta").keydown(function () {
+                $('#prue').remove();
+                $('#prue2').remove();
+
+            })
+        })
+    });
+});
+
+
+/* $(document).ready(function (evnt) {
+
+    if ($(".pinta").mouseover) {
+        $(".pinta").css("background-color", "white");
+        $('#prue').html('<div>introduzca xxxx</div>');
+        $('#prue2').html('<div>introduzca xxxx</div>');
+
+    } else {
+        $(".pinta").css("background-color", "lightgray");
+        $('#prue').remove();
+        $('#prue2').remove();
+
+    }
+});
+ */
+
+
+
+
+/* setTimeout(function () {
+    limpiar();
+
+}, 1000); */
