@@ -67,6 +67,7 @@
     <!-- Nombre seccion -->
     <section>
         <h2>Añadir Módulo</h2>
+        <div id="ok"></div>
         <hr>
     </section>
 
@@ -94,22 +95,23 @@
         <div class="col-10 col-sm-10 col-sm-10">
             <form class="form-inline">
                 <div class="form-group mx-sm-3 mb-2">
+                    <div id="mensajes"></div>
                     <!-- ExpReg= /[A-Z]{3,} \d/ -->
                     <input type="text" pattern="[A-Z]{3,} \d" maxlength="5" class="form-control" id="code_modulo" placeholder="Código módulo"
                         required>
-                    <div id="error"></div>
-                    <div id="ok"></div>
+                    
+                    
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
                     <!-- ExpReg= /[aA-zZ]/ -->
                     <input type="text" minlength="4" class="form-control" id="nombre_modulo" placeholder="Nombre módulo" required>
-                    <div id="error1"></div>
-                    <div id="ok1"></div>
+                    
                 </div>
                 <div class="col-10 col-sm-10 col-md-10">
                     <button id="btn_form">
                         <img id="prof_save" src="images/users/aqua-save-256.gif" alt=""> </button>
                 </div>
+                
             </form>
         </div>
     </div>

@@ -1,4 +1,4 @@
-document.getElementById('btn_form').addEventListener('click', function (event) {
+/*document.getElementById('btn_form').addEventListener('click', function (event) {
     event.preventDefault();
 
 
@@ -18,9 +18,82 @@ document.getElementById('btn_form').addEventListener('click', function (event) {
         document.getElementById("error").innerHTML = '';
     }
 
-});  
+});  */
 
     //            <img src="./images/users/Custom-Icon-Design-Pretty-Office-8-Accept.ico">                 //
+
+
+    $('#btn_form').click(function (evnt) {
+        evnt.preventDefault();
+        let form_data = ValFormulario();
+        if (form_data.vall) {
+            enviarDatos(form_data.data)
+        }
+    });
+
+
+
+
+/*     función  validar */ 
+
+let ValFormulario = function () {
+    $('form .estamal').remove();
+    let datos_envio = {};
+    let formulario_correcto = true;
+    $('form div input').each(function () {
+        if (this.checkValidity()) {
+            datos_envio[this.name] = this.value;
+            $(this).before('<div class="estamal"> <img id="check" src="./images/users/Custom-Icon-Design-Pretty-Office-8-Accept.ico"></div>');
+        } else {
+            $(this).before('<div class="estamal">¡¡Error!! Datos no válidos. </div>');
+            formulario_correcto = false;/* no fun*/
+        }
+    })
+    return { vall: formulario_correcto, data: datos_envio };
+}
+
+
+
+let enviarDatos = function (datos_envio) {
+
+    $.ajax({
+        url: 'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9',
+        
+        method: 'POST',
+        data: datos_envio
+    })
+        .done(function (responde_data) {
+            console.log('recibido');
+            if (responde_data.result) {
+                $('#ok').html('Enhorabuena, datos enviados correctamente!!!');
+            } else {
+                $('#ok').html('Usuario y/o Contraseña incorrectas');
+            }
+            $('#ok').addClass('show');
+        })
+        .fail(function (err) {
+            $('#ok').html('Ha habido un error de conexión, inténtalo en unos minutos.');
+            $('#ok').addClass('show');
+        });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -43,7 +116,7 @@ document.getElementById('btn_form').addEventListener('click', function (event) {
 
 
 
-    let getFormData = function () {
+   /* let getFormData = function () {
         let data_to_send = {};
         let form_valid = true;
     
@@ -98,4 +171,4 @@ document.getElementById('btn_form').addEventListener('click', function (event) {
             enviarDatos(form_data.data);
         }
     
-    });
+    });*/
