@@ -47,18 +47,50 @@ let validar = () => {
         _valid[this.id] = this.checkValidity();
         _formValues[this.id] = this.value;
     });
-    
+
     return { valid: _valid, values: _formValues };
 }
+
+const enviarCurso = (dataSend) => {
+    console.log(dataSend);
+    $.ajax({
+        url: 'http://www.mocky.io/v2/5ad782d73000006900e584a344', // URL WRONG
+        //url: 'http://www.mocky.io/v2/5ad78aa33000004b00e584d0', // URL FALSE
+        //url: 'http://www.mocky.io/v2/5ad782d73000006900e584a3', // URL TRUE
+        method: 'POST',
+        data: dataSend
+    })
+    .done(function (respuesta) {
+        // Cuando hay exito
+        if (respuesta.result){
+            console.log('Bien');
+            $('#mensajes').html(`<div class="alert alert-success col-6" role="alert">
+            Los datos se han envíado correctamente!!!!!!
+          </div>`);
+          $('#formCurso').trigger("reset");
+        } else {$('#mensajes').html(`<div class="alert alert-danger" role="alert">
+        No lo he podido guardar en el servidor, en un ratito lo intentaré de nuevo.
+      </div>`)};
+    })
+    .fail(function (err) {
+        // Cuando hay error
+        $('#mensajes').html(`<div class="alert alert-danger" role="alert">
+        No lo he podido guardar en el servidor, en un ratito lo intentaré de nuevo.
+      </div>`);
+    });
+};
+
+
 
 $('#enviar').click(function (evnt) {
     evnt.preventDefault();
     let formValido = validar();
 
-    if(formValido.valid){
+    if (formValido.valid) {
         console.log(formValido);
         console.log('Muy bien campeón');
-    } else {console.log('Fatal total!')}
+        enviarCurso(formValido);
+    } else { console.log('Fatal total!') }
 });
 
 $('#lupa').click(function (evnt) {
