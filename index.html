@@ -30,55 +30,56 @@
       <a class="navbar-brand logo" href="#">MINDTY
       </a>
 
-      <div>
-        Hola
-        <img clas="cara" src="./images/if_user_318585.png">
-        <img clas="cara" src="./images/flecha-desplegable.png">
-      </div>
+
     </nav>
     <!-- Menu nav -->
   </header>
   <!-- Fin header -->
 
-  <section>
-    <h4>Login Form</h4>
-    <section>
-      <form action="/action_page.php" id="commentForm">
-        <div class="imgcontainer">
-          <img src="./images/login/login.png" alt="Avatar" class="avatar">
+  <section class="login">
+
+    <form action="/action_page.php" id="commentForm">
+      <div class="imgcontainer">
+        <img src="./images/login/Login.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div id="mensajes">
+        <label for="uname">
+
+        </label>
+
+        <div>
+          <div id="prue"></div>
+          <input class="pinta" id="usuario" type="text" placeholder="usuario" name="usuario" value="Usuario" pattern="^([A-Z][a-z]{1}[a-zñáéíóú]+[\s]*)+$"
+            required>
         </div>
 
-        <div id="mensajes">
-          <label for="uname">
+        <label for="psw">
 
-          </label>
-          
-            <div>
-              <div id="prue"></div>
-              <input class="pinta" id="usuario" type="text" placeholder="usuario" name="usuario" value="Usuario" pattern="^([A-Z][a-z]{1}[a-zñáéíóú]+[\s]*)+$"
-                required>
-            </div>
+        </label>
 
-            <label for="psw">
-
-            </label>
-
-            <div>
-              <div id="prue2"></div>
-              <input class="pinta" id="contraseña" type="password" placeholder="contraseña" value="Adddd" pattern="^([A-Z]{1}[a-zñáéíóú]+[\s]*)+$"
-                name="contaseña" required>
-            </div>
-            <div>
-              <br>
-              <button id="bton" type="submit">Entrar</button>
-            </div>
-          
+        <div>
+          <div id="prue2"></div>
+          <input class="pinta" id="contraseña" type="password" placeholder="contraseña" value="Adddd" pattern="^([A-Z]{1}[a-zñáéíóú]+[\s]*)+$"
+            name="contaseña" required>
         </div>
-        <div class="enviado">
-
+        <div>
+          <br>
+          <button id="bton" type="submit">Entrar</button>
         </div>
-      </form>
-    </section>
+
+      </div>
+      <div class="enviado">
+
+      </div>
+    </form>
+  </section>
+  <footer>
+    <div>
+      <p>Diseñado por OVERFLOW
+        <br>&copy 2018</p>
+    </div>
+  </footer>
 </body>
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script src="./js/login.js"></script>

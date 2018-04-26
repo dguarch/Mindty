@@ -69,3 +69,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .botons{color: #007bff; background: white; border: 0px; padding: 0px; cursor: pointer;}
 
 .errors{color: red;}
+/* centrar login */
+.login{ padding-left: 130px; padding-top:100px; margin-bottom:200px; }
+/* .avatar{ height: 70px; display:block; margin:auto;} */
