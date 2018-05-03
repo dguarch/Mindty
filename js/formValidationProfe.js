@@ -43,7 +43,7 @@ let ValFormulario = function () {
     $('form div input').each(function () {
         if (this.checkValidity()) {
             datos_envio[this.name] = this.value;
-            $(this).before('<div class="estamal"> <img id="check" src="./images/users/Custom-Icon-Design-Pretty-Office-8-Accept.ico"></div>');
+            $(this).before('<div class="estamal"> <img id="check" src="./images/users/Custom-Icon-Design-Pretty-Office-8-Accept.ico" alt="ok"></div>');
         } else {
             $(this).before('<div class="estamal">¡¡Error!! Datos no válidos. </div>');
             formulario_correcto = false;/* no fun*/
