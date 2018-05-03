@@ -7,7 +7,8 @@ let validar = () => {
     $('#codigoCurso').each(function () {
         let validezNombre = this.validity;
         if (validezNombre.patternMismatch || validezNombre.valueMissing) {
-            $('#codigoCurso').after('<div class="errors"><i class="far fa-times-circle"></i> Código curso inválido.</div>');
+            $('form #cheet').remove();
+            $('#codigoCurso').after('<div class="errors"><i class="far fa-times-circle"></i> Ej. XXX 12345</div>');
             _valid = false;
         }
         _formValues[this.id] = this.value;
@@ -32,7 +33,7 @@ let validar = () => {
 
     $('#modulos').each(function () {
         if (this.value < 1 || this.value > 10) {
-            $('#modulos').after('<div class="errors"><i class="far fa-times-circle"></i> Nº de módulos inválido.</div>');
+            $('#modulos').after('<div class="errors"><i class="far fa-times-circle"></i> Nº inválido.</div>');
             _valid = false;
         }
         _valid[this.id] = this.checkValidity();
@@ -41,7 +42,7 @@ let validar = () => {
 
     $('#horas').each(function () {
         if (this.value < 20 || this.value > 200) {
-            $('#horas').after('<div class="errors"><i class="far fa-times-circle"></i> Nº de horas inválidas.</div>');
+            $('#horas').after('<div class="errors"><i class="far fa-times-circle"></i> Nº inválido.</div>');
             _valid = false;
         }
         _valid[this.id] = this.checkValidity();

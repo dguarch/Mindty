@@ -62,6 +62,12 @@
   <!-- Nombre seccion -->
   <section>
     <h2>Curso</h2>
+    <!-- Lupa -->
+    <div id="lupa" class="col-1">
+      <button class="botons" tabindex="2" aria-label="lupa">
+        <i class="fas fa-search fa-2x"></i>
+      </button>
+    </div>
     <hr>
   </section>
 
@@ -69,45 +75,23 @@
   <section>
     <div id="mensajes" class="row justify-content-center"></div>
     <form id="formCurso">
-      <!-- Fila Código + Btn Guardar -->
+      <!-- Fila Código + Nombre Curso -->
       <div class="form-row">
-        <div class="form-group col-6">
-          <!-- Campo Código curso con RegExp = ^[A-Z]{3}\s+[0-9]{5}$ (XXX 12345) -->
-          <input type="text" class="form-control" pattern="^[A-Z]{3}\s+[0-9]{5}$" id="codigoCurso" placeholder="Código curso" aria-label="Código curso" required
-            tabindex="1">
-          <small> XXX 12345</small>
+        <div class="form-group col-4">
+          <!-- Campo Código curso con RegExp = ^[A-Z]{3}\s+[0-9]{5}$ (XXX 12345)$ -->
+          <input type="text" class="form-control" pattern="^[A-Z]{3}\s+[0-9]{5}$" id="codigoCurso" placeholder="Código curso" aria-label="Código curso" required>
+          <small id="cheet" class="text-info">Ej. XXX 12345</small>
         </div>
-        <!-- Lupa + Disquete -->
-        <div class="col-4">
-          <div id="lupa">
-            <!-- Lupa -->
-            <button class="botons" tabindex="2" aria-label="lupa">
-              <i class="fas fa-search fa-2x"></i>
-            </button>
-          </div>
-        </div>
-        <div class="col-2">
-          <!-- Disquete -->
-          <div>
-            <button id="enviar" class="botons" tabindex="7" aria-label="Guardar">
-              <i class="fas fa-save fa-3x"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Fila nombre -->
-      <div class="form-row">
-        <div class="form-group col-12">
+        <div class="col-8">
           <!-- ExpReg= 1a letra mayuscula, solo letras -->
-          <input type="text" class="form-control" pattern="^[A-Z]+(([,. -][a-zA-Z ])?[a-zA-Z]*)*$" id="nombreCurso" placeholder="Nombre curso" aria-label="Nombre curso" required tabindex="3">
+          <input type="text" class="form-control" pattern="^[A-Z]+(([,. -][a-zA-Z ])?[a-zA-Z]*)*$" id="nombreCurso" placeholder="Nombre curso" aria-label="Nombre curso" required>
         </div>
       </div>
 
       <!-- Fila formador -->
       <div class="form-row">
         <div class="form-group col-12">
-          <select id="profes" class="form-control col-12" tabindex="4" aria-label="Selecciona al formador">
+          <select id="profes" class="form-control col-12" aria-label="Selecciona al formador">
             <option value="0" disabled selected>Formador</option>
             <option value="Angel M. Rayo">Ángel M. Rayo</option>
             <option value="Joan Marimon">Joan Marimón</option>
@@ -123,14 +107,22 @@
       <div class="form-row">
         <div class="form-group col-5">
           <label for="modulos">Nº módulos</label>
-          <input type="number" class="form-control" id="modulos" placeholder="1" min="1" max="10" tabindex="5">
+          <input type="number" class="form-control" id="modulos" placeholder="1" min="1" max="10">
         </div>
-        <div class="col-2"></div>
         <div class="col-5">
           <label for="horas">Nº horas</label>
-          <input type="number" class="form-control" id="horas" placeholder="20" min="20" max="200" tabindex="6">
+          <input type="number" class="form-control" id="horas" placeholder="20" min="20" max="200">
         </div>
+          <!-- Disquete -->
+          <div class="col-2 container d-flex h-100 justify-content-center align-self-center">
+              <button id="enviar" class="botons" aria-label="Guardar">
+                  <i class="fas fa-save fa-3x align-middle"></i>
+              </button>
+          </div>
       </div>
+
+
+
     </form>
   </section>
 
