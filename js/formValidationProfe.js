@@ -43,7 +43,7 @@ let ValFormulario = function () {
     $('form div input').each(function () {
         if (this.checkValidity()) {
             datos_envio[this.name] = this.value;
-            $(this).before('<div class="estamal"> <img id="check" src="./images/users/Custom-Icon-Design-Pretty-Office-8-Accept.ico"></div>');
+            $(this).before('<div class="estamal"> <img id="check" src="./images/users/Custom-Icon-Design-Pretty-Office-8-Accept.ico" alt="ok"></div>');
         } else {
             $(this).before('<div class="estamal">¡¡Error!! Datos no válidos. </div>');
             formulario_correcto = false;/* no fun*/
@@ -59,7 +59,7 @@ let enviarDatos = function (datos_envio) {
     $.ajax({
         // url: 'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9asasas',  // SERVER WRONG
         //url: 'http://www.mocky.io/v2/5ad78aa33000004b00e584d0', // URL FALSE
-        url: 'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9asasas',  // SERVER OK  
+        url: 'http://www.mocky.io/v2/5aeb49703000004e00575486',  // SERVER OK  
         
         method: 'POST',
         data: datos_envio
