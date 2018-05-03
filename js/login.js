@@ -30,8 +30,8 @@ let ValFormulario = function () {
 let enviarDatos = function (datos_envio) {
 
     $.ajax({
-        url:  'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9',  /* "true" dice el servidor*/
-         /* url: 'http://www.mocky.io/v2/5ae0fab8320006b00510dbc',  */ //* "false" dice el servidor*/
+        url: 'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9',  /* "true" dice el servidor*/
+        /* url: 'http://www.mocky.io/v2/5ae0fab8320006b00510dbc',  */ //* "false" dice el servidor*/
         method: 'POST',
         data: datos_envio
     })
@@ -43,25 +43,48 @@ let enviarDatos = function (datos_envio) {
             }
         })
         .fail(function (err) {
-           
+
             $('#errServidor').text('habido un error de conexión,  inténtalo en unos minutos.');
-           
+
             $('#btonErr').html('<button  id="btnR" type="submit">refrescar pag</button>');
-            
+
 
             $('#errServidor').show();
             $('.pinta').hide();
-             $('#bton').hide();
-             $('#prue').hide();
-             $('#prue2').hide();
-             
+            $('#bton').hide();
+            $('#prue').hide();
+            $('#prue2').hide();
+
         });
 }
 
-$('#btnR').click(function (env) {
 
-    location.href = '/index.html';
-  /*  evn= window.reload() */
+$(document).ready(function (evnt) {
+
+    $(".pinta").mouseover(function () {
+
+        /* $(".pinta").css("background-color", "white"); */
+        $('#prue').text('el campo requiere XXXXX');
+        $('#prue2').text('el campo requiere XXXXX');
+        $('#prue').show();
+        $('#prue2').show();
+
+        $(".pinta").mouseout(function () {
+          /*   $(".pinta").css("background-color", "lightgray"); */
+            $(".pinta").keydown(function () {
+                $('#prue').hide();
+                $('#prue2').hide();
+
+            })
+        })
+
+    });
+
+    $('#btnR').click(function (env) {
+
+        location.href = '/index.html';
+        /*  evn= window.reload() */
+    });
 });
 
 
