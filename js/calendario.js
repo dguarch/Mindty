@@ -1,19 +1,17 @@
-var actual = new Date();
+let actual = new Date();
     function mostrarCalendario(year, month) {
-        var now = new Date(year, month - 1, 1);
-        var last = new Date(year, month, 0);
-        var primerDiaSemana = (now.getDay() == 0) ? 7 : now.getDay();
-        var ultimoDiaMes = last.getDate();
-        var dia = 0;
-        var resultado = "<tr bgcolor='silver'>";
-        var diaActual = 0;
-        console.log(ultimoDiaMes);
+        let now = new Date(year, month - 1, 1);
+        let last = new Date(year, month, 0);
+        let primerDiaSemana = (now.getDay() == 0) ? 7 : now.getDay();
+        let ultimoDiaMes = last.getDate();
+        let dia = 0;
+        let resultado = "<tr bgcolor='silver'>";
+        let diaActual = 0;
 
-        var last_cell = primerDiaSemana + ultimoDiaMes;
+        let last_cell = primerDiaSemana + ultimoDiaMes;
 
-        // hacemos un bucle hasta 42, que es el máximo de valores que puede
-        // haber... 6 columnas de 7 dias
-        for (var i = 1; i <= 42; i++) {
+        // hacemos un bucle hasta 42, que es el máximo de valores que puede haber... 6 columnas de 7 dias
+        for (let i = 1; i <= 42; i++) {
             if (i == primerDiaSemana) {
                 // determinamos en que dia empieza
                 dia = 1;
@@ -37,7 +35,7 @@ var actual = new Date();
         }
         resultado += "</tr>";
 
-        var meses = Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+        let meses = Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
 
         // Calculamos el siguiente mes y año
         nextMonth = month + 1;
