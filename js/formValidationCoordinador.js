@@ -56,7 +56,7 @@ const enviarCurso = (dataSend) => {
     $.ajax({
         //url: 'http://www.mocky.io/v2/5ad782d73000006900e584a344', // URL WRONG
         //url: 'http://www.mocky.io/v2/5ad78aa33000004b00e584d0', // URL FALSE
-        url: 'http://www.mocky.io/v2/5ad782d73000006900e584a3', // URL TRUE
+        url: 'http://www.mocky.io/v2/5aeb49703000004e00575486', // URL TRUE
         method: 'POST',
         data: dataSend
     })
