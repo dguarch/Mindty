@@ -65,8 +65,8 @@ $(document).ready(function (evnt) {
     $(".pinta").mouseover(function () {
 
         /* $(".pinta").css("background-color", "white"); */
-        $('#prue').text('el campo requiere XXXXX');
-        $('#prue2').text('el campo requiere XXXXX');
+        $('#prue').text('La primera letra en mayúscula');
+        $('#prue2').text('La primera letra en mayúscula');
         $('#prue').show();
         $('#prue2').show();
 
