@@ -25,14 +25,17 @@
     <nav id="menu" class="navbar navbar-expand-lg navbar-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
             aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fas fa-bars"></i>
         </button>
         <a class="navbar-brand logo" href="./index.html">
-            <h1>MINDTY</h1> <!-- ivan -->
+            <h1>MINDTY</h1>
+            <!-- ivan -->
         </a>
         <div>
-            <img clas="cara" src="./images/if_user_318585.png" alt="user"><!-- ivan alt -->
-            <img clas="cara" src="./images/flecha-desplegable.png" alt="desplegable"><!-- ivan -->
+            <img clas="cara" src="./images/if_user_318585.png" alt="user">
+            <!-- ivan alt -->
+            <img class="cara arrow" src="./images/flecha-desplegable.png" alt="desplegable">
+            <!-- ivan -->
         </div>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -47,17 +50,13 @@
                     <a class="nav-link" href="./alumno.html">Alumno</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
         </div>
     </nav>
 
     <!-- Breadcrumb -->
     <nav class="breadcrumb">
         <div>
-            <a class="breadcrumb-item" href="#" title="incio" alt="Incio">Home
+            <a class="breadcrumb-item" href="#" title="Incio" alt="Incio" aria-label="Inicio">
                 <i class="fas fa-home"></i>
             </a>
             <a class="breadcrumb-item" href="#" title="Curso" alt="Curso">Contenido</a>
@@ -77,21 +76,24 @@
                     <div class="form-group mx-sm-3 mb-2">
                         <div id="mensajes"></div>
                         <!-- ExpReg= /[A-Z]{3,} \d/ -->
-                        <label for="code_modulo">Código modulo:</label><!-- ivan -->
-                        <input type="text" pattern="[A-Z]{3,} \d" maxlength="5" class="form-control" id="code_modulo" placeholder=""
-                            required>
+                        <label for="code_modulo">Código modulo:</label>
+                        <!-- ivan -->
+                        <input type="text" pattern="[A-Z]{3,} \d" maxlength="5" class="form-control" id="code_modulo" placeholder="" required>
 
 
                     </div>
                     <div class="form-group mx-sm-3 mb-2">
                         <!-- ExpReg= /[aA-zZ]/ -->
-                        <label for="nombre_modulo">Nombre modulo:</label><!-- ivan -->
+                        <label for="nombre_modulo">Nombre modulo:</label>
+                        <!-- ivan -->
                         <input type="text" minlength="4" class="form-control" id="nombre_modulo" required>
 
                     </div>
+                    
 
                     <button id="btn_form">
-                        <img id="prof_save" src="images/users/aqua-save-256.gif" alt="">Guardar </button><!-- ivan nombre boton -->
+                        <img id="prof_save" src="images/users/aqua-save-256.gif" alt=""></button>
+                    <!-- ivan nombre boton -->
 
 
 
@@ -107,88 +109,91 @@
 
             <ol class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Modulo 1</a>
+                    <a class="nav-link moduloactive modulo" href="#">Modulo 1</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Modulo 2</a>
+                    <a class="nav-link modulo" href="#">Modulo 2</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Modulo 3</a>
+                    <a class="nav-link modulo" href="#">Modulo 3</a>
                 </li>
 
             </ol>
-    
 
-        <!-- bloque de modulos -->
-        <div id="unidades" class="col-sm-7">
-            <ol>
-                <li>
-                    <a href="#">Arquitectura de las apps</a>
-                </li>
-                <li>
-                    <a href="#">Gestión de software</a>
-                </li>
-                <li>
-                    <a href="#">Fundamentos UX</a>
-                </li>
-                <li>
-                    <a href="#">Fundamentos desarrollo</a>
-                </li>
-                <li>
-                    <a href="#">Fundamentos Java</a>
-                </li>
-                <!-- <ol>Boton-->
-                <button type="button" id="btn_añadir" class="btn btn-primary btn-sm">+</button>
-            </ol>
-        </div>
-    </div>
 
-    <div id="calendario">
-
-        </head>
-
-        <body>
-            <div id="formC">
-                <h3>Calendario</h3><!-- ivan -->
-                <table id="calendar">
-                    <caption></caption>
-                    <thead>
-                        <tr>
-                            <th>Lun</th>
-                            <th>Mar</th>
-                            <th>Mie</th>
-                            <th>Jue</th>
-                            <th>Vie</th>
-                            <th>Sab</th>
-                            <th>Dom</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-
+            <!-- bloque de modulos -->
+            <div id="unidades" class="col-sm-7">
+                <ol>
+                    <li>
+                        <a href="#">Arquitectura de las apps</a>
+                    </li>
+                    <li>
+                        <a href="#">Gestión de software</a>
+                    </li>
+                    <li>
+                        <a href="#">Fundamentos UX</a>
+                    </li>
+                    <li>
+                        <a href="#">Fundamentos desarrollo</a>
+                    </li>
+                    <li>
+                        <a href="#">Fundamentos Java</a>
+                    </li>
+                    <!-- <ol>Boton-->
+                            <button type="button" id="add" class="btn btn-success" aria-label="Añadir alumno">
+                                    <i class="fas fa-plus"></i>
+                                  </button>
+                </ol>
             </div>
-
-
-    </div>
-
-    <!-- Copy right -->
-    <footer>
-        <div>
-            <p>Diseñado por OVERFLOW
-                <br>&copy 2018</p>
         </div>
-    </footer>
-    </body>
-    <!-- Optional JavaScript -->
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
-        crossorigin="anonymous "></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
-        crossorigin="anonymous "></script>
-    <script src="./js/formValidationProfe.js"></script>
-    <script src="./js/calendario.js"></script>
-    
+
+        <div id="calendario">
+
+            </head>
+
+            <body>
+                <div id="formC">
+                    <h3>Calendario</h3>
+                    <!-- ivan -->
+                    <table id="calendar">
+                        <caption></caption>
+                        <thead>
+                            <tr>
+                                <th>Lun</th>
+                                <th>Mar</th>
+                                <th>Mie</th>
+                                <th>Jue</th>
+                                <th>Vie</th>
+                                <th>Sab</th>
+                                <th>Dom</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+        </div>
+
+        <!-- Copy right -->
+        <footer>
+            <div>
+                <p>Diseñado por OVERFLOW
+                    <br>&copy 2018</p>
+            </div>
+        </footer>
+        </body>
+        <!-- Optional JavaScript -->
+        <script src="./js/jquery-3.3.1.min.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
+            crossorigin="anonymous "></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
+            crossorigin="anonymous "></script>
+        <script src="./js/formValidationProfe.js"></script>
+        <script src="./js/calendario.js"></script>
+
 
 </html>

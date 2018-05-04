@@ -8,7 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    crossorigin="anonymous">
 
   <!-- Mindty CSS -->
   <link rel="stylesheet" href="./css/style.css">
@@ -17,65 +17,57 @@
 </head>
 
 <body>
-<header>
-  <!-- Menu nav -->
-  <nav id="menu" class="navbar navbar-expand-lg navbar-light">
-    <!-- Boton desplegable -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
-            aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Titulo de la web -->
-    <a class="navbar-brand logo" href="./index.html">
-      <h1>MINDTY</h1> <!-- h1 -->
-    </a>
-
-    <div>
-      <img class="cara" alt="foto_usuario" src="./images/if_user_318585.png">
-      <img class="cara" alt="flecha" src="./images/flecha-desplegable.png">
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link activeNav">Coordinador</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./profesor.html">Profesor</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./alumno.html">Alumno</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
-    </div>
-  </nav>
-  <!-- Menu nav -->
-</header>
-<!-- Fin header -->
-<!-- Inicio section -->
-<section>
-  <div>
-    <nav class="breadcrumb">
-      <a class="breadcrumb-item" href="#" title="Incio" alt="Incio" aria-label="Inicio">
-        <i class="fas fa-home"></i>
+  <header>
+    <!-- Menu nav -->
+    <nav id="menu" class="navbar navbar-expand-lg navbar-light">
+      <!-- Boton desplegable -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Titulo de la web -->
+      <a class="navbar-brand logo" href="./index.html">
+        <h1>MINDTY</h1>
+        <!-- h1 -->
       </a>
-      <a class="breadcrumb-item" href="#" title="Curso" alt="Curso">Cursos</a>
-      <span class="breadcrumb-item active" title="Añadir módulo" alt="Añadir módulo">Curso</span>
-    </nav>
-  </div>
 
-  <!-- Nombre seccion -->
-  <section>
-    <h1 class="d-inline">Curso</h1>
-    <!-- Lupa -->
-    <button class="botons d-inline ml-3" aria-label="Buscar curso">
-      <i id="lupa" class="fas fa-search fa-2x"></i>
-    </button>
-    <hr>
+      <div>
+        <img class="cara" alt="foto_usuario" src="./images/if_user_318585.png">
+        <img class="cara arrow" alt="flecha" src="./images/flecha-desplegable.png">
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link activeNav">Coordinador</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./profesor.html">Profesor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./alumno.html">Alumno</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Fin header -->
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a class="breadcrumb-item" href="#" title="Incio" alt="Incio" aria-label="Inicio">
+      <i class="fas fa-home"></i>
+    </a>
+    <a class="breadcrumb-item" href="#" title="Curso" alt="Curso">Cursos</a>
+    <span class="breadcrumb-item active" title="Añadir módulo" alt="Añadir módulo">Curso</span>
+  </nav>
+
+  <!-- Nombre sección -->
+  <h1 class="d-inline">Curso</h1>
+  <!-- Lupa -->
+  <button class="botons d-inline ml-3" aria-label="Buscar curso">
+    <i id="lupa" class="fas fa-search fa-2x"></i>
+  </button>
+  <hr>
   </section>
 
   <!-- Formulario entrada curso -->
@@ -86,12 +78,14 @@
       <div class="form-row">
         <div class="form-group col-4">
           <!-- Campo Código curso con RegExp = ^[A-Z]{3}\s+[0-9]{5}$ (XXX 12345)$ -->
-          <input type="text" class="form-control" pattern="^[A-Z]{3}\s+[0-9]{5}$" id="codigoCurso" placeholder="Código curso" aria-label="Código curso" required>
+          <input type="text" class="form-control" pattern="^[A-Z]{3}\s+[0-9]{5}$" id="codigoCurso" placeholder="Código curso" aria-label="Código curso"
+            required>
           <small id="cheet" class="text-info">Ej. XXX 12345</small>
         </div>
         <div class="col-8">
           <!-- ExpReg= 1a letra mayuscula, solo letras -->
-          <input type="text" class="form-control" pattern="^[A-Z]+(([,. -][a-zA-Z ])?[a-zA-Z]*)*$" id="nombreCurso" placeholder="Nombre curso" aria-label="Nombre curso" required>
+          <input type="text" class="form-control" pattern="^[A-Z]+(([,. -][a-zA-Z ])?[a-zA-Z]*)*$" id="nombreCurso" placeholder="Nombre curso"
+            aria-label="Nombre curso" required>
         </div>
       </div>
 
@@ -142,7 +136,7 @@
       </div>
       <div class="col-5"></div>
       <div class="col-4">
-        <button type="button" id="add" class="btn btn-success" aria-label="Añadir alumno">
+        <button type="button" id="add" class="btn btn-success derecha" aria-label="Añadir alumno">
           <i class="fas fa-plus"></i>
         </button>
       </div>
@@ -215,15 +209,16 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- Popper.js, then Bootstrap JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
-        crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
-        crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script>
 
 <!-- Font Awesome -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
-        crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script>
 
 <!-- Mindty JS -->
 <!-- <script src="./js/formValidation.js"></script> -->
 <script src="./js/formValidationCoordinador.js"></script>
+
 </html>

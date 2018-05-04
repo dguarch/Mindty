@@ -21,206 +21,193 @@
 </head>
 
 <body>
-    <!-- Inicio header -->
     <header>
         <!-- Menu nav -->
         <nav id="menu" class="navbar navbar-expand-lg navbar-light">
             <!-- Boton desplegable -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
                 aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars"></i>
             </button>
             <!-- Titulo de la web -->
             <a class="navbar-brand logo" href="./index.html">
-                <h1>MINDTY</h1> <!-- h1 -->
+                <h1>MINDTY</h1>
+                <!-- h1 -->
             </a>
 
             <div>
-                Hola
                 <img class="cara" alt="foto_usuario" src="./images/if_user_318585.png">
-                <img class="cara" alt="flecha" src="./images/flecha-desplegable.png">
+                <img class="cara arrow" alt="flecha" src="./images/flecha-desplegable.png">
             </div>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="./coordinador.html">Coordinación
-                        </a>
+                        <a class="nav-link" href="./coordinador.html">Coordinador</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./profesor.html">Profesiorado</a>
+                        <a class="nav-link" href="./profesor.html">Profesor</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link activeNav">Alumno</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
             </div>
         </nav>
-        <!-- Menu nav -->
     </header>
     <!-- Fin header -->
-    <!-- Inicio section -->
-    <section>
-        <div>
-            <nav class="breadcrumb">
-                <a class="breadcrumb-item" href="#" title="incio" alt="Incio">Home
-                    <i class="fas fa-home"></i>
-                </a>
-                <a class="breadcrumb-item" href="#" title="Curso" alt="Curso">Cursos</a>
-                <span class="breadcrumb-item active" title="Añadir módulo" alt="Añadir módulo">Curso</span>
-            </nav>
-        </div>
-        <!-- zona del desplegable -->
-        <div>
-            <h1>Cursos</h1>
-            <hr>
-            <div class="desplegable">
-                <div id="accordion">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <!-- Boton del desplegable del primer curso -->
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
-                                        1 Curso
-                                </button>
-                            </h2>
-                        </div>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <a class="breadcrumb-item active" href="#" title="Incio" alt="Incio" aria-label="Inicio">
+            <i class="fas fa-home"></i>
+        </a>
+    </nav>
+    <div>
+        <h1>Cursos</h1>
+        <hr>
+        <div class="desplegable">
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <!-- Boton del desplegable del primer curso -->
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+                                1 Curso
+                            </button>
+                        </h2>
+                    </div>
 
-                        <div id="collapseOne1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                            <div class="card-body">
+                    <div id="collapseOne1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
 
-                                <div id="accordion2">
-                                    <div class="card">
-                                        <div class="card-header" id="headingOne">
-                                            <h3 class="mb-0">
-                                                <!-- Boton del desplegable del primer Modulo -->
-                                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseN2" aria-expanded="true" aria-controls="collapseOne">
-                                                    Modulo 1
-                                                </button>
-                                            </h3>
+                            <div id="accordion2">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h3 class="mb-0">
+                                            <!-- Boton del desplegable del primer Modulo -->
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseN2" aria-expanded="true" aria-controls="collapseOne">
+                                                Modulo 1
+                                            </button>
+                                        </h3>
+                                    </div>
+
+                                    <div id="collapseN2" class="collapse " aria-labelledby="headingOne" data-parent="#accordion2">
+                                        <div class="card-body">
+                                            <div class="card-body">
+
+                                                <div id="accordion3">
+                                                    <div class="card">
+                                                        <div class="card-header" id="headingOne">
+                                                            <h4 class="mb-0">
+                                                                <!-- Boton del desplegable del primer Uf -->
+                                                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseN3" aria-expanded="true" aria-controls="collapseOne">
+                                                                    Uf1
+                                                                </button>
+                                                            </h4>
+                                                        </div>
+
+                                                        <div id="collapseN3" class="collapse " aria-labelledby="headingOne" data-parent="#accordion3">
+                                                            <div class="card-body">
+                                                                <p>Documentacion</p>
+                                                                <br>
+                                                                <br>
+                                                                <p>Notas</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-body">
+
+                                                <div id="accordion3">
+                                                    <div class="card">
+                                                        <div class="card-header" id="headingOne">
+                                                            <h4 class="mb-0">
+                                                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseN6" aria-expanded="true" aria-controls="collapseOne">
+                                                                    Uf1
+                                                                </button>
+                                                            </h4>
+                                                        </div>
+
+                                                        <div id="collapseN6" class="collapse " aria-labelledby="headingOne" data-parent="#accordion6">
+                                                            <div class="card-body">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-body">
+
+                                                <div id="accordion7">
+                                                    <div class="card">
+                                                        <div class="card-header" id="headingOne">
+                                                            <h4 class="mb-0">
+                                                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseN7" aria-expanded="true" aria-controls="collapseOne">
+                                                                    Uf1
+                                                                </button>
+                                                            </h4>
+                                                        </div>
+
+                                                        <div id="collapseN7" class="collapse " aria-labelledby="headingOne" data-parent="#accordion7">
+                                                            <div class="card-body">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
 
-                                        <div id="collapseN2" class="collapse " aria-labelledby="headingOne" data-parent="#accordion2">
-                                            <div class="card-body">
-                                                <div class="card-body">
-
-                                                    <div id="accordion3">
-                                                        <div class="card">
-                                                            <div class="card-header" id="headingOne">
-                                                                <h4 class="mb-0">
-                                                                    <!-- Boton del desplegable del primer Uf -->
-                                                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseN3" aria-expanded="true" aria-controls="collapseOne">
-                                                                        Uf1
-                                                                    </button>
-                                                                </h4>
-                                                            </div>
-
-                                                            <div id="collapseN3" class="collapse " aria-labelledby="headingOne" data-parent="#accordion3">
-                                                                <div class="card-body">
-                                                                    <p>Documentacion</p>
-                                                                    <br>
-                                                                    <br>
-                                                                    <p>Notas</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="card-body">
-
-                                                    <div id="accordion3">
-                                                        <div class="card">
-                                                            <div class="card-header" id="headingOne">
-                                                                <h4 class="mb-0">
-                                                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseN6" aria-expanded="true" aria-controls="collapseOne">
-                                                                        Uf1
-                                                                    </button>
-                                                                </h4>
-                                                            </div>
-
-                                                            <div id="collapseN6" class="collapse " aria-labelledby="headingOne" data-parent="#accordion6">
-                                                                <div class="card-body">
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="card-body">
-
-                                                    <div id="accordion7">
-                                                        <div class="card">
-                                                            <div class="card-header" id="headingOne">
-                                                                <h4 class="mb-0">
-                                                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseN7" aria-expanded="true" aria-controls="collapseOne">
-                                                                        Uf1
-                                                                    </button>
-                                                                </h4>
-                                                            </div>
-
-                                                            <div id="collapseN7" class="collapse " aria-labelledby="headingOne" data-parent="#accordion7">
-                                                                <div class="card-body">
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
 
 
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h2 class="mb-0">
-                            <!-- Boton del desplegable del segundo Modulo -->
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo">
-                                2 Curso
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                        <div class="card-body">
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <!-- Boton del desplegable del segundo Modulo -->
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo">
+                            2 Curso
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
 
-                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header" id="headingThree">
-                        <h2 class="mb-0">
-                            <!-- Boton del desplegable del tercer Modulo -->
-                            <button  class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree">
-                                3 Curso
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseThree3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                        <div class="card-body">
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <!-- Boton del desplegable del tercer Modulo -->
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree">
+                            3 Curso
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
 
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
 
