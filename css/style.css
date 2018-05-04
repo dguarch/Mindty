@@ -57,8 +57,7 @@ small{margin-left: 5px;}
 
 .activeNav {color: white !important; font-weight: 700;}
 
-.nav-link{font-size: 15px; color: ;
-}
+.nav-link{font-size: 15px;}
 
 /* Estilo del botón de búsqueda */
 .btn-outline-success{color: #000203; background-color: transparent; background-image: none; border-color: #000203;}
