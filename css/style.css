@@ -64,8 +64,6 @@ small{margin-left: 5px;}
 /* Icono enviar form */
 #prof_save{width: 30px; height:30px;}
 
-#lupa{margin-top: 2px;}
-
 label {margin-bottom: 0 !important;}
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none; -moz-appearance:textfield;}
