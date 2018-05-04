@@ -4,6 +4,25 @@
 /* Fuente logo y h1-h6 */
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
 
+div a{
+    color: hsl(210, 64%, 33%) !important;
+    font-size: 10px;
+}
+div span{
+    color: hsl(210, 64%, 33%)  !important;
+    font-size: 10px;
+}
+#cheet{
+    color: hsl(210, 64%, 33%)  !important;
+   
+}
+
+#btonAlumnos{
+    color: hsl(204, 100%, 1%)  !important;
+    font-size: 19px !important;
+    background: hsl(210, 76%, 84%)
+}
+
 /* Propiedad principal para el cuerpo de la app*/
 body{margin: 0px !important; padding: 0px !important; background: #f5f5f5 !important; font-family: 'Open Sans', sans-serif !important; font-size: 12px !important;}
 
