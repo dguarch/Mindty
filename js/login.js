@@ -30,8 +30,8 @@ let ValFormulario = function () {
 let enviarDatos = function (datos_envio) {
 
     $.ajax({
-        url: 'http://www.mocky.io/v2/5aeb49703000004e00575486',  /* "true" dice el servidor*/
-        /* url: 'http://www.mocky.io/v2/5ae0fab8320006b00510dbc',  */ //* "false" dice el servidor*/
+        url: ' http://www.mocky.io/v2/5aec64fb3200004e00fa48f4',  /* { "result": "true" }  "true" dice el servidor*/
+        /*  url: 'http://www.mocky.io/v2/5aec652d3200006000fa48f6', */  // { "result": "false" }  //* "false" dice el servidor*/
         method: 'POST',
         data: datos_envio
     })
@@ -39,6 +39,7 @@ let enviarDatos = function (datos_envio) {
             if (responde_data.result) {
                 location.href = './coordinador.html';
             } else {
+                console.log('Error');
                 $('#mesajes').html('Usuario y/o Contraseña incorrectas');
             }
         })
@@ -70,7 +71,7 @@ $(document).ready(function (evnt) {
         $('#prue2').show();
 
         $(".pinta").mouseout(function () {
-          /*   $(".pinta").css("background-color", "lightgray"); */
+            /*   $(".pinta").css("background-color", "lightgray"); */
             $(".pinta").keydown(function () {
                 $('#prue').hide();
                 $('#prue2').hide();
