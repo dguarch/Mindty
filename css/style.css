@@ -4,6 +4,9 @@
 /* Fuente logo y h1-h6 */
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
 
+/* Fuente logo Overflow */
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
 /* Propiedad principal para el cuerpo de la app*/
 body{margin: 0px !important; padding: 0px !important; background: #f5f5f5 !important; font-family: 'Open Sans', sans-serif !important; font-size: 12px !important;}
 
@@ -12,6 +15,7 @@ section{margin: 10px;}
 
 /* Estilo del pie de la página de la APP */
 footer{text-align: center; font-size: 1em; background: #93adb7; width: 100%; padding: 5px;}
+footer > div > p {margin: 0;}
 
 /* Asignamos la fuente Audiowise a las etiquetas de cabecera */
 h1,h2,h3,h4,h5,h6{font-family: 'Audiowide', cursive !important; margin-bottom: 0}
@@ -169,3 +173,5 @@ li>a:hover{
 form>div{
     height: 70px;
 }
+
+.overflow{font-family: 'Dancing Script', cursive; font-size: 2em;}

@@ -76,24 +76,27 @@
                     <div class="form-group mx-sm-3 mb-2">
                         <div id="mensajes"></div>
                         <!-- ExpReg= /[A-Z]{3,} \d/ -->
-                        <label for="code_modulo">Código modulo:</label>
                         <!-- ivan -->
-                        <input type="text" pattern="[A-Z]{3,} \d" maxlength="5" class="form-control" id="code_modulo" placeholder="" required>
+                        <input type="text" pattern="[A-Z]{3,} \d" maxlength="5" class="form-control" id="code_modulo" placeholder="Código modulo" aria-label="Código modulo" required>
 
 
                     </div>
                     <div class="form-group mx-sm-3 mb-2">
                         <!-- ExpReg= /[aA-zZ]/ -->
-                        <label for="nombre_modulo">Nombre modulo:</label>
                         <!-- ivan -->
-                        <input type="text" minlength="4" class="form-control" id="nombre_modulo" required>
+                        <input type="text" minlength="4" class="form-control" id="nombre_modulo" placeholder="Nombre modulo" aria-label="Nombre modulo" required>
 
                     </div>
-                    
 
-                    <button id="btn_form">
-                        <img id="prof_save" src="images/users/aqua-save-256.gif" alt=""></button>
-                    <!-- ivan nombre boton -->
+
+                    <!-- <div id="btn_form" class="text-center"> -->
+                        <button id="btn_form" class="botons" aria-label="Guardar">
+                            <i class="fas fa-save fa-3x align-middle"></i>
+                        </button>
+                    <!-- </div>
+                     <button id="btn_form">
+                         <img id="prof_save" src="images/users/aqua-save-256.gif" alt=""></button>
+                     <!-- ivan nombre boton -->
 
 
 
