@@ -1,5 +1,7 @@
 package com.mindty.modelos;
 
-public class Profesor {
+public class Profesor  extends Usuario{
+	
+	
 
 }

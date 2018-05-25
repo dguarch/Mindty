@@ -67,7 +67,7 @@
     <!-- Nombre seccion -->
     <section>
         <div id="ok"></div>
-        <h2>A帽adir m贸dulo:</h2>
+        <h2>A馻dir modulo:</h2>
         <hr>
 
         <div class="row">
@@ -77,7 +77,7 @@
                         <div id="mensajes"></div>
                         <!-- ExpReg= /[A-Z]{3,} \d/ -->
                         <!-- ivan -->
-                        <input type="text" pattern="[A-Z]{3,} \d" maxlength="5" class="form-control" id="code_modulo" placeholder="C贸digo modulo" aria-label="C贸digo modulo" required>
+                        <input type="text" pattern="[A-Z]{3,} \d" maxlength="5" class="form-control" id="code_modulo" placeholder="C骴igo modulo" aria-label="C骴igo modulo" required>
 
 
                     </div>
@@ -131,7 +131,7 @@
                         <a href="#">Arquitectura de las apps</a>
                     </li>
                     <li>
-                        <a href="#">Gesti贸n de software</a>
+                        <a href="#">Gestion de software</a>
                     </li>
                     <li>
                         <a href="#">Fundamentos UX</a>
@@ -183,7 +183,7 @@
         <!-- Copy right -->
         <footer>
             <div>
-                <p>Dise帽ado por OVERFLOW
+                <p>Dise馻do por OVERFLOW
                     <br>&copy 2018</p>
             </div>
         </footer>

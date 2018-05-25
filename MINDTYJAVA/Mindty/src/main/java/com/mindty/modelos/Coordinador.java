@@ -1,5 +1,5 @@
 package com.mindty.modelos;
 
-public class Coordinador {
+public class Coordinador extends Usuario{
 
 }
