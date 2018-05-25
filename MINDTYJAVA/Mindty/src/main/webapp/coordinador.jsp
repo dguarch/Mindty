@@ -26,7 +26,7 @@
         <i class="fas fa-bars"></i>
       </button>
       <!-- Titulo de la web -->
-      <a class="navbar-brand logo" href="./index.html">
+      <a class="navbar-brand logo" href="./login.jsp">
         <h1>MINDTY</h1>
         <!-- h1 -->
       </a>
@@ -42,10 +42,10 @@
             <a class="nav-link activeNav">Coordinador</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./profesor.html">Profesor</a>
+            <a class="nav-link" href="./profesor.jsp">Profesor</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./alumno.html">Alumno</a>
+            <a class="nav-link" href="./alumno.jsp">Alumno</a>
           </li>
         </ul>
       </div>
