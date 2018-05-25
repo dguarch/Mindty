@@ -30,7 +30,7 @@
                 <i class="fas fa-bars"></i>
             </button>
             <!-- Titulo de la web -->
-            <a class="navbar-brand logo" href="./index.html">
+            <a class="navbar-brand logo" href="./login.jsp">
                 <h1>MINDTY</h1>
                 <!-- h1 -->
             </a>
@@ -43,10 +43,10 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="./coordinador.html">Coordinador</a>
+                        <a class="nav-link" href="./coordinador.jsp">Coordinador</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./profesor.html">Profesor</a>
+                        <a class="nav-link" href="./profesor.jsp">Profesor</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link activeNav">Alumno</a>

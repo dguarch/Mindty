@@ -37,7 +37,7 @@ let enviarDatos = function (datos_envio) {
     })
         .done(function (responde_data) {
             if (responde_data.result) {
-                location.href = './coordinador.html';
+                location.href = './coordinador.jsp';
             } else {
                 console.log('Error');
                 $('#mesajes').html('Usuario y/o Contraseña incorrectas');
@@ -83,7 +83,7 @@ $(document).ready(function (evnt) {
 
     $('#btnR').click(function (env) {
 
-        location.href = '/index.html';
+        location.href = '/login.jsp';
         /*  evn= window.reload() */
     });
 });

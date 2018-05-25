@@ -27,7 +27,7 @@
             aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
-        <a class="navbar-brand logo" href="./index.html">
+        <a class="navbar-brand logo" href="./login.jsp">
             <h1>MINDTY</h1>
             <!-- ivan -->
         </a>
@@ -40,14 +40,14 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="./coordinador.html">Coordinador
+                    <a class="nav-link" href="./coordinador.jsp">Coordinador
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link activeNav">Profesor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./alumno.html">Alumno</a>
+                    <a class="nav-link" href="./alumno.jsp">Alumno</a>
                 </li>
             </ul>
         </div>

@@ -36,14 +36,14 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="./coordinador.html">Coordinador
+                    <a class="nav-link" href="./coordinador.jsp">Coordinador
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./profesor.html">Profesor</a>
+                    <a class="nav-link" href="./profesor.jsp">Profesor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./alumno.html">Alumno</a>
+                    <a class="nav-link" href="./alumno.jsp">Alumno</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
