@@ -1,0 +1,177 @@
+/* Fuente texto cuerpo */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans' );
+
+/* Fuente logo y h1-h6 */
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+/* Fuente logo Overflow */
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+/* Propiedad principal para el cuerpo de la app*/
+body{margin: 0px !important; padding: 0px !important; background: #f5f5f5 !important; font-family: 'Open Sans', sans-serif !important; font-size: 12px !important;}
+
+/* Estilo de la sección */
+section{margin: 10px;}
+
+/* Estilo del pie de la página de la APP */
+footer{text-align: center; font-size: 1em; background: #93adb7; width: 100%; padding: 5px;}
+footer > div > p {margin: 0;}
+
+/* Asignamos la fuente Audiowise a las etiquetas de cabecera */
+h1,h2,h3,h4,h5,h6{font-family: 'Audiowide', cursive !important; margin-bottom: 0}
+
+/* Separador cabecera*/
+hr{margin-top: 0;}
+
+/* Estilo para small */
+small{margin-left: 5px;}
+
+p>a:link{
+    color: rgb(0, 26, 255);
+}
+
+p>a:hover{
+    color: red;
+}
+
+
+.breadcrumb-item{
+    color: rgb(170, 5, 32) !important;
+}
+
+.active{
+    color: black !important;
+}
+
+/* Fondo de la navegación principal*/
+#menu{background: #313333e3 !important; color: white;}
+
+/* Colocación icono lupa <search> */ 
+#lupa {
+    vertical-align: 0px !important;
+}
+
+/*Chuleta Código curso*/
+#cheet{
+    color: hsl(210, 64%, 33%)  !important;
+}
+
+/* Listado de alumnos */
+#alumnos{border: 1px solid darkgray; box-shadow: 0px 0px 5px darkgray; padding: 10px; margin-top: 15px; margin-bottom: 20px; background: rgb(255, 255, 255);}
+
+/* Contador de alumnos del curso */
+#btonAlumnos{
+    color: hsl(204, 100%, 1%)  !important;
+    font-size: 19px !important;
+    background: hsl(210, 82%, 85%);
+    margin-bottom: 15px;
+}
+
+/* Botón añadir nuevo */
+#add{height: 40px; width: 40px; border-radius: 100%; box-shadow: 0px 0px 10px darkgray;}
+
+.derecha{
+    float: right;
+}
+
+/* Fuente del logo */
+.logo{font-family: 'Audiowide', cursive; color: white !important; font-size: 2.5em;}
+
+.navbar-toggler{border-color: rgba(255, 255, 255, 0) !important; color:white !important;}
+
+.navbar-toggler-icon{color:white !important;}
+
+.activeNav {color: white !important; font-weight: 900; font-size: 1.8em !important;}
+
+.nav-link{font-size: 15px; color: white !important; font-weight: 100px;} 
+
+.arrow{width: 15px; height: 15px;}
+
+.modulo{color: black !important; background-color: rgb(185, 185, 185); border-top-left-radius: 15px !important; border-top-right-radius: 15px !important; border: 1px solid rgb(235, 235, 235) !important}
+
+.moduloactive {color: white !important; background-color: #084d46; font-weight: bold !important;}
+
+/* Estilo del botón de búsqueda */
+.btn-outline-success{color: #000203; background-color: transparent; background-image: none; border-color: #000203;}
+
+/* Estilo del bradcrumb */
+.breadcrumb{background-color: #e9e9e9 !important; font-size: 10px;}
+
+/* ------ COLLAPSES ---------------------------------------*/
+/* Color de fondo de los collapses */
+.card{background-color: #f5f5f5;}
+.card-header{background-color: #f5f5f5 !important;}
+.card-body{background-color: #f5f5f5 !important;}
+/* Formateo de los collapses y sus margenes */
+.desplegable {background: #f5f5f5 !important; padding-bottom: 25px; padding-left: 20px; padding-right: 20px; color: black !important;}
+/* --------------------------------------------------------*/
+
+/* Formateo del calendario */
+#calendario{padding-left: 20px; line-height: 50px; padding-right:20px; margin: 20px;} 
+#calendar {font-family: Arial;font-size: 12px;border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;}
+#calendar caption {text-align: left;padding: 5px 10px;background-color: #084d46;color: #fff;font-weight: bold;font-size: mediu  m;}
+#calendar caption div:nth-child(1) {float: left;}
+#calendar caption div:nth-child(2) {float: right;}
+#calendar caption div:nth-child(2) a {cursor: pointer;}
+#calendar th {background-color: #084d46;color: #fff;width: 40px; text-align:center;}
+#calendar td {text-align: right;padding: 2px 5px;background-color: white;    border-bottom: 1px solid rgba(0,0,0,.125);}
+#calendar .hoy {background-color: rgb(160, 0, 0); color:white;}
+.navCalendar {font-size: 2em;}
+
+/* Icono validación form */
+#check{ width: 20px; height: 20px;}
+
+/* Icono enviar form */
+#prof_save{width: 30px; height:30px;}
+
+label {margin-bottom: 0 !important;}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none; -moz-appearance:textfield;}
+
+.botons{color: #007bff; background: #f5f5f5; border: 0px; padding: 0px; cursor: pointer;}
+
+.errors{color: red;}
+
+.btn-link{color: rgb(0, 26, 255);}
+
+#ok{
+    width: 300px;height: 40px; border: 1px solid green;background:rgb(63, 219, 154); border-radius: 10px; padding-left: 20px; padding-right:20px; display:none;margin-bottom:30px;
+}
+
+.show{display: block !important;}
+/* centrar login */
+.login{ padding-left: 130px; padding-top:100px; margin-bottom:200px; }
+/* .avatar{ height: 70px; display:block; margin:auto;} */
+
+
+li>a{
+    color: rgb(6, 22, 170);  
+}
+
+li>a:hover{
+    color: red;    
+}
+
+#unidades > ol > li{
+    font-size:1.2em;
+    margin:8px;
+    color: rgb(6, 22, 170);  
+}
+
+#modulos > ol > li{
+    font-size:1.3em;
+
+}
+.estamal{
+    color:rgb(170, 18, 18);
+}
+
+#enviar{
+    margin-top: 15px;
+}
+
+form>div{
+    height: 70px;
+}
+
+.overflow{font-family: 'Dancing Script', cursive; font-size: 2em;}
