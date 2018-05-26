@@ -60,7 +60,7 @@
                 <i class="fas fa-home"></i>
             </a>
             <a class="breadcrumb-item" href="#" title="Curso" alt="Curso">Contenido</a>
-            <span class="breadcrumb-item active" title="Añadir módulo" alt="Añadir módulo">Módulos</span>
+            <span class="breadcrumb-item active" title="A�adir modulo" alt="A�adir modulo">Modulos</span>
         </div>
     </nav>
 
@@ -72,7 +72,7 @@
 
         <div class="row">
             <div class="col-10 col-sm-10 col-sm-10">
-                <form class="form-inline">
+                <form class="form-inline" action="POST">
                     <div class="form-group mx-sm-3 mb-2">
                         <div id="mensajes"></div>
                         <!-- ExpReg= /[A-Z]{3,} \d/ -->
