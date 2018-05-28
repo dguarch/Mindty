@@ -69,13 +69,13 @@
 
 		<div class="row">
 			<div class="col-10 col-sm-10 col-sm-10">
-				<form class="form-inline" action="" method="POST">
+				<form id="form_data" class="form-inline" action="" method="POST">
 					<div class="form-group mx-sm-3 mb-2">
 						<div id="mensajes"></div>
 						<!-- ExpReg= /[A-Z]{3,} \d/ -->
 						<!-- ivan -->
 						<input type="text" pattern="[A-Z]{3,} \d" maxlength="5"
-							class="form-control" id="code_modulo" placeholder="Código modulo"
+							class="form-control" name="code_modulo" id="code_modulo" placeholder="Código modulo"
 							aria-label="Código modulo" required>
 
 
@@ -84,7 +84,7 @@
 						<!-- ExpReg= /[aA-zZ]/ -->
 						<!-- ivan -->
 						<input type="text" minlength="4" class="form-control"
-							id="nombre_modulo" placeholder="Nombre modulo"
+							id="nombre_modulo" name="nombre_modulo" placeholder="Nombre modulo"
 							aria-label="Nombre modulo" required>
 
 					</div>
