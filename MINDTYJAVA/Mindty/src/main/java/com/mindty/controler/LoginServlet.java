@@ -49,7 +49,7 @@ public class LoginServlet extends HttpServlet {
 				muro = "/coordenador";
 				break;
 			case "profesor":
-				muro = "/profesor";
+				muro = "/Mindty/profesor";
 				break;
 			case "alumno":
 				muro = "alumno";

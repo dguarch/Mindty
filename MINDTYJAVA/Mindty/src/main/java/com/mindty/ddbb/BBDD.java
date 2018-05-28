@@ -15,7 +15,7 @@ public class BBDD {
 
 	private static BBDD instance = null;
 	private static List<Curso> listaCursos = new ArrayList<>();
-	private static Map<Integer, List<Modulo>> HasModulos = new HashMap<>();
+	private static Map<String, List<Modulo>> HasModulos = new HashMap<>();
 	private static ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 
 	public static BBDD getInstance() {
@@ -34,10 +34,9 @@ public class BBDD {
 	public boolean CrearCurso() {
 
 
-		listaCursos.add(new Curso(1, 200, "Mecanica quantica", "Hector"));
+		listaCursos.add(new Curso("1","Mecanica quantica", 2,5, 250));
 
-		listaCursos.add(new Curso(1, 200, "Mecanica quantica", "Pedrito"));
-		listaCursos.add(new Curso(2, 250, "Artes Aven", "luis"));
+		listaCursos.add(new Curso("2","Fisica", 4,5, 250));
 
 		// listaCursos.add(unCurso);
 
@@ -46,11 +45,11 @@ public class BBDD {
 	
 	
 
-	public int IdCurso(String strNombreCurso)
+	public String IdCurso(String strNombreCurso)
 	{
-		int nId=0;
+		String nId="";
 		for (Curso cursoN : listaCursos) {
-			if(cursoN.getStrnombre()==strNombreCurso) {
+			if(cursoN.getNombreCurso()==strNombreCurso) {
 				nId=cursoN.getIdCurso();
 						
 				break;
@@ -59,13 +58,25 @@ public class BBDD {
 		return nId;
 	}
 	// Obtenemos el curso creado
-	public static List<Curso> ConsultaCursos() {
+	
+	public static List<Curso> ConsultaCursos(int idProfe) {
+		
+		List<Curso> listaCursos = new ArrayList<>();
+		
+		for (Curso cursoN : listaCursos) {
+			if(cursoN.getCodFormador()==idProfe) {
+				listaCursos.add(cursoN);
+						
+			}
+		}
+		
+		
 		return listaCursos;
 	}
 
 	// Creamos los modulos
 
-	public boolean CrearModulo(int idCurso, List nuevoModulo) {
+	public boolean CrearModulo(String idCurso, List nuevoModulo) {
 
 		HasModulos.put(idCurso, nuevoModulo);
 		return true;

@@ -9,10 +9,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.mindty.ddbb.BBDD;
 import com.mindty.modelos.Curso;
 import com.mindty.modelos.Modulo;
+import com.mindty.modelos.Usuario;
 
 @WebServlet("/profesor")
 
@@ -35,13 +37,27 @@ public class profesorServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		// request.getRequestDispatcher("profesor.jsp").forward(request, response);
+		
+		String user = request.getParameter("usuario");
+		String pass = request.getParameter("contrasena");
+		Usuario unUsuarioEncontrado = BBDD.Login(user, pass);
+		//77int id=0;
+		//id=unUsuarioEncontrado.getId();
+		
+		System.out.println(user+ ":"+pass+":"+unUsuarioEncontrado);
+		
+		
+		
+			
+				
+				
 
 		
 
 		// on datos lita cursos
 		BBDD.getInstance().CrearCurso();
-		List<Curso> listaCursos = BBDD.getInstance().ConsultaCursos();
-		System.out.println(listaCursos.toString());
+		List<Curso> listaCursos = BBDD.getInstance().ConsultaCursos(3);
+		//System.out.println(listaCursos.toString());
 		request.setAttribute("listaCursos", listaCursos);
 		// off datos lita cursos
 
@@ -61,11 +77,11 @@ public class profesorServlet extends HttpServlet {
 			String strMaterias="Arquitectura de las apps\n" + "Gestion de software\n" + "Fundamentos UX\n";
 			Modulo nuevoModulo = new Modulo(request.getParameter("code_modulo"), request.getParameter("nombre_modulo"),strMaterias);
 			listaModulos.add(nuevoModulo);
-			int nIdCurso = BBDD.getInstance().IdCurso(request.getParameter("Cursos"));
+			String strCurso = BBDD.getInstance().IdCurso(request.getParameter("Cursos"));
 			System.out.println(request.getParameter("code_modulo"));
 			System.out.println(request.getParameter("nombre_modulo"));
 			
-			boolean nSalida = BBDD.getInstance().CrearModulo(nIdCurso, listaModulos);
+			boolean nSalida = BBDD.getInstance().CrearModulo(strCurso, listaModulos);
 		}
 		else
 		{
