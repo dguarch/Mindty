@@ -14,7 +14,7 @@ import com.mindty.ddbb.BBDD;
 import com.mindty.modelos.Curso;
 import com.mindty.modelos.Modulo;
 
-@WebServlet("profesor")
+@WebServlet("/profesor")
 
 public class profesorServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
