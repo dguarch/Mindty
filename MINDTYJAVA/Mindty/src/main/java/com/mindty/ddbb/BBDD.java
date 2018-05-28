@@ -10,6 +10,7 @@ import com.mindty.modelos.Curso;
 import com.mindty.modelos.Modulo;
 import com.mindty.modelos.Usuario;
 
+
 public class BBDD {
 
 	private static BBDD instance = null;
@@ -24,17 +25,19 @@ public class BBDD {
 	}
 
 	// Creamos los cursos
-	public boolean CrearCurso(Curso unCurso) {
+	public boolean CrearCurso() {
 
 		listaCursos.add(new Curso(1, 200, "Mecanica quantica", "Pedrito"));
+		listaCursos.add(new Curso(2, 250, "Artes Aven", "luis"));
 		// listaCursos.add(unCurso);
 
 		return true;
 	}
+	
+	
 
 	// Obtenemos el curso creado
 	public static List<Curso> ConsultaCursos() {
-
 		return listaCursos;
 	}
 
@@ -75,3 +78,18 @@ public class BBDD {
 		return true;
 	}
 }
+
+
+//datos lanzados a jsp profesor
+
+//public final Curso getCurso(String strnombre) {
+//	Curso unCurso = null;
+//	for (Curso cursoc : listaCursos) {
+//		if (cursoc.getIdCurso() == strnombre) {
+//			unCurso = cursoc;
+//			break;
+//		}
+//	}
+//	return unCurso;
+//}
+//}

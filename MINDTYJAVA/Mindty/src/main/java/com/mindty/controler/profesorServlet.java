@@ -14,6 +14,7 @@ import com.mindty.ddbb.BBDD;
 import com.mindty.modelos.Curso;
 import com.mindty.modelos.Modulo;
 
+
 @WebServlet("/profesor")
 
 public class profesorServlet extends HttpServlet {
@@ -32,8 +33,15 @@ public class profesorServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Hola");
-		request.getRequestDispatcher("profesor.jsp").forward(request, response);
+	
+		//on datos lita cursos
+		BBDD.getInstance().CrearCurso();
+		List<Curso> listaCursos= BBDD.getInstance().ConsultaCursos();
+		System.out.println(listaCursos.toString());
+		request.setAttribute("listaCursos", listaCursos);
+		// off datos lita cursos
 		
+		request.getRequestDispatcher("profesor.jsp").forward(request, response);
 	}
 
 	/**
