@@ -31,7 +31,7 @@ public class profesorServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Hola");
+		
 		request.getRequestDispatcher("profesor.jsp").forward(request, response);
 		
 	}
@@ -40,11 +40,21 @@ public class profesorServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Hola");
-		Curso NuevoCurso=(Curso) BBDD.getInstance().ConsultaCursos();
+		System.out.println("Holaaa");
+		
+		
+		Curso NuevoCurso=new Curso(1, 100, "Curso", "Pedro");
+		System.out.println("Holaaaaaaaaaaaaaaaaaaa2");
 		List<Modulo> listaModulos = new ArrayList<>();
-		System.out.println("el id del curso es " + NuevoCurso.getIdCurso() );
-		listaModulos=BBDD.getInstance().ModulosCurso(NuevoCurso.getIdCurso());
+		//System.out.println("el id del curso es " + NuevoCurso.getIdCurso() );
+		if((request.getParameter("code_modulo")!=null) && (request.getParameter("nombre_modulo")!=null) )
+		{
+			Modulo nuevoModulo=new Modulo(request.getParameter("code_modulo"),request.getParameter("nombre_modulo"));
+			System.out.println(listaModulos.toString());
+			listaModulos.add(nuevoModulo);
+			boolean nSalida=BBDD.getInstance().CrearModulo(NuevoCurso, listaModulos);
+		}
+		System.out.println("Hola3");
 		doGet(request, response);
 	}
 

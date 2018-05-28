@@ -51,7 +51,7 @@
 
 		<div class="row">
 			<div class="col-10 col-sm-10 col-sm-10">
-				<form class="form-inline" action="POST">
+				<form class="form-inline" action="" method="POST">
 					<div class="form-group mx-sm-3 mb-2">
 						<div id="mensajes"></div>
 						<!-- ExpReg= /[A-Z]{3,} \d/ -->

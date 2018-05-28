@@ -14,7 +14,7 @@ public class BBDD {
 
 	private static BBDD instance = null;
 	private static List listaCursos = new ArrayList<>();
-	private static Map<Integer, Modulo> HasModulos = new HashMap<Integer, Modulo>();
+	private static Map<Integer, List<Modulo>> HasModulos = new HashMap<>();
 	private static ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 
 	public static BBDD getInstance() {
@@ -23,10 +23,15 @@ public class BBDD {
 		return instance;
 	}
 
+	private BBDD()
+	{
+		loadUsuarios();
+		CrearCurso();
+	}
 	// Creamos los cursos
-	public boolean CrearCurso(Curso unCurso) {
+	public boolean CrearCurso() {
 
-		listaCursos.add(new Curso(1, 200, "Mecanica quantica", "Pedrito"));
+		listaCursos.add(new Curso(1, 200, "Mecanica quantica", "Hector"));
 		// listaCursos.add(unCurso);
 
 		return true;
@@ -40,23 +45,19 @@ public class BBDD {
 
 	// Creamos los modulos
 
-	public boolean CrearModulo(Curso unCurso, Modulo nuevoModulo) {
+	public boolean CrearModulo(Curso unCurso, List nuevoModulo) {
 
 		HasModulos.put(unCurso.getIdCurso(), nuevoModulo);
 		return true;
 	}
 
 	public List<Modulo> ModulosCurso(int idCurso) {
-		List<Modulo> listaModulos = new ArrayList<>();
-		Iterator it = HasModulos.entrySet().iterator();
-		while (it.hasNext()) {
-			Map.Entry e = (Map.Entry) it.next();
-			if (Integer.parseInt((String) e.getKey()) == idCurso) {
-				listaModulos.add((Modulo) e.getValue());
-			}
-		}
-		return listaModulos;
+		
+		return HasModulos.get(new Integer(idCurso));
 	}
+	
+	//
+	//Usuarios
 	public static Usuario Login(String usuario, String contrasena) {
 		loadUsuarios();
 		Usuario user = null;
