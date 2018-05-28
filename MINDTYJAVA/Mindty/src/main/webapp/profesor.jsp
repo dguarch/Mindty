@@ -47,11 +47,29 @@
 	<section>
 		<div id="ok"></div>
 		<h2>Añadir modulo:</h2>
+		
+		<!-- lsita de cursos -->
+			<div class="form-row">
+				<div class="form-group col-12">
+					<select id="Cursos" class="form-control col-12"
+						aria-label="Selecciona al formador" name="Cursos">
+						<!-- <option value="" disabled selected>Cursos</option> -->
+						<c:forEach var="unCurso" items="${listaCursos}">
+						
+						<option value="${unCurso.idCurso}">${unCurso.strnombre}</option>
+						
+						
+						</c:forEach>
+						
+					</select>
+				</div>
+			</div>
+		
 		<hr>
 
 		<div class="row">
 			<div class="col-10 col-sm-10 col-sm-10">
-				<form class="form-inline" action="POST">
+				<form class="form-inline" action="" method="POST">
 					<div class="form-group mx-sm-3 mb-2">
 						<div id="mensajes"></div>
 						<!-- ExpReg= /[A-Z]{3,} \d/ -->

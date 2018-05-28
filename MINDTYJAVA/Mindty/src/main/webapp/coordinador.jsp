@@ -32,7 +32,7 @@
 			aria-label="Inicio"> <i class="fas fa-home"></i>
 		</a> <a class="breadcrumb-item" href="#" title="Curso" alt="Curso">Cursos</a>
 		<span class="breadcrumb-item active" title="A帽adir m贸dulo"
-			alt="A帽adir m贸dulo">Curso</span>
+			alt="A馻dir m贸dulo">Curso</span>
 	</nav>
 
 	<!-- Nombre secci贸n -->
@@ -54,7 +54,7 @@
 					<!-- Campo C贸digo curso con RegExp = ^[A-Z]{3}\s+[0-9]{5}$ (XXX 12345)$ -->
 					<input type="text" class="form-control"
 						pattern="^[A-Z]{3}\s+[0-9]{5}$" id="codigoCurso"
-						placeholder="C贸digo curso" aria-label="C贸digo curso" required>
+						placeholder="C骴igo curso" aria-label="C骴igo curso" required>
 					<small id="cheet" class="text-info">Ej. XXX 12345</small>
 				</div>
 				<div class="col-8">

@@ -14,8 +14,8 @@ import com.mindty.modelos.Usuario;
 public class BBDD {
 
 	private static BBDD instance = null;
-	private static List listaCursos = new ArrayList<>();
-	private static Map<Integer, Modulo> HasModulos = new HashMap<Integer, Modulo>();
+	private static List<Curso> listaCursos = new ArrayList<>();
+	private static Map<Integer, List<Modulo>> HasModulos = new HashMap<>();
 	private static ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 
 	public static BBDD getInstance() {
@@ -24,40 +24,60 @@ public class BBDD {
 		return instance;
 	}
 
+	private BBDD()
+	{
+		loadUsuarios();
+		CrearCurso();
+		
+	}
 	// Creamos los cursos
-	public boolean CrearCurso(Curso unCurso) {
+	public boolean CrearCurso() {
+
+
+		listaCursos.add(new Curso(1, 200, "Mecanica quantica", "Hector"));
 
 		listaCursos.add(new Curso(1, 200, "Mecanica quantica", "Pedrito"));
+		listaCursos.add(new Curso(2, 250, "Artes Aven", "luis"));
+
 		// listaCursos.add(unCurso);
 
 		return true;
 	}
+	
+	
 
+	public int IdCurso(String strNombreCurso)
+	{
+		int nId=0;
+		for (Curso cursoN : listaCursos) {
+			if(cursoN.getStrnombre()==strNombreCurso) {
+				nId=cursoN.getIdCurso();
+						
+				break;
+			}
+		}
+		return nId;
+	}
 	// Obtenemos el curso creado
 	public static List<Curso> ConsultaCursos() {
-
 		return listaCursos;
 	}
 
 	// Creamos los modulos
 
-	public boolean CrearModulo(Curso unCurso, Modulo nuevoModulo) {
+	public boolean CrearModulo(int idCurso, List nuevoModulo) {
 
-		HasModulos.put(unCurso.getIdCurso(), nuevoModulo);
+		HasModulos.put(idCurso, nuevoModulo);
 		return true;
 	}
 
 	public List<Modulo> ModulosCurso(int idCurso) {
-		List<Modulo> listaModulos = new ArrayList<>();
-		Iterator it = HasModulos.entrySet().iterator();
-		while (it.hasNext()) {
-			Map.Entry e = (Map.Entry) it.next();
-			if (Integer.parseInt((String) e.getKey()) == idCurso) {
-				listaModulos.add((Modulo) e.getValue());
-			}
-		}
-		return listaModulos;
+		
+		return HasModulos.get(new Integer(idCurso));
 	}
+	
+	//
+	//Usuarios
 	public static Usuario Login(String usuario, String contrasena) {
 		loadUsuarios();
 		Usuario user = null;
@@ -78,3 +98,18 @@ public class BBDD {
 	}
 
 }
+
+
+//datos lanzados a jsp profesor
+
+//public final Curso getCurso(String strnombre) {
+//	Curso unCurso = null;
+//	for (Curso cursoc : listaCursos) {
+//		if (cursoc.getIdCurso() == strnombre) {
+//			unCurso = cursoc;
+//			break;
+//		}
+//	}
+//	return unCurso;
+//}
+//}

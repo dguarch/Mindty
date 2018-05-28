@@ -23,12 +23,13 @@
     //            <img src="./images/users/Custom-Icon-Design-Pretty-Office-8-Accept.ico">                 //
 
 
-    $('#btn_form').click(function (evnt) {
-        evnt.preventDefault();
-        let form_data = ValFormulario();
-        if (form_data.vall) {
+   $('#btn_form').click(function (evnt) {
+       // evnt.preventDefault();
+       // let form_data = ValFormulario();
+	   
+       // if (form_data.vall) {
             enviarDatos(form_data.data)
-        }
+        //}
     });
 
 
