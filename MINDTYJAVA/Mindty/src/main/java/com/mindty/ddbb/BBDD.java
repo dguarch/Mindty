@@ -10,6 +10,7 @@ import com.mindty.modelos.Curso;
 import com.mindty.modelos.Modulo;
 import com.mindty.modelos.Usuario;
 
+
 public class BBDD {
 
 	private static BBDD instance = null;
@@ -67,9 +68,20 @@ public class BBDD {
 		}
 		return user;
 	}
+	public static Usuario getUsuarioByUsuario(String usuario) {
+		Usuario unUsuario = null;
+		for (Usuario user : listaUsuarios) {
+			if (user.getUsuario().equals(usuario)) {
+				unUsuario = user;
+				break;
+			}
+		}
+
+		return unUsuario;
+	}
 	private static final boolean loadUsuarios() {
-		listaUsuarios.add(new Usuario(1, "Youssef", "Youssef", "Youssef123","coordinador"));
-		listaUsuarios.add(new Usuario(2, "Hector", "Hector", "Hector123","profesor"));
+		listaUsuarios.add(new Usuario(1, "Youssef", "Youssef", "Youssef","coordinador"));
+		listaUsuarios.add(new Usuario(2, "Hector", "Hector", "Hector","profesor"));
 		listaUsuarios.add(new Usuario(3, "Raul", "Raul", "Raul123","alumno"));
 		listaUsuarios.add(new Usuario(4, "Ivan", "Ivan", "Ivan123","coordinador"));
 		return true;

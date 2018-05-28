@@ -2,6 +2,7 @@ package com.mindty.controler;
 
 import java.io.IOException;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +20,7 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		
 		HttpSession session = request.getSession();
 
 		if (session.getAttribute("usuario") != null) {
@@ -33,9 +34,12 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		String user = request.getParameter("usuario");
-		String pass = request.getParameter("contraseña");
+		String pass = request.getParameter("contrasena");
 		Usuario unUsuarioEncontrado = BBDD.Login(user, pass);
-
+		
+		System.out.println(user+ ":"+pass+":"+unUsuarioEncontrado);
+		
+		
 		if (unUsuarioEncontrado != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("usuario", unUsuarioEncontrado.getUsuario());
@@ -48,7 +52,7 @@ public class LoginServlet extends HttpServlet {
 				muro = "/profesor";
 				break;
 			case "alumno":
-				muro = "/alumno";
+				muro = "alumno";
 				break;
 			}
 			response.sendRedirect(muro);
