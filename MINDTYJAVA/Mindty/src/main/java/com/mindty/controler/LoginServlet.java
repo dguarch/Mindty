@@ -41,21 +41,25 @@ public class LoginServlet extends HttpServlet {
 		
 		
 		if (unUsuarioEncontrado != null) {
+			
+			System.out.println("tipò:"+unUsuarioEncontrado.getTipo()+":"+unUsuarioEncontrado.getNombre());
+			
 			HttpSession session = request.getSession();
 			session.setAttribute("usuario", unUsuarioEncontrado.getUsuario());
 			String muro = null;
 			switch (unUsuarioEncontrado.getTipo()) {
-			case "coordenador":
-				muro = "/coordenador";
+			case "coordinador":
+				muro = "/Mindty/coordinador";
 				break;
 			case "profesor":
-				muro = "/profesor";
+				muro = "/Mindty/profesor";
 				break;
 			case "alumno":
-				muro = "alumno";
+				muro = "/Mindty/alumno";
 				break;
 			}
 			response.sendRedirect(muro);
+			System.out.println(muro);
 		} else {
 			request.setAttribute("error", "Los datos son incorrectos!!!");
 			this.doGet(request, response);
