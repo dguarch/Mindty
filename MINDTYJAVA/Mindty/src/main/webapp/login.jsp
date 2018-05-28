@@ -45,7 +45,7 @@
 
 
 	<section class="login">
-		<form action="/action_page.php" id="commentForm">
+		<form action="" method="post" id="commentForm">
 			<div class="imgcontainer">
 				<img src="./images/login/login.png" alt="Avatar" class="avatar">
 			</div>
@@ -65,7 +65,7 @@
 					<input class="pinta" id="contraseña" type="password"
 						placeholder="contraseña" value="Password"
 						pattern="^([A-Z]{1}[a-zñáéíóú]+[\s]*)+$" aria-label="Contraseña"
-						name="contaseña" required>
+						name="contrasena" required>
 				</div>
 				<div>
 					<br>

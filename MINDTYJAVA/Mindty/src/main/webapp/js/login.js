@@ -1,11 +1,11 @@
 /*     boton enviar validar */
-$('#bton').click(function (evnt) {
-    evnt.preventDefault();
-    let form_data = ValFormulario();
-    if (form_data.vall) {
-        enviarDatos(form_data.data)
-    }
-});
+//$('#bton').click(function (evnt) {
+//    evnt.preventDefault();
+//    let form_data = ValFormulario();
+//    if (form_data.vall) {
+//        enviarDatos(form_data.data)
+//    }
+//});
 
 /*     función  validar */
 
@@ -37,7 +37,7 @@ let enviarDatos = function (datos_envio) {
     })
         .done(function (responde_data) {
             if (responde_data.result) {
-                location.href = './coordinador.jsp';
+                location.href = './login';
             } else {
                 console.log('Error');
                 $('#mesajes').html('Usuario y/o Contraseña incorrectas');
