@@ -51,8 +51,8 @@
 		<!-- lsita de cursos -->
 			<div class="form-row">
 				<div class="form-group col-12">
-					<select id="profes" class="form-control col-12"
-						aria-label="Selecciona al formador">
+					<select id="Cursos" class="form-control col-12"
+						aria-label="Selecciona al formador" name="Cursos">
 						<!-- <option value="" disabled selected>Cursos</option> -->
 						<c:forEach var="unCurso" items="${listaCursos}">
 						
