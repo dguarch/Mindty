@@ -2,6 +2,7 @@ package com.mindty.ddbb;
 
 import java.awt.List;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 import com.mindty.modelos.Curso;
@@ -11,7 +12,7 @@ import com.mindty.modelos.Usuario;
 public class BBDD {
 
 	private static BBDD instance = null;
-	private static List listaCursos = new ArrayList<>();
+//	private static List listaCursos = new ArrayList<>();
 	private static Map<Integer, Modulo> HasModulos = new HashMap<Integer, Modulo>();
 	private static ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 
