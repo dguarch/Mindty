@@ -32,10 +32,8 @@ public class BBDD {
 
 	// Creamos los cursos
 	public boolean CrearCurso() {
-
-
-		
 		listaCursos.add(new Curso("ASV 12345", "Mecanica quantica", 2, 5, 250));
+		listaCursos.add(new Curso("PSV 52145", "Relatividad quantica", 1, 5, 250));
 
 		
 
@@ -179,6 +177,7 @@ public boolean AnalisisLogin( String usuario, String contraseña) {
 		}
 		return listaProfes;
 	}
+	
 	public boolean newCurso(Curso cursoNuevo) {
 		listaCursos.add(cursoNuevo);
 		return true;

@@ -19,7 +19,15 @@ public class alumnoServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		request.getRequestDispatcher("alumno.jsp").forward(request, response);
+		if (session.getAttribute("usuario") != null) {
+			BBDD.getInstance();
+			Usuario elUser = BBDD.getUsuarioByUsuario((String) session.getAttribute("usuario"));
+			
+			request.setAttribute("usuario", elUser);
+			request.getRequestDispatcher("alumno.jsp").forward(request, response);
+		} else {
+			response.sendRedirect("login");
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

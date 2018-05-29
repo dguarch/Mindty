@@ -87,6 +87,7 @@ $('#enviar').click(function (evnt) {
     localStorage.setItem('infoCurso', JSON.stringify(formValido.values, ' '));
     if (formValido.valid) {
         //enviarCurso(formValido); //**MOKI
+    	$('#mensajes').html(`<div class="alert alert-success col-6" role="alert">Los datos se han envíado correctamente!!!!!!</div>`);
     	$('#formCurso').submit();
     }
 });

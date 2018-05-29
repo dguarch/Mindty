@@ -29,7 +29,17 @@ public class coordinadorServlet extends HttpServlet {
 		
 		List<Usuario> profes = BBDD.getInstance().getProfes();
 		request.setAttribute("profes", profes);
-		request.getRequestDispatcher("coordinador.jsp").forward(request, response);
+		HttpSession session = request.getSession();
+		if (session.getAttribute("usuario") != null) {
+			BBDD.getInstance();
+			Usuario elUser = BBDD.getUsuarioByUsuario((String) session.getAttribute("usuario"));
+			
+			request.setAttribute("usuario", elUser);
+			request.getRequestDispatcher("coordinador.jsp").forward(request, response);
+		} else {
+			response.sendRedirect("login");
+		}
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

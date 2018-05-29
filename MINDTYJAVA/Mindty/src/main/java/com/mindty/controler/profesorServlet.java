@@ -40,8 +40,15 @@ public class profesorServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-
-	
+		if (session.getAttribute("usuario") != null) {
+			BBDD.getInstance();
+			Usuario elUser = BBDD.getUsuarioByUsuario((String) session.getAttribute("usuario"));
+			
+			request.setAttribute("usuario", elUser);
+			request.getRequestDispatcher("profesor.jsp").forward(request, response);
+		} else {
+			response.sendRedirect("login");
+		}
 
 		// request.getRequestDispatcher("profesor.jsp").forward(request, response);
 		
