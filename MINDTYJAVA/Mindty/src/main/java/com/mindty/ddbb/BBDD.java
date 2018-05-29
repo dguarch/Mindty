@@ -24,40 +24,36 @@ public class BBDD {
 		return instance;
 	}
 
-	private BBDD()
-	{
+	private BBDD() {
 		loadUsuarios();
 		CrearCurso();
-		
+
 	}
+
 	// Creamos los cursos
 	public boolean CrearCurso() {
 
-
-		listaCursos.add(new Curso(1, 200, "Mecanica quantica", "Hector"));
-
+		listaCursos.add(new Curso(1, 200, "Artes Aven", "Hector"));
 		listaCursos.add(new Curso(1, 200, "Mecanica quantica", "Pedrito"));
-		listaCursos.add(new Curso(2, 250, "Artes Aven", "luis"));
+		listaCursos.add(new Curso(2, 250, "Sumas", "luis"));
 
 		// listaCursos.add(unCurso);
 
 		return true;
 	}
-	
-	
 
-	public int IdCurso(String strNombreCurso)
-	{
-		int nId=0;
+	public int IdCurso(String strNombreCurso) {
+		int nId = 0;
 		for (Curso cursoN : listaCursos) {
-			if(cursoN.getStrnombre()==strNombreCurso) {
-				nId=cursoN.getIdCurso();
-						
+			if (cursoN.getStrnombre() == strNombreCurso) {
+				nId = cursoN.getIdCurso();
+
 				break;
 			}
 		}
 		return nId;
 	}
+
 	// Obtenemos el curso creado
 	public static List<Curso> ConsultaCursos() {
 		return listaCursos;
@@ -72,22 +68,24 @@ public class BBDD {
 	}
 
 	public List<Modulo> ModulosCurso(int idCurso) {
-		
+
 		return HasModulos.get(new Integer(idCurso));
 	}
-	
+
 	//
-	//Usuarios
-	public static Usuario Login(String usuario, String contrasena) {
+	// Usuarios
+	public static Usuario Login(String usuario, String contraseña) {
 		loadUsuarios();
 		Usuario user = null;
 		for (int i = 0; i < listaUsuarios.size(); i++) {
-			if(listaUsuarios.get(i).getUsuario().equals(usuario)&&listaUsuarios.get(i).getContraseña().equals(contrasena)) {
-			user=listaUsuarios.get(i);
+			if (listaUsuarios.get(i).getUsuario().equals(usuario)
+					&& listaUsuarios.get(i).getContraseña().equals(contraseña)) {
+				user = listaUsuarios.get(i);
 			}
 		}
 		return user;
 	}
+
 	public static Usuario getUsuarioByUsuario(String usuario) {
 		Usuario unUsuario = null;
 		for (Usuario user : listaUsuarios) {
@@ -99,26 +97,50 @@ public class BBDD {
 
 		return unUsuario;
 	}
+
 	private static final boolean loadUsuarios() {
-		listaUsuarios.add(new Usuario(1, "Youssef", "Youssef", "Youssef","coordinador"));
-		listaUsuarios.add(new Usuario(2, "Hector", "Hector", "Hector","profesor"));
-		listaUsuarios.add(new Usuario(3, "Raul", "Raul", "Raul123","alumno"));
-		listaUsuarios.add(new Usuario(4, "Ivan", "Ivan", "Ivan123","coordinador"));
+		listaUsuarios.add(new Usuario(1, "Youssef", "Youssef", "Youssef", "coordinador"));
+		listaUsuarios.add(new Usuario(2, "Hector", "Hector", "Hector", "profesor"));
+		listaUsuarios.add(new Usuario(3, "Raul", "Raul", "Raul123", "alumno"));
+		listaUsuarios.add(new Usuario(4, "Ivan", "Ivan", "Ivan123", "coordinador"));
 		return true;
 	}
+
+public boolean AnalisisLogin( String usuario, String contraseña) {
+//	String regexNum=".?[0-9].?";    //&& !usuario.toLowerCase()
+	boolean isOk = false;
+	if (usuario != null && usuario.equals("") && usuario.equals(".?[0-9].?") ) {
+		
+		
+			for (Usuario usuarioT : listaUsuarios) {
+				if (usuarioT.getUsuario() == usuario) {
+					usuarioT.setUsuario(usuario);
+					usuarioT.setContraseña(contraseña);
+					int index = listaUsuarios.indexOf(usuarioT);
+					listaUsuarios.set(index, usuarioT);
+					isOk = true;
+					break;
+				}
+			}
+		}
+		
+
+	return isOk;
+}
+
 }
 
 
-//datos lanzados a jsp profesor
+// datos lanzados a jsp profesor
 
-//public final Curso getCurso(String strnombre) {
-//	Curso unCurso = null;
-//	for (Curso cursoc : listaCursos) {
-//		if (cursoc.getIdCurso() == strnombre) {
-//			unCurso = cursoc;
-//			break;
-//		}
-//	}
-//	return unCurso;
-//}
-//}
+// public final Curso getCurso(String strnombre) {
+// Curso unCurso = null;
+// for (Curso cursoc : listaCursos) {
+// if (cursoc.getIdCurso() == strnombre) {
+// unCurso = cursoc;
+// break;
+// }
+// }
+// return unCurso;
+// }
+// }

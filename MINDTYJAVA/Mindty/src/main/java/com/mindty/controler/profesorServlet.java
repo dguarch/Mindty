@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.mindty.ddbb.BBDD;
 import com.mindty.modelos.Curso;
@@ -32,6 +33,8 @@ public class profesorServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession session = request.getSession();
 
 		
 		//request.getRequestDispatcher("profesor.jsp").forward(request, response);
@@ -39,14 +42,27 @@ public class profesorServlet extends HttpServlet {
 		System.out.println("Hola");
 	
 		//on datos lita cursos
-		BBDD.getInstance().CrearCurso();
+//		BBDD.getInstance().CrearCurso();
 		List<Curso> listaCursos= BBDD.getInstance().ConsultaCursos();
 		System.out.println(listaCursos.toString());
 		request.setAttribute("listaCursos", listaCursos);
 		// off datos lita cursos
-
+		
+		//on datos lita cursos
+//		BBDD.getInstance().CrearCurso();
+		List<Curso> listaModulos= BBDD.getInstance().ConsultaCursos();
+		System.out.println(listaModulos.toString());
+		request.setAttribute("listaModulos", listaModulos);
+		// off datos lita cursos
+		
+		
 		
 		request.getRequestDispatcher("profesor.jsp").forward(request, response);
+	}
+
+	private void ListaModulo() {
+		
+		
 	}
 
 	/**

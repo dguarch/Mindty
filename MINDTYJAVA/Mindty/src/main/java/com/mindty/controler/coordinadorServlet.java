@@ -22,6 +22,8 @@ public class coordinadorServlet extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession session = request.getSession();
 		request.getRequestDispatcher("coordinador.jsp").forward(request, response);
 		
 	

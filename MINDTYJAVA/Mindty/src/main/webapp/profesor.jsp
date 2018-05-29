@@ -47,24 +47,24 @@
 	<section>
 		<div id="ok"></div>
 		<h2>A�adir modulo:</h2>
-		
+
 		<!-- lsita de cursos -->
-			<div class="form-row">
-				<div class="form-group col-12">
-					<select id="Cursos" class="form-control col-12"
-						aria-label="Selecciona al formador" name="Cursos">
-						<!-- <option value="" disabled selected>Cursos</option> -->
-						<c:forEach var="unCurso" items="${listaCursos}">
-						
+		<div class="form-row">
+			<div class="form-group col-12">
+				<select id="Cursos" class="form-control col-12"
+					aria-label="Selecciona al formador" name="Cursos">
+					<!-- <option value="" disabled selected>Cursos</option> -->
+					<c:forEach var="unCurso" items="${listaCursos}">
+
 						<option value="${unCurso.idCurso}">${unCurso.strnombre}</option>
-						
-						
-						</c:forEach>
-						
-					</select>
-				</div>
+
+
+					</c:forEach>
+
+				</select>
 			</div>
-		
+		</div>
+
 		<hr>
 
 		<div class="row">
@@ -110,34 +110,37 @@
 
 	<div class="row">
 		<div id="modulos" class="col-sm-10 col-md-10">
+<!-- modulos mostrados -->
+				<c:forEach var="unModulo" items="${listaModulos}">
 
 			<ol class="nav nav-tabs">
-				<li class="nav-item"><a class="nav-link moduloactive modulo"
-					href="#">Modulo 1</a></li>
-				<li class="nav-item"><a class="nav-link modulo" href="#">Modulo
-						2</a></li>
-				<li class="nav-item"><a class="nav-link modulo" href="#">Modulo
-						3</a></li>
 
-			</ol>
+					<li class="nav-item"><a class="nav-link moduloactive modulo"
+						href="#">${unModulo.strNombre}</a></li>
 
-
-			<!-- bloque de modulos -->
-			<div id="unidades" class="col-sm-7">
-				<ol>
-					<li><a href="#">Arquitectura de las apps</a></li>
-					<li><a href="#">Gestion de software</a></li>
-					<li><a href="#">Fundamentos UX</a></li>
-					<li><a href="#">Fundamentos desarrollo</a></li>
-					<li><a href="#">Fundamentos Java</a></li>
-					<!-- <ol>Boton-->
-					<button type="button" id="add" class="btn btn-success"
-						aria-label="Añadir alumno">
-						<i class="fas fa-plus"></i>
-					</button>
-				</ol>
-			</div>
+					<!-- contenido de modulos -->
+					<div id="unidades" class="col-sm-7">
+						<ol>
+							<li><a href="#">Arquitectura de las apps</a></li>
+							<li><a href="#">Gestion de software</a></li>
+							<li><a href="#">Fundamentos UX</a></li>
+							<li><a href="#">Fundamentos desarrollo</a></li>
+							<li><a href="#">Fundamentos Java</a></li>
+							<!-- <ol>Boton-->
+							<button type="button" id="add" class="btn btn-success"
+								aria-label="Añadir alumno">
+								<i class="fas fa-plus"></i>
+							</button>
+						</ol>
+					</div>
+					<!-- contenido de modulos fin-->
 		</div>
+
+		</c:forEach>
+		<!-- modulos mostrados  fin-->
+
+
+
 
 		<div id="calendario">
 
