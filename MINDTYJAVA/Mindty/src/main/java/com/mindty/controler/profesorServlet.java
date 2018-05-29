@@ -1,7 +1,6 @@
 package com.mindty.controler;
 
 import java.io.IOException;
-import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,15 +39,7 @@ public class profesorServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-		if (session.getAttribute("usuario") != null) {
-			BBDD.getInstance();
-			Usuario elUser = BBDD.getUsuarioByUsuario((String) session.getAttribute("usuario"));
-			
-			request.setAttribute("usuario", elUser);
-			request.getRequestDispatcher("profesor.jsp").forward(request, response);
-		} else {
-			response.sendRedirect("login");
-		}
+
 
 		// request.getRequestDispatcher("profesor.jsp").forward(request, response);
 		
@@ -77,14 +68,19 @@ public class profesorServlet extends HttpServlet {
 		// off datos lita cursos
 		*/
 		
-		
+		if (session.getAttribute("usuario") != null) {
+
+			Usuario elUser = BBDD.getUsuarioByUsuario((String) session.getAttribute("usuario"));
+			
+			request.setAttribute("usuario", elUser);
+			request.getRequestDispatcher("profesor.jsp").forward(request, response);
+		} else {
+			response.sendRedirect("login");
+		}
 
 	
 
 		
-
-
-		request.getRequestDispatcher("profesor.jsp").forward(request, response);
 		
 	
 		

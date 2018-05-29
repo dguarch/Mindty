@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.mindty.ddbb.BBDD;
+import com.mindty.modelos.Usuario;
+
 @WebServlet("/alumno")
 
 public class alumnoServlet extends HttpServlet {
@@ -20,7 +23,7 @@ public class alumnoServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		if (session.getAttribute("usuario") != null) {
-			BBDD.getInstance();
+			
 			Usuario elUser = BBDD.getUsuarioByUsuario((String) session.getAttribute("usuario"));
 			
 			request.setAttribute("usuario", elUser);
