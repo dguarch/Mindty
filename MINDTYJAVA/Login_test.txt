@@ -1,0 +1,11 @@
+
+Test sobre Login 
+
+usuario: existe (2), usuario:”Youssef” && contraseña: existe , contraseña:"Youssef" ? true
+usuario: existe (2), usuario:”Feota” && contraseña: existe , contraseña:"Si lo es" ? false
+usuario: existe (2), usuario:”” && contraseña: existe  contraseña:"" ? false
+usuario: existe (2), usuario:”null” && contraseña: existe , contraseña:"null" ? false
+usuario: existe (2), usuario:”25” && contraseña: existe , contraseña:"1" ? false
+usuario: existe (2), usuario:”youssef” && contraseña: existe, contraseña:"youssef" ? false
+
+

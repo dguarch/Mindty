@@ -70,15 +70,19 @@ public class BBDD {
 		return listaCursoProfe;
 	}
 
+	
+	
+	
+	
 	// Creamos los modulos
-
+	
 	public boolean CrearModulo(String idCurso, List nuevoModulo) {
 
 		HasModulos.put(idCurso, nuevoModulo);
 		return true;
 	}
 
-	public List<Modulo> ModulosCurso(int idCurso) {
+	public List<Modulo> ModulosCurso(String  idCurso) {
 
 		return HasModulos.get(new Integer(idCurso));
 	}

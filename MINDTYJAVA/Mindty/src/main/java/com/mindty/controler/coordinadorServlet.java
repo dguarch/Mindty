@@ -39,7 +39,6 @@ public class coordinadorServlet extends HttpServlet {
 		} else {
 			response.sendRedirect("login");
 		}
-		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

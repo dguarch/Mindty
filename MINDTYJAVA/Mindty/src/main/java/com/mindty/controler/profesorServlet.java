@@ -1,6 +1,7 @@
 package com.mindty.controler;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,6 +41,7 @@ public class profesorServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 
+	
 
 		// request.getRequestDispatcher("profesor.jsp").forward(request, response);
 		
@@ -55,18 +57,18 @@ public class profesorServlet extends HttpServlet {
 
 		
 		List<Curso> listaCursos = BBDD.getInstance().ConsultaCursos(nid);
-		System.out.println(listaCursos.toString());
-
+		
 		
 		request.setAttribute("listaCursos", listaCursos);
-		// off datos lita cursos
 		
 		
-		/*List<Modulos> listaModulos= BBDD.getInstance().ConsultaCursos(nid);
-		System.out.println(listaModulos.toString());
+		
+		/*List<Modulos> listaModulos= BBDD.getInstance().ConsultaMoldulos(nid);
+		
 		request.setAttribute("listaModulos", listaModulos);
 		// off datos lita cursos
 		*/
+		
 		
 		if (session.getAttribute("usuario") != null) {
 
@@ -78,9 +80,9 @@ public class profesorServlet extends HttpServlet {
 			response.sendRedirect("login");
 		}
 
-	
-
 		
+
+
 		
 	
 		
@@ -98,6 +100,12 @@ public class profesorServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		/*String strCurso2 = BBDD.getInstance().IdCurso(request.getParameter("Cursos"));
+		System.out.println(strCurso2 +"AAAAAAAAAAAAAAAA");
+		System.out.println(strCurso2);
+		List<Modulo> listaModulos2 = new ArrayList<>();
+		listaModulos2=BBDD.getInstance().ModulosCurso(strCurso2);*/
+		
 		List<Modulo> listaModulos = new ArrayList<>();
 		// System.out.println("el id del curso es " + NuevoCurso.getIdCurso() );
 		if ((request.getParameter("code_modulo") != null) && (request.getParameter("nombre_modulo") != null)) {

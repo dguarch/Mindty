@@ -52,23 +52,24 @@ let validar = () => {
     return { valid: _valid, values: _formValues };
 }
 //MOKI
-/*const enviarCurso = (dataSend) => {
+const enviarCurso = (dataSend) => {
+	let cursodata=$('#formCurso').serialize();
+	
     $.ajax({
-        //url: 'http://www.mocky.io/v2/5ad782d73000006900e584a344', // URL WRONG
-        //url: 'http://www.mocky.io/v2/5ad78aa33000004b00e584d0', // URL FALSE
-        url: 'http://www.mocky.io/v2/5aeb49703000004e00575486', // URL TRUE
+        url: `/Mindty/coordinador`, // URL TRUE
         method: 'POST',
-        data: dataSend
+        accepts:"application/json",
+        data: cursodata
     })
-        .done(function (respuesta) {
+        .done(function (dataSend) {
             // Cuando hay exito
-            if (respuesta.result) {
+            if (dataSend) {
                 $('#mensajes').html(`<div class="alert alert-success col-6" role="alert">
             Los datos se han envíado correctamente!!!!!!
           </div>`);
             } else {
                 $('#mensajes').html(`<div class="alert alert-danger" role="alert">
-        No lo he podido guardar en el servidor, en un ratito lo intentaré de nuevo.
+        No lo he podido guardar en el servidor, en un ratito lo intentaré de nuevo2.
       </div>`)
             };
         })
@@ -79,16 +80,14 @@ let validar = () => {
       </div>`);
         });
     $('#formCurso').trigger("reset");
-};*/
+};
 
 $('#enviar').click(function (evnt) {
     evnt.preventDefault();
     let formValido = validar();
     localStorage.setItem('infoCurso', JSON.stringify(formValido.values, ' '));
     if (formValido.valid) {
-        //enviarCurso(formValido); //**MOKI
-    	$('#mensajes').html(`<div class="alert alert-success col-6" role="alert">Los datos se han envíado correctamente!!!!!!</div>`);
-    	$('#formCurso').submit();
+    	enviarCurso(formValido);
     }
 });
 
