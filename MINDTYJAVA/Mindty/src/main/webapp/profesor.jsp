@@ -52,7 +52,7 @@
 		<h2>Añadir modulo:</h2>
 
 		<!-- lsita de cursos -->
-<<<<<<< HEAD
+
 			<div class="form-row">
 				<div class="form-group col-12">
 					<select id="Cursos" class="form-control col-12"
@@ -64,22 +64,8 @@
 						
 					</select>
 				</div>
-=======
-		<div class="form-row">
-			<div class="form-group col-12">
-				<select id="Cursos" class="form-control col-12"
-					aria-label="Selecciona al formador" name="Cursos">
-					<!-- <option value="" disabled selected>Cursos</option> -->
-					<c:forEach var="unCurso" items="${listaCursos}">
 
-						<option value="${unCurso.idCurso}">${unCurso.strnombre}</option>
-
-
-					</c:forEach>
-
-				</select>
->>>>>>> a691a08457f990887fcceca6e945d1880167adb0
-			</div>
+		
 		</div>
 
 		<hr>

@@ -17,7 +17,7 @@ let validar = () => {
     $('#nombreCurso').each(function () {
         let validezCurso = this.validity;
         if (validezCurso.patternMismatch || validezCurso.valueMissing) {
-            $('#nombreCurso').after('<div class="errors"><i class="far fa-times-circle"></i> Nombre curso inválido.</div>');
+            $('#nombreCurso').after('<div class="errors"><i class="far fa-times-circle"></i> Nombre curso inv&aacute;lido.</div>');
             _valid = false;
         }
         _formValues[this.id] = this.value;
@@ -51,8 +51,8 @@ let validar = () => {
 
     return { valid: _valid, values: _formValues };
 }
-
-const enviarCurso = (dataSend) => {
+//MOKI
+/*const enviarCurso = (dataSend) => {
     $.ajax({
         //url: 'http://www.mocky.io/v2/5ad782d73000006900e584a344', // URL WRONG
         //url: 'http://www.mocky.io/v2/5ad78aa33000004b00e584d0', // URL FALSE
@@ -79,15 +79,15 @@ const enviarCurso = (dataSend) => {
       </div>`);
         });
     $('#formCurso').trigger("reset");
-};
+};*/
 
 $('#enviar').click(function (evnt) {
     evnt.preventDefault();
-    validar();
+    let formValido = validar();
     localStorage.setItem('infoCurso', JSON.stringify(formValido.values, ' '));
-    
     if (formValido.valid) {
-        $('formCurso').post();
+        //enviarCurso(formValido); //**MOKI
+    	$('#formCurso').submit();
     }
 });
 

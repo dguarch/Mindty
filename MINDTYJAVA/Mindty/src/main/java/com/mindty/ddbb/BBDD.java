@@ -33,34 +33,18 @@ public class BBDD {
 	// Creamos los cursos
 	public boolean CrearCurso() {
 
-<<<<<<< HEAD
-		listaCursos.add(new Curso(1, 200, "Artes Aven", "Hector"));
-		listaCursos.add(new Curso(1, 200, "Mecanica quantica", "Pedrito"));
-		listaCursos.add(new Curso(2, 250, "Sumas", "luis"));
-=======
 
-<<<<<<< HEAD
+		
 		listaCursos.add(new Curso("ASV 12345", "Mecanica quantica", 2, 5, 250));
-=======
-		listaCursos.add(new Curso("1","Mecanica quantica", 2,5, 250));
 
-		listaCursos.add(new Curso("2","Fisica", 4,5, 250));
->>>>>>> c8241ac3f3e3677ee9a3aaa638ab2607c40d1e39
+		
 
-		// listaCursos.add(unCurso);
-
->>>>>>> a691a08457f990887fcceca6e945d1880167adb0
+		
 		return true;
 	}
 
-<<<<<<< HEAD
-	public int IdCurso(String strNombreCurso) {
-		int nId = 0;
-		for (Curso cursoN : listaCursos) {
-			if (cursoN.getStrnombre() == strNombreCurso) {
-				nId = cursoN.getIdCurso();
 
-=======
+	
 	public String IdCurso(String strNombreCurso)
 	{
 		String nId="";
@@ -68,7 +52,7 @@ public class BBDD {
 			if(cursoN.getNombreCurso()==strNombreCurso) {
 				nId=cursoN.getIdCurso();
 						
->>>>>>> c8241ac3f3e3677ee9a3aaa638ab2607c40d1e39
+
 				break;
 			}
 		}
@@ -102,7 +86,7 @@ public class BBDD {
 	}
 
 	//
-<<<<<<< HEAD
+
 	//Usuarios
 	
 	public static int idUsuario(String usuario)
@@ -115,11 +99,10 @@ public class BBDD {
 		}
 		return(nid);
 	}
-	public static Usuario Login(String usuario, String contrasena) {
-=======
+
 	// Usuarios
 	public static Usuario Login(String usuario, String contraseña) {
->>>>>>> a691a08457f990887fcceca6e945d1880167adb0
+
 		loadUsuarios();
 		Usuario user = null;
 		for (int i = 0; i < listaUsuarios.size(); i++) {
@@ -130,7 +113,7 @@ public class BBDD {
 		}
 		return user;
 	}
-<<<<<<< HEAD
+
 
 	public static Usuario getUsuarioByUsuario(String usuario) {
 		Usuario unUsuario = null;
@@ -144,13 +127,7 @@ public class BBDD {
 		return unUsuario;
 	}
 
-	private static final boolean loadUsuarios() {
-		listaUsuarios.add(new Usuario(1, "Youssef", "Youssef", "Youssef", "coordinador"));
-		listaUsuarios.add(new Usuario(2, "Hector", "Hector", "Hector", "profesor"));
-		listaUsuarios.add(new Usuario(3, "Raul", "Raul", "Raul123", "alumno"));
-		listaUsuarios.add(new Usuario(4, "Ivan", "Ivan", "Ivan123", "coordinador"));
-		return true;
-	}
+	
 
 public boolean AnalisisLogin( String usuario, String contraseña) {
 //	String regexNum=".?[0-9].?";    //&& !usuario.toLowerCase()
@@ -174,7 +151,7 @@ public boolean AnalisisLogin( String usuario, String contraseña) {
 	return isOk;
 }
 
-=======
+
 
 	private static final boolean loadUsuarios() {
 		listaUsuarios.add(new Usuario(1, "Youssef", "Youssef", "Youssef123","coordinador"));
@@ -190,7 +167,7 @@ public boolean AnalisisLogin( String usuario, String contraseña) {
 		
 	}
 
-<<<<<<< HEAD
+
 	
 	///Profes
 	public final List<Usuario> getProfes(){
@@ -206,11 +183,8 @@ public boolean AnalisisLogin( String usuario, String contraseña) {
 		listaCursos.add(cursoNuevo);
 		return true;
 	}
-=======
->>>>>>> c8241ac3f3e3677ee9a3aaa638ab2607c40d1e39
->>>>>>> a691a08457f990887fcceca6e945d1880167adb0
-}
 
+}
 
 // datos lanzados a jsp profesor
 
