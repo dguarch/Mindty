@@ -36,6 +36,11 @@ public class profesorServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+<<<<<<< HEAD
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession session = request.getSession();
+=======
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -50,16 +55,54 @@ public class profesorServlet extends HttpServlet {
 		
 			
 				
+<<<<<<< HEAD
 		
 		List<Curso> listaCursos = BBDD.getInstance().ConsultaCursos(nid);
 		System.out.println(listaCursos.toString());
+=======
+				
+>>>>>>> c8241ac3f3e3677ee9a3aaa638ab2607c40d1e39
+
+		
+
+<<<<<<< HEAD
+		System.out.println("Hola");
+	
+		//on datos lita cursos
+//		BBDD.getInstance().CrearCurso();
+		List<Curso> listaCursos= BBDD.getInstance().ConsultaCursos();
+		System.out.println(listaCursos.toString());
+		request.setAttribute("listaCursos", listaCursos);
+		// off datos lita cursos
+		
+		//on datos lita cursos
+//		BBDD.getInstance().CrearCurso();
+		List<Curso> listaModulos= BBDD.getInstance().ConsultaCursos();
+		System.out.println(listaModulos.toString());
+		request.setAttribute("listaModulos", listaModulos);
+		// off datos lita cursos
+		
+		
+		
+=======
+		// on datos lita cursos
+		BBDD.getInstance().CrearCurso();
+		List<Curso> listaCursos = BBDD.getInstance().ConsultaCursos(3);
+		//System.out.println(listaCursos.toString());
+>>>>>>> a691a08457f990887fcceca6e945d1880167adb0
 		request.setAttribute("listaCursos", listaCursos);
 		// off datos lita cursos
 
+>>>>>>> c8241ac3f3e3677ee9a3aaa638ab2607c40d1e39
 		request.getRequestDispatcher("profesor.jsp").forward(request, response);
 		
 	
 		
+		
+		
+	}
+
+	private void ListaModulo() {
 		
 		
 	}

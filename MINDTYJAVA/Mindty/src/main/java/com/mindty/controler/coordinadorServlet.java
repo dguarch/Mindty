@@ -20,6 +20,12 @@ public class coordinadorServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+<<<<<<< HEAD
+=======
+		
+		HttpSession session = request.getSession();
+		request.getRequestDispatcher("coordinador.jsp").forward(request, response);
+>>>>>>> a691a08457f990887fcceca6e945d1880167adb0
 		
 		List<Usuario> profes = BBDD.getInstance().getProfes();
 		request.setAttribute("profes", profes);
