@@ -8,11 +8,11 @@ public class Modulo {
 	private String strNombre,strCodigo, strMaterias;
 	private List<String> listaMateria=new ArrayList<>();
 
-	public Modulo(String strNombre, String strCodigo) {
+	public Modulo(String strNombre, String strCodigo,String strMaterias) {
 		super();
 		this.strNombre = strNombre;
 		this.strCodigo = strCodigo;
-		this.strMaterias="Arquitectura de las apps\n" + "Gestion de software\n" + "Fundamentos UX\n";
+		this.strMaterias=strMaterias;
 	}
 
 	public String getStrNombre() {

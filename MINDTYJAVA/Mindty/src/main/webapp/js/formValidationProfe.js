@@ -56,19 +56,24 @@ let ValFormulario = function () {
 
 
 let enviarDatos = function (datos_envio) {
+	
+	let formdata = $('#form_data').serialize();
 
     $.ajax({
         // url: 'http://www.mocky.io/v2/5ae1d9932d000047009d7ef9asasas',  // SERVER WRONG
         //url: 'http://www.mocky.io/v2/5ad78aa33000004b00e584d0', // URL FALSE
-        url: 'http://www.mocky.io/v2/5aeb49703000004e00575486',  // SERVER OK  
+        url: './profesor',  // SERVER OK  
         
         method: 'POST',
-        data: datos_envio
+        accepts:"application/json",
+        data: formdata
+        
+        
     })
         .done(function (responde_data) {
-            console.log('recibido');
-            if (responde_data.result) {
-                $('#ok').html('Enhorabuena, datos enviados correctamente!!!');
+            console.log('recibido',responde_data);
+            if (responde_data) {
+                $('#ok').append(`<p>AJAX FUNCIONA!!!!!!!!</p>`);
             } else {
                 $('#ok').html('Ha habido un error de conexión, inténtalo en unos minutos');
             }

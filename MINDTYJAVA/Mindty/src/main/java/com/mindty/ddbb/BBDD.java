@@ -15,7 +15,7 @@ public class BBDD {
 
 	private static BBDD instance = null;
 	private static List<Curso> listaCursos = new ArrayList<>();
-	private static Map<Integer, List<Modulo>> HasModulos = new HashMap<>();
+	private static Map<String, List<Modulo>> HasModulos = new HashMap<>();
 	private static ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 
 	public static BBDD getInstance() {
@@ -33,21 +33,38 @@ public class BBDD {
 	// Creamos los cursos
 	public boolean CrearCurso() {
 
+<<<<<<< HEAD
 		listaCursos.add(new Curso(1, 200, "Artes Aven", "Hector"));
 		listaCursos.add(new Curso(1, 200, "Mecanica quantica", "Pedrito"));
 		listaCursos.add(new Curso(2, 250, "Sumas", "luis"));
+=======
+
+		listaCursos.add(new Curso("1","Mecanica quantica", 2,5, 250));
+
+		listaCursos.add(new Curso("2","Fisica", 4,5, 250));
+>>>>>>> c8241ac3f3e3677ee9a3aaa638ab2607c40d1e39
 
 		// listaCursos.add(unCurso);
 
 		return true;
 	}
 
+<<<<<<< HEAD
 	public int IdCurso(String strNombreCurso) {
 		int nId = 0;
 		for (Curso cursoN : listaCursos) {
 			if (cursoN.getStrnombre() == strNombreCurso) {
 				nId = cursoN.getIdCurso();
 
+=======
+	public String IdCurso(String strNombreCurso)
+	{
+		String nId="";
+		for (Curso cursoN : listaCursos) {
+			if(cursoN.getNombreCurso()==strNombreCurso) {
+				nId=cursoN.getIdCurso();
+						
+>>>>>>> c8241ac3f3e3677ee9a3aaa638ab2607c40d1e39
 				break;
 			}
 		}
@@ -55,13 +72,25 @@ public class BBDD {
 	}
 
 	// Obtenemos el curso creado
-	public static List<Curso> ConsultaCursos() {
+	
+	public static List<Curso> ConsultaCursos(int idProfe) {
+		
+		List<Curso> listaCursos = new ArrayList<>();
+		
+		for (Curso cursoN : listaCursos) {
+			if(cursoN.getCodFormador()==idProfe) {
+				listaCursos.add(cursoN);
+						
+			}
+		}
+		
+		
 		return listaCursos;
 	}
 
 	// Creamos los modulos
 
-	public boolean CrearModulo(int idCurso, List nuevoModulo) {
+	public boolean CrearModulo(String idCurso, List nuevoModulo) {
 
 		HasModulos.put(idCurso, nuevoModulo);
 		return true;
@@ -85,6 +114,7 @@ public class BBDD {
 		}
 		return user;
 	}
+<<<<<<< HEAD
 
 	public static Usuario getUsuarioByUsuario(String usuario) {
 		Usuario unUsuario = null;
@@ -128,6 +158,17 @@ public boolean AnalisisLogin( String usuario, String contraseña) {
 	return isOk;
 }
 
+=======
+
+	private static final boolean loadUsuarios() {
+		listaUsuarios.add(new Usuario(1, "Youssef", "Youssef", "Youssef","coordinador"));
+		listaUsuarios.add(new Usuario(2, "Hector", "Hector", "Hector","profesor"));
+		listaUsuarios.add(new Usuario(3, "Raul", "Raul", "Raul","alumno"));
+		listaUsuarios.add(new Usuario(4, "Ivan", "Ivan", "Ivan123","coordinador"));
+		return true;
+	}
+
+>>>>>>> c8241ac3f3e3677ee9a3aaa638ab2607c40d1e39
 }
 
 
