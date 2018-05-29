@@ -1,6 +1,7 @@
 package com.mindty.controler;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+//import com.fasterxml.jackson.databind.ObjectMapper;
+//import com.fasterxml.jackson.databind.SerializationFeature;
 import com.mindty.ddbb.BBDD;
 import com.mindty.modelos.Curso;
 import com.mindty.modelos.Modulo;
@@ -38,36 +41,34 @@ public class profesorServlet extends HttpServlet {
 
 		// request.getRequestDispatcher("profesor.jsp").forward(request, response);
 		
-		String user = request.getParameter("usuario");
-		String pass = request.getParameter("contrasena");
-		Usuario unUsuarioEncontrado = BBDD.Login(user, pass);
-		//77int id=0;
-		//id=unUsuarioEncontrado.getId();
+		String user = (String) request.getSession().getAttribute("usuario");
+		System.out.println(user);
+		int nid=BBDD.getInstance().idUsuario(user);
 		
-		System.out.println(user+ ":"+pass+":"+unUsuarioEncontrado);
-		
+		System.out.println(nid);
 		
 		
 			
 				
-				
-
 		
-
-		// on datos lita cursos
-		BBDD.getInstance().CrearCurso();
-		List<Curso> listaCursos = BBDD.getInstance().ConsultaCursos(3);
-		//System.out.println(listaCursos.toString());
+		List<Curso> listaCursos = BBDD.getInstance().ConsultaCursos(nid);
+		System.out.println(listaCursos.toString());
 		request.setAttribute("listaCursos", listaCursos);
 		// off datos lita cursos
 
 		request.getRequestDispatcher("profesor.jsp").forward(request, response);
+		
+	
+		
+		
+		
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -89,6 +90,45 @@ public class profesorServlet extends HttpServlet {
 		}
 		System.out.println("Hola3");
 		doGet(request, response);
+
+	/*protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+	String formulario=request.getParameter("code_modulo")+request.getParameter("nombre_modulo");
+		
+	
+	String respuesta ="";
+	
+	
+		respuesta="{\"idAmigo\":"+formulario+"}";
+	
+		ObjectMapper objectMapper = new ObjectMapper();
+		objectMapper.configure(SerializationFeature.INDENT_OUTPUT, true);		
+		StringWriter stringEmp = new StringWriter();
+
+		objectMapper.writeValue(stringEmp,respuesta);
+		respuesta =""+stringEmp+"";
+		
+		response.setContentType("application/json");
+		response.getWriter().append(stringEmp.toString()).flush();
+		
+		
+		
+		
+//		List<Modulo> listaModulos = new ArrayList<>();
+//		//System.out.println("el id del curso es " + NuevoCurso.getIdCurso() );
+//		if((request.getParameter("code_modulo")!=null) && (request.getParameter("nombre_modulo")!=null) )
+//		{
+//			Modulo nuevoModulo=new Modulo(request.getParameter("code_modulo"),request.getParameter("nombre_modulo"));
+//			int nIdCurso=BBDD.getInstance().IdCurso(request.getParameter("Cursos"));
+//			System.out.println(listaModulos.toString());
+//			listaModulos.add(nuevoModulo);
+//			boolean nSalida=BBDD.getInstance().CrearModulo(nIdCurso, listaModulos);
+//		}
+//		System.out.println("Hola3");
+//		doGet(request, response);
+
+	}*/
 	}
 
 }

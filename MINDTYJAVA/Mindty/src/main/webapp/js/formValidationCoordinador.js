@@ -83,10 +83,11 @@ const enviarCurso = (dataSend) => {
 
 $('#enviar').click(function (evnt) {
     evnt.preventDefault();
-    let formValido = validar();
+    validar();
     localStorage.setItem('infoCurso', JSON.stringify(formValido.values, ' '));
+    
     if (formValido.valid) {
-        enviarCurso(formValido);
+        $('formCurso').post();
     }
 });
 

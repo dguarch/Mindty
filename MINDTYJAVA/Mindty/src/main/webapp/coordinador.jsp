@@ -1,7 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<%@page import="com.mindty.modelos.Usuario"%>
+<%@page import="java.util.List"%>
+
 <!doctype html>
-<html lang="es"> 
+<html lang="es">
 
 <head>
 <!-- Required meta tags -->
@@ -31,11 +34,11 @@
 		<a class="breadcrumb-item" href="#" title="Incio" alt="Incio"
 			aria-label="Inicio"> <i class="fas fa-home"></i>
 		</a> <a class="breadcrumb-item" href="#" title="Curso" alt="Curso">Cursos</a>
-		<span class="breadcrumb-item active" title="A√±adir m√≥dulo"
-			alt="AÒadir m√≥dulo">Curso</span>
+		<span class="breadcrumb-item active" title="AÒadir mÛdulo"
+			alt="AÒadir mÛdulo">Curso</span>
 	</nav>
 
-	<!-- Nombre secci√≥n -->
+	<!-- Nombre secciÛn -->
 	<h1 class="d-inline">Curso</h1>
 	<!-- Lupa -->
 	<button class="botons d-inline ml-3" aria-label="Buscar curso">
@@ -47,21 +50,21 @@
 	<!-- Formulario entrada curso -->
 	<section>
 		<div id="mensajes" class="row justify-content-center"></div>
-		<form id="formCurso">
-			<!-- Fila C√≥digo + Nombre Curso -->
+		<form id="formCurso" action="" method="POST">
+			<!-- Fila CÛdigo + Nombre Curso -->
 			<div class="form-row">
 				<div class="form-group col-4">
-					<!-- Campo C√≥digo curso con RegExp = ^[A-Z]{3}\s+[0-9]{5}$ (XXX 12345)$ -->
+					<!-- Campo CÛdigo curso con RegExp = ^[A-Z]{3}\s+[0-9]{5}$ (XXX 12345)$ -->
 					<input type="text" class="form-control"
 						pattern="^[A-Z]{3}\s+[0-9]{5}$" id="codigoCurso"
-						placeholder="CÛdigo curso" aria-label="CÛdigo curso" required>
+						placeholder="CÛdigo curso" aria-label="CÛdigo curso" name="codigoCurso" required>
 					<small id="cheet" class="text-info">Ej. XXX 12345</small>
 				</div>
 				<div class="col-8">
 					<!-- ExpReg= 1a letra mayuscula, solo letras -->
 					<input type="text" class="form-control"
 						pattern="^[A-Z]+(([,. -][a-zA-Z ])?[a-zA-Z]*)*$" id="nombreCurso"
-						placeholder="Nombre curso" aria-label="Nombre curso" required>
+						placeholder="Nombre curso" aria-label="Nombre curso" name="nombreCurso" required>
 				</div>
 			</div>
 
@@ -69,28 +72,25 @@
 			<div class="form-row">
 				<div class="form-group col-12">
 					<select id="profes" class="form-control col-12"
-						aria-label="Selecciona al formador">
+						aria-label="Selecciona al formador" name="profes">
 						<option value="0" disabled selected>Formador</option>
-						<option value="Angel M. Rayo">√Ångel M. Rayo</option>
-						<option value="Joan Marimon">Joan Marim√≥n</option>
-						<option value="Xavier Saladie">Xavier Saladi√©</option>
-						<option value="Eduardo di Monte">Eduardo di Monte</option>
-						<option value="Luis Sanchez">Luis S√°nchez</option>
-						<option value="Ricardo Ahumada">Ricardo Ahumada</option>
+						<c:forEach var="unProfe" items="${profes}" varStatus="counter">
+							<option value="${unProfe.id}">${unProfe.nombre}</option>
+						</c:forEach>
 					</select>
 				</div>
 			</div>
 
-			<!-- Fila m√≥dulos + horas -->
+			<!-- Fila mÛdulos + horas -->
 			<div class="form-row">
 				<div class="form-group col-5">
-					<label for="modulos">N¬∫ m√≥dulos</label> <input type="number"
-						class="form-control" id="modulos" placeholder="1" min="1" max="10">
+					<label for="modulos">N∫ mÛdulos</label> <input type="number"
+						class="form-control" id="modulos" placeholder="1" min="1" max="10" name="modulos">
 				</div>
 				<div class="col-5">
-					<label for="horas">N¬∫ horas</label> <input type="number"
+					<label for="horas">N∫ horas</label> <input type="number"
 						class="form-control" id="horas" placeholder="20" min="20"
-						max="200">
+						max="200" name="horas">
 				</div>
 				<!-- Disquete -->
 				<!-- <div class="col-2 container d-flex h-100 justify-content-center align-self-center"> -->

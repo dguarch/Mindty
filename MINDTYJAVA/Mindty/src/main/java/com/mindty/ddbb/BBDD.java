@@ -34,12 +34,7 @@ public class BBDD {
 	public boolean CrearCurso() {
 
 
-		listaCursos.add(new Curso("1","Mecanica quantica", 2,5, 250));
-
-		listaCursos.add(new Curso("2","Fisica", 4,5, 250));
-
-		// listaCursos.add(unCurso);
-
+		listaCursos.add(new Curso("ASV 12345", "Mecanica quantica", 2, 5, 250));
 		return true;
 	}
 	
@@ -60,18 +55,14 @@ public class BBDD {
 	// Obtenemos el curso creado
 	
 	public static List<Curso> ConsultaCursos(int idProfe) {
-		
-		List<Curso> listaCursos = new ArrayList<>();
-		
+		ArrayList<Curso> listaCursoProfe = new ArrayList<Curso>();
 		for (Curso cursoN : listaCursos) {
 			if(cursoN.getCodFormador()==idProfe) {
-				listaCursos.add(cursoN);
-						
+				listaCursoProfe.add(cursoN);	
+				System.out.println(cursoN);
 			}
 		}
-		
-		
-		return listaCursos;
+		return listaCursoProfe;
 	}
 
 	// Creamos los modulos
@@ -89,6 +80,17 @@ public class BBDD {
 	
 	//
 	//Usuarios
+	
+	public static int idUsuario(String usuario)
+	{
+		int nid=0;
+		for (int i = 0; i < listaUsuarios.size(); i++) {
+			if(listaUsuarios.get(i).getUsuario().equals(usuario)) {
+			nid=listaUsuarios.get(i).getId();
+			}
+		}
+		return(nid);
+	}
 	public static Usuario Login(String usuario, String contrasena) {
 		loadUsuarios();
 		Usuario user = null;
@@ -101,13 +103,34 @@ public class BBDD {
 	}
 
 	private static final boolean loadUsuarios() {
-		listaUsuarios.add(new Usuario(1, "Youssef", "Youssef", "Youssef","coordinador"));
+		listaUsuarios.add(new Usuario(1, "Youssef", "Youssef", "Youssef123","coordinador"));
 		listaUsuarios.add(new Usuario(2, "Hector", "Hector", "Hector","profesor"));
-		listaUsuarios.add(new Usuario(3, "Raul", "Raul", "Raul","alumno"));
-		listaUsuarios.add(new Usuario(4, "Ivan", "Ivan", "Ivan123","coordinador"));
+		listaUsuarios.add(new Usuario(3, "Raul", "Raul", "Raul","coordinador"));
+		listaUsuarios.add(new Usuario(4, "Ángel M. Rayo", "arayo", "profe2018","profesor"));
+		listaUsuarios.add(new Usuario(5, "Joan Marimón", "jmarimon", "profe2018","profesor"));
+		listaUsuarios.add(new Usuario(6, "Xavier Saladié", "xsaladie", "profe2018","profesor"));
+		listaUsuarios.add(new Usuario(7, "Eduardo di Monte", "emonte", "profe2018","profesor"));
+		listaUsuarios.add(new Usuario(8, "Luis Sánchez", "lsanchez", "profe2018","profesor"));
+		listaUsuarios.add(new Usuario(9, "Ricardo Ahumada", "rahumada", "profe2018","profesor"));
 		return true;
+		
 	}
 
+	
+	///Profes
+	public final List<Usuario> getProfes(){
+		ArrayList<Usuario> listaProfes = new ArrayList<Usuario>();
+		for (Usuario unCoor : listaUsuarios) {
+			if (unCoor.getTipo()=="profesor") {
+				listaProfes.add(unCoor);
+			}
+		}
+		return listaProfes;
+	}
+	public boolean newCurso(Curso cursoNuevo) {
+		listaCursos.add(cursoNuevo);
+		return true;
+	}
 }
 
 

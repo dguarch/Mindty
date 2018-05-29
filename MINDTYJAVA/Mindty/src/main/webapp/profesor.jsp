@@ -1,5 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<%@page import="com.mindty.modelos.Curso" %>
+<%@page import="java.util.List" %>
+
 <!doctype html>
 <html lang="es">
 
@@ -54,11 +57,8 @@
 					<select id="Cursos" class="form-control col-12"
 						aria-label="Selecciona al formador" name="Cursos">
 						<!-- <option value="" disabled selected>Cursos</option> -->
-						<c:forEach var="unCurso" items="${listaCursos}">
-						
-						<option value="${unCurso.idCurso}">${unCurso.strnombre}</option>
-						
-						
+						<c:forEach var="unCurso" items="${listaCursos}" varStatus="counter">
+						<option value="${unCurso.idCurso}">${unCurso.nombreCurso}</option>
 						</c:forEach>
 						
 					</select>
@@ -69,14 +69,12 @@
 
 		<div class="row">
 			<div class="col-10 col-sm-10 col-sm-10">
-				<form class="form-inline" action="" method="POST">
+				<form id="form_data" class="form-inline" action="" method="POST">
 					<div class="form-group mx-sm-3 mb-2">
 						<div id="mensajes"></div>
 						<!-- ExpReg= /[A-Z]{3,} \d/ -->
 						<!-- ivan -->
-						<input type="text" pattern="[A-Z]{3,} \d" maxlength="5"
-							class="form-control" id="code_modulo" name="code_modulo" placeholder="Código modulo"
-							aria-label="Código modulo" required>
+						<input type="text" pattern="[A-Z]{3,} \d" maxlength="5" class="form-control" name="code_modulo" id="code_modulo" placeholder="Código modulo" aria-label="Código modulo" required>
 
 
 					</div>
